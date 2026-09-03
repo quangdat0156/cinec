@@ -35,33 +35,42 @@ if (!isset($page_title)) {
                 },
                 extend: {
                     colors: {
-                        cinecPrimary: '#062AAD',     // Xanh dương đậm chủ đạo
-                        cinecSecondary: '#05A6F5',   // Xanh dương nhạt phụ trợ
-                        cinecAcent: '#C1FF72',       // Xanh neon/lime tạo điểm nhấn
-                        cinecDarkBlue: '#02185D',    // Xanh đen
-                        cinecBg: '#FAFCFF',          // Nền sáng đồng bộ
+                        cinecPrimary: '#062AAD',     // Xanh dương đậm chủ đạo (Primary)
+                        cinecSecondary: '#05A6F5',   // Xanh dương nhạt phụ trợ (Secondary)
+                        cinecAcent: '#C1FF72',       // Xanh lime neon điểm nhấn (Accent)
+                        cinecLime: '#7BC612',        // Xanh lá đậm điểm nhấn
+                        cinecDarkBlue: '#02155B',    // Xanh đen đậm
+                        cinecBg: '#F7FAFD',          // Nền chuẩn Figma Design Systems (#F7FAFD)
+                        cinecTextMain: '#062AAD',    // Màu chữ tiêu đề
+                        cinecTextBody: '#5B5B5B',    // Màu chữ nội dung (#5B5B5B)
+                        cinecTextMuted: '#A6A7AA',   // Màu chữ phụ
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'Be Vietnam Pro', 'Inter', 'sans-serif'],
+                        sans: ['Inter', 'Plus Jakarta Sans', 'Be Vietnam Pro', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
                         playball: ['Playball', 'cursive'],
                     },
                     fontSize: {
-                        // Áp dụng scale kích thước chuẩn từ Figma Design System với letter-spacing và line-height tối ưu
-                        'h1': ['52px', { lineHeight: '1.18', letterSpacing: '-0.025em' }],
-                        'h2': ['36px', { lineHeight: '1.25', letterSpacing: '-0.02em' }],
-                        'h3': ['28px', { lineHeight: '1.3', letterSpacing: '-0.015em' }],
-                        'h4': ['22px', { lineHeight: '1.35', letterSpacing: '-0.01em' }],
-                        'h5': ['18px', { lineHeight: '1.4' }],
-                        'body-lg': ['16px', { lineHeight: '1.65' }],
-                        'body-md': ['14px', { lineHeight: '1.65' }],
-                        'body-sm': ['13px', { lineHeight: '1.6' }],
-                        'body-xs': ['12px', { lineHeight: '1.55' }],
-                        'caption': ['11px', { lineHeight: '1.5' }],
+                        // Kích thước chuẩn Figma Design Systems (Node 2:1078)
+                        'h1': ['56px', { lineHeight: '64px', letterSpacing: '-0.02em', fontWeight: '700' }],
+                        'h2': ['40px', { lineHeight: '48px', letterSpacing: '-0.02em', fontWeight: '700' }],
+                        'h3': ['32px', { lineHeight: '40px', letterSpacing: '-0.015em', fontWeight: '600' }],
+                        'h4': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }],
+                        'h5': ['20px', { lineHeight: '28px', fontWeight: '600' }],
+                        'body-lg': ['16px', { lineHeight: '24px' }],
+                        'body-md': ['14px', { lineHeight: '20px' }],
+                        'body-sm': ['13px', { lineHeight: '20px' }],
+                        'body-xs': ['12px', { lineHeight: '16px' }],
+                        'caption': ['12px', { lineHeight: '16px' }],
+                        'caption-xs': ['11px', { lineHeight: '16px' }],
                     },
                     spacing: {
                         '128': '32rem',
                     },
                     boxShadow: {
+                        'figma-card': '0px 2px 4px 0px rgba(0, 0, 0, 0.1)',
+                        'figma-elevate': '0px 2px 4px 0px rgba(0, 0, 0, 0.25)',
+                        'figma-nav': '0px 2px 4px 0px rgba(0, 0, 0, 0.15)',
                         'subtle': '0 2px 10px rgba(6, 42, 173, 0.04)',
                         'premium': '0 10px 30px -10px rgba(6, 42, 173, 0.08), 0 2px 6px rgba(6, 42, 173, 0.02)',
                         'hover-card': '0 20px 40px -12px rgba(6, 42, 173, 0.14), 0 4px 12px rgba(6, 42, 173, 0.04)',

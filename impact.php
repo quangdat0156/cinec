@@ -4,327 +4,235 @@ require_once 'config/db.php';
 require_once 'includes/header.php';
 ?>
 
-<!-- TRANG IMPACT CHUẨN 100% CẤU TRÚC FIGMA (TỐI ƯU HÌNH ẢNH BANNER & BIỂU ĐỒ TRÒN HOÀN HẢO) -->
-<div class="bg-[#FAFCFF] min-h-screen pt-28 pb-16">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-12 2xl:px-20 space-y-12">
+<!-- TOÀN BỘ GIAO DIỆN IMPACT: CHUẨN XÁC THEO FIGMA (NODE 115:2362) -->
+<div class="bg-[#F7FAFD] min-h-screen pt-28 pb-20 relative overflow-hidden">
 
-        <!-- BREADCRUMBS BAR CHUẨN FIGMA -->
-        <div class="text-[11px] font-medium text-slate-500 flex items-center gap-1.5 text-left">
-            <a href="index.php" class="hover:text-[#062AAD] transition-colors">Trang chủ</a>
-            <span>&gt;</span>
-            <span class="text-[#062AAD] font-bold">Impact</span>
-        </div>
+    <!-- Đồ họa nền công nghệ phía trên bên phải (Hero Right Graphic) -->
+    <div class="absolute top-0 right-0 w-[820px] max-w-[65vw] h-[480px] pointer-events-none opacity-40 mix-blend-multiply overflow-hidden z-0 hidden sm:block">
+        <img src="assets/img/impact_hero_bg.png" alt="Impact Decor" class="w-full h-full object-cover object-left-top">
+        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-[#F7FAFD]/40 to-[#F7FAFD]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F7FAFD]"></div>
+    </div>
 
-        <!-- HERO TOP BANNER (NỀN SÁNG VỚI HÌNH ẢNH CẦU CẦU QUỐC TẾ & QUẢ CẦU CÔNG NGHỆ GÓC PHẢI KHỚP FIGMA) -->
-        <div class="relative bg-white rounded-3xl p-6 md:p-10 border border-slate-200/80 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <!-- Cột trái: Tiêu đề & Thuyết minh -->
-            <div class="lg:col-span-7 space-y-3 text-left relative z-10">
-                <h1 class="text-h3 md:text-h2 font-extrabold text-[#02185D] leading-tight">
-                    CiNEC <span class="text-[#71A800]">Impact</span>
+    <div class="max-w-[1440px] mx-auto px-4 md:px-12 2xl:px-24 relative z-10 space-y-12">
+
+        <!-- ================================================================= -->
+        <!-- BREADCRUMB & HERO HEADER                                          -->
+        <!-- ================================================================= -->
+        <div class="space-y-4 pt-2">
+            <!-- Breadcrumb điều hướng -->
+            <nav class="flex items-center gap-2 text-sm text-[#062AAD] font-medium" aria-label="Breadcrumb">
+                <a href="index.php" class="hover:underline transition-all">Trang chủ</a>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                <span class="font-semibold text-[#062AAD]">Impact</span>
+            </nav>
+
+            <!-- Tiêu đề lớn & Thuyết minh -->
+            <div class="space-y-3 max-w-3xl">
+                <h1 class="text-3xl sm:text-4xl md:text-[40px] font-bold text-[#062AAD] tracking-tight leading-tight">
+                    CiNEC <span class="text-[#7BC612]">Impact</span>
                 </h1>
-                <p class="text-body-xs md:text-body-sm text-slate-500 font-normal leading-relaxed max-w-xl">
-                    CINEC cam kết tạo ra tác động tích cực và bền vững cho hệ sinh thái<br class="hidden sm:inline"> đổi mới sáng tạo của Cà Mau và khu vực Đồng bằng sông Cửu Long.
+                <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed font-normal">
+                    CiNEC cam kết tạo ra tác động tích cực và bền vững cho hệ sinh thái đổi mới sáng tạo của Cà Mau và khu vực Đồng bằng sông Cửu Long.
                 </p>
             </div>
-
-            <!-- Cột phải: Khung Đồ Họa Cầu Cầu & Quả Cầu Số Rõ Nét Nổi Bật Chuẩn Figma -->
-            <div class="lg:col-span-5 relative h-56 md:h-64 rounded-2xl overflow-hidden shadow-md border border-slate-100 hidden md:block">
-                <!-- Ảnh Cầu Cần Thơ / Cầu Cà Mau & Đô thị sáng -->
-                <img src="assets/img/intro-building.jpg" alt="City & Bridge Impact" class="w-full h-full object-cover">
-                
-                <!-- Lớp phủ quả cầu công nghệ phát sáng hiệu ứng Glassmorphism mờ -->
-                <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent flex items-center justify-end pr-4">
-                    <div class="relative w-48 h-48 rounded-full bg-gradient-to-br from-[#062AAD]/20 via-[#05A6F5]/20 to-[#71A800]/20 backdrop-blur-sm border border-white/60 p-4 flex items-center justify-center animate-pulse">
-                        <img src="assets/img/hero-bg.jpg" class="w-40 h-40 rounded-full object-cover mix-blend-overlay opacity-80">
-                        <div class="absolute inset-0 rounded-full border-2 border-dashed border-[#05A6F5]/60 animate-spin" style="animation-duration: 20s;"></div>
-                        <!-- Icon mạng lưới vệ tinh -->
-                        <div class="absolute top-2 right-4 w-7 h-7 rounded-full bg-[#062AAD] text-white flex items-center justify-center shadow-md">
-                            <i data-lucide="globe" class="w-4 h-4"></i>
-                        </div>
-                        <div class="absolute bottom-3 left-3 w-7 h-7 rounded-full bg-[#71A800] text-white flex items-center justify-center shadow-md">
-                            <i data-lucide="trending-up" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <!-- SECTION 1: DASHBOARD TỔNG QUAN (3 ANALYTICS CHARTS CARDS GRID CHUẨN FIGMA) -->
-        <div class="space-y-6 text-left">
-            <h2 class="text-h3 font-extrabold text-[#02185D]">
+        <!-- ================================================================= -->
+        <!-- SECTION 1: DASHBOARD TỔNG QUAN (3 THẺ BIỂU ĐỒ FIGMA GỐC)          -->
+        <!-- ================================================================= -->
+        <section class="space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">
                 Dashboard tổng quan
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
                 
-                <!-- CARD 1: SỐ LIỆU NỔI BẬT NĂM 2025 (VERTICAL BAR CHART FIGMA) -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-4 hover:shadow-premium transition-all flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-body-md font-extrabold text-[#02185D] mb-6">Số liệu nổi bật năm 2025</h3>
-                        
-                        <!-- Biểu đồ Cột SVG Visual Canvas -->
-                        <div class="h-44 flex items-end justify-between gap-3 pt-4 pb-2 px-2 border-b border-slate-200/80">
-                            <!-- Col 1 -->
-                            <div class="flex-1 flex flex-col items-center gap-1 group">
-                                <span class="text-[10px] font-black text-[#062AAD]">200+</span>
-                                <div class="w-full bg-gradient-to-t from-[#062AAD] to-[#05A6F5] rounded-t-lg transition-all group-hover:brightness-110" style="height: 120px;"></div>
-                                <span class="text-[9px] text-slate-400 font-medium text-center line-clamp-1">Startup</span>
-                            </div>
-                            <!-- Col 2 -->
-                            <div class="flex-1 flex flex-col items-center gap-1 group">
-                                <span class="text-[10px] font-black text-[#05A6F5]">120+</span>
-                                <div class="w-full bg-[#05A6F5] rounded-t-lg transition-all group-hover:brightness-110" style="height: 75px;"></div>
-                                <span class="text-[9px] text-slate-400 font-medium text-center line-clamp-1">Tập huấn</span>
-                            </div>
-                            <!-- Col 3 -->
-                            <div class="flex-1 flex flex-col items-center gap-1 group">
-                                <span class="text-[10px] font-black text-[#062AAD]">180+</span>
-                                <div class="w-full bg-[#062AAD] rounded-t-lg transition-all group-hover:brightness-110" style="height: 105px;"></div>
-                                <span class="text-[9px] text-slate-400 font-medium text-center line-clamp-1">Mentors</span>
-                            </div>
-                            <!-- Col 4 -->
-                            <div class="flex-1 flex flex-col items-center gap-1 group">
-                                <span class="text-[10px] font-black text-[#71A800]">25+</span>
-                                <div class="w-full bg-[#71A800] rounded-t-lg transition-all group-hover:brightness-110" style="height: 35px;"></div>
-                                <span class="text-[9px] text-slate-400 font-medium text-center line-clamp-1">Quỹ</span>
-                            </div>
-                            <!-- Col 5 -->
-                            <div class="flex-1 flex flex-col items-center gap-1 group">
-                                <span class="text-[10px] font-black text-[#2E7D32]">5+</span>
-                                <div class="w-full bg-[#2E7D32] rounded-t-lg transition-all group-hover:brightness-110" style="height: 20px;"></div>
-                                <span class="text-[9px] text-slate-400 font-medium text-center line-clamp-1">Quốc tế</span>
-                            </div>
-                        </div>
+                <!-- Card 1: Số liệu nổi bật năm 2025 -->
+                <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4">
+                    <h3 class="text-lg md:text-xl font-bold text-[#062AAD]">
+                        Số liệu nổi bật năm 2025
+                    </h3>
+                    <div class="w-full flex items-center justify-center my-auto py-2">
+                        <img src="assets/img/impact_chart_solieu.png" alt="Biểu đồ số liệu nổi bật năm 2025" class="w-full max-h-[220px] object-contain">
                     </div>
-                    <p class="text-[10px] text-slate-400 font-medium pt-2">Số liệu cập nhật đến 31/12/2025</p>
+                    <p class="text-xs md:text-[13px] text-[#5B5B5B] text-center font-medium pt-2 border-t border-slate-50">
+                        Số liệu cập nhật đến 31/12/2025
+                    </p>
                 </div>
 
-                <!-- CARD 2: TÁC ĐỘNG THEO LĨNH VỰC (BIỂU ĐỒ TRÒN DONUT CHUẨN TRÒN 100% PERFECT CIRCLE) -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-4 hover:shadow-premium transition-all flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-body-md font-extrabold text-[#02185D] mb-4">Tác động theo lĩnh vực</h3>
-                        
-                        <!-- Biểu đồ Donut SVG Tròn Hoàn Hảo (Tỷ lệ aspect-square 1:1) -->
-                        <div class="flex items-center justify-between gap-4 py-2">
-                            <!-- Canvas SVG Donut 100% Tròn xoe -->
-                            <div class="relative w-36 h-36 aspect-square shrink-0 flex items-center justify-center">
-                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 42 42">
-                                    <!-- Nền vòng tròn nhạt -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#F1F5F9" stroke-width="5"></circle>
-                                    
-                                    <!-- Segment 1: 40% Deep Blue (#02185D) -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#02185D" stroke-width="5.5" stroke-dasharray="40 60" stroke-dashoffset="0"></circle>
-                                    
-                                    <!-- Segment 2: 25% Sky Blue (#05A6F5) -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#05A6F5" stroke-width="5.5" stroke-dasharray="25 75" stroke-dashoffset="-40"></circle>
-                                    
-                                    <!-- Segment 3: 20% Lime Green (#71A800) -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#71A800" stroke-width="5.5" stroke-dasharray="20 80" stroke-dashoffset="-65"></circle>
-                                    
-                                    <!-- Segment 4: 15% Purple (#8E24AA) -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#8E24AA" stroke-width="5.5" stroke-dasharray="15 85" stroke-dashoffset="-85"></circle>
-                                </svg>
-                            </div>
-
-                            <!-- Legend List Right -->
-                            <div class="space-y-2 text-[10px] font-bold flex-1 min-w-0">
-                                <div class="flex items-center gap-2 text-slate-700">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-[#02185D] shrink-0"></span>
-                                    <span class="truncate">Chuyển đổi số <b class="text-[#02185D]">40%</b></span>
-                                </div>
-                                <div class="flex items-center gap-2 text-slate-700">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-[#05A6F5] shrink-0"></span>
-                                    <span class="truncate">Nông nghiệp <b class="text-[#05A6F5]">25%</b></span>
-                                </div>
-                                <div class="flex items-center gap-2 text-slate-700">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-[#71A800] shrink-0"></span>
-                                    <span class="truncate">Năng lượng xanh <b class="text-[#71A800]">20%</b></span>
-                                </div>
-                                <div class="flex items-center gap-2 text-slate-700">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-[#8E24AA] shrink-0"></span>
-                                    <span class="truncate">Du lịch & Dịch vụ <b class="text-[#8E24AA]">15%</b></span>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Card 2: Tác động theo lĩnh vực -->
+                <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4">
+                    <h3 class="text-lg md:text-xl font-bold text-[#062AAD]">
+                        Tác động theo lĩnh vực
+                    </h3>
+                    <div class="w-full flex items-center justify-center my-auto py-2">
+                        <img src="assets/img/impact_chart_linhvuc.png" alt="Biểu đồ tác động theo lĩnh vực" class="w-full max-h-[220px] object-contain">
                     </div>
                 </div>
 
-                <!-- CARD 3: PHÂN BỐ HỖ TRỢ CHO STARTUP (BIỂU ĐỒ TRÒN DONUT CHUẨN TRÒN 100% PERFECT CIRCLE) -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-4 hover:shadow-premium transition-all flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-body-md font-extrabold text-[#02185D] mb-4">Phân bố hỗ trợ cho Startup</h3>
-                        
-                        <!-- Biểu đồ Donut SVG Tròn Hoàn Hảo (Tỷ lệ aspect-square 1:1) -->
-                        <div class="flex items-center justify-between gap-4 py-2">
-                            <!-- Canvas SVG Donut 100% Tròn xoe -->
-                            <div class="relative w-36 h-36 aspect-square shrink-0 flex items-center justify-center">
-                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 42 42">
-                                    <!-- Nền vòng tròn nhạt -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#F1F5F9" stroke-width="5"></circle>
-                                    
-                                    <!-- Segment 1: 65% Deep Blue (#062AAD) -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#062AAD" stroke-width="5.5" stroke-dasharray="65 35" stroke-dashoffset="0"></circle>
-                                    
-                                    <!-- Segment 2: 35% Lime Green (#71A800) -->
-                                    <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#71A800" stroke-width="5.5" stroke-dasharray="35 65" stroke-dashoffset="-65"></circle>
-                                </svg>
-                            </div>
-
-                            <!-- Legend List Right -->
-                            <div class="space-y-3 text-[10px] font-bold flex-1 min-w-0">
-                                <div class="flex items-start gap-2 text-slate-700">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-[#062AAD] shrink-0 mt-0.5"></span>
-                                    <div>
-                                        <span class="block text-slate-600 font-medium">Ươm tạo (Incubation)</span>
-                                        <span class="text-body-xs font-black text-[#062AAD]">65%</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-2 text-slate-700">
-                                    <span class="w-2.5 h-2.5 rounded-full bg-[#71A800] shrink-0 mt-0.5"></span>
-                                    <div>
-                                        <span class="block text-slate-600 font-medium">Tăng tốc (Acceleration)</span>
-                                        <span class="text-body-xs font-black text-[#71A800]">35%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Card 3: Phân bổ hỗ trợ cho Startup -->
+                <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4">
+                    <h3 class="text-lg md:text-xl font-bold text-[#062AAD]">
+                        Phân bổ hỗ trợ cho Startup
+                    </h3>
+                    <div class="w-full flex items-center justify-center my-auto py-2">
+                        <img src="assets/img/impact_chart_phanbo.png" alt="Biểu đồ phân bổ hỗ trợ cho Startup" class="w-full max-h-[220px] object-contain">
                     </div>
                 </div>
 
             </div>
-        </div>
+        </section>
 
-        <!-- SECTION 2: TÁC ĐỘNG NỔI BẬT (4 CARDS GRID CHUẨN FIGMA) -->
-        <div class="space-y-6 text-left">
-            <h2 class="text-h3 font-extrabold text-[#02185D]">
+        <!-- ================================================================= -->
+        <!-- SECTION 2: TÁC ĐỘNG NỔI BẬT (4 THẺ THÀNH TỰU NGANG)               -->
+        <!-- ================================================================= -->
+        <section class="space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">
                 Tác động nổi bật
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1: Kinh tế -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 space-y-4 group">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#062AAD] flex items-center justify-center border border-blue-100/60 group-hover:bg-[#062AAD] group-hover:text-white transition-colors">
-                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                
+                <!-- Thẻ 1: Kinh tế -->
+                <div class="bg-white rounded-xl p-5 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] flex items-center justify-center shrink-0 p-2 overflow-hidden">
+                        <img src="assets/img/impact_icon_kinhte.png" alt="Kinh tế" class="w-7 h-7 object-contain">
                     </div>
-                    <div class="space-y-1.5">
-                        <h3 class="text-body-md font-extrabold text-[#02185D]">Kinh tế</h3>
-                        <p class="text-[11px] text-slate-500 leading-relaxed font-normal">
+                    <div class="space-y-1">
+                        <h3 class="text-base font-semibold text-[#062AAD]">Kinh tế</h3>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
                             Hỗ trợ tạo ra doanh thu ước tính hơn 150 tỷ đồng cho các startup trong hệ sinh thái.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 2: Việc làm -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 space-y-4 group">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#062AAD] flex items-center justify-center border border-blue-100/60 group-hover:bg-[#062AAD] group-hover:text-white transition-colors">
-                        <i data-lucide="users" class="w-6 h-6"></i>
+                <!-- Thẻ 2: Việc làm -->
+                <div class="bg-white rounded-xl p-5 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] flex items-center justify-center shrink-0 p-2 overflow-hidden">
+                        <img src="assets/img/impact_icon_vieclam.png" alt="Việc làm" class="w-7 h-7 object-contain">
                     </div>
-                    <div class="space-y-1.5">
-                        <h3 class="text-body-md font-extrabold text-[#02185D]">Việc làm</h3>
-                        <p class="text-[11px] text-slate-500 leading-relaxed font-normal">
+                    <div class="space-y-1">
+                        <h3 class="text-base font-semibold text-[#062AAD]">Việc làm</h3>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
                             Tạo ra hơn 500+ việc làm trực tiếp và gián tiếp cho cộng đồng địa phương.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 3: Đổi mới sáng tạo -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 space-y-4 group">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#062AAD] flex items-center justify-center border border-blue-100/60 group-hover:bg-[#062AAD] group-hover:text-white transition-colors">
-                        <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                <!-- Thẻ 3: Đổi mới sáng tạo -->
+                <div class="bg-white rounded-xl p-5 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] flex items-center justify-center shrink-0 p-2 overflow-hidden">
+                        <img src="assets/img/impact_icon_doimoi.png" alt="Đổi mới sáng tạo" class="w-7 h-7 object-contain">
                     </div>
-                    <div class="space-y-1.5">
-                        <h3 class="text-body-md font-extrabold text-[#02185D]">Đổi mới sáng tạo</h3>
-                        <p class="text-[11px] text-slate-500 leading-relaxed font-normal">
+                    <div class="space-y-1">
+                        <h3 class="text-base font-semibold text-[#062AAD]">Đổi mới sáng tạo</h3>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
                             Thúc đẩy hơn 80 giải pháp đổi mới được ứng dụng và thương mại hóa thành công.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 4: Cộng đồng -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 space-y-4 group">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#062AAD] flex items-center justify-center border border-blue-100/60 group-hover:bg-[#062AAD] group-hover:text-white transition-colors">
-                        <i data-lucide="globe" class="w-6 h-6"></i>
+                <!-- Thẻ 4: Cộng đồng -->
+                <div class="bg-white rounded-xl p-5 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.1)] hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] flex items-center justify-center shrink-0 p-2 overflow-hidden">
+                        <img src="assets/img/impact_icon_congdong.png" alt="Cộng đồng" class="w-7 h-7 object-contain">
                     </div>
-                    <div class="space-y-1.5">
-                        <h3 class="text-body-md font-extrabold text-[#02185D]">Cộng đồng</h3>
-                        <p class="text-[11px] text-slate-500 leading-relaxed font-normal">
+                    <div class="space-y-1">
+                        <h3 class="text-base font-semibold text-[#062AAD]">Cộng đồng</h3>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
                             Lan tỏa văn hóa đổi mới sáng tạo đến hơn 10.000+ sinh viên và thanh niên tại khu vực.
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- SECTION 3: CÂU CHUYỆN TÁC ĐỘNG (3 CARD ẢNH CÓ TAG XANH NEON CHUẨN FIGMA) -->
-        <div class="space-y-6 text-left">
-            <h2 class="text-h3 font-extrabold text-[#02185D]">
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTION 3: CÂU CHUYỆN TÁC ĐỘNG (3 THẺ CÂU CHUYỆN NỀN ẢNH THỰC TẾ) -->
+        <!-- ================================================================= -->
+        <section class="space-y-6">
+            <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">
                 Câu chuyện tác động
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
                 <!-- Story 1 -->
-                <div class="relative h-64 rounded-3xl overflow-hidden shadow-md group cursor-pointer border border-slate-200/80">
-                    <img src="assets/img/hero-bg.jpg" alt="Impact Story" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#02185D] via-[#02185D]/60 to-transparent p-6 flex flex-col justify-between">
-                        <div>
-                            <span class="bg-[#71A800] text-white text-[9px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-sm inline-block">
-                                Chuyển đổi số
-                            </span>
-                        </div>
-                        <div class="space-y-1.5 text-left">
-                            <h3 class="text-body-md font-extrabold text-white leading-snug group-hover:text-[#C1FF72] transition-colors">
-                                Nền tảng quản lý ao nuôi thông minh Made in Cà Mau
-                            </h3>
-                            <p class="text-[11px] text-slate-200 font-light leading-relaxed line-clamp-2">
-                                Giải pháp giúp 200+ hộ nuôi tôm tăng năng suất 20% và giảm chi phí 15%.
-                            </p>
-                        </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md group min-h-[224px] p-6 flex flex-col justify-between border border-slate-200/50">
+                    <!-- Ảnh nền câu chuyện -->
+                    <img src="assets/img/impact_story_bg.png" alt="Nền tảng quản lý ao nuôi thông minh" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- Lớp phủ gradient mờ tối bảo đảm độ tương phản chữ -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/65 to-slate-900/35"></div>
+
+                    <!-- Nội dung nổi phía trên -->
+                    <div class="relative z-10 space-y-2">
+                        <span class="inline-block bg-[#7BC612] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Chuyển đổi số
+                        </span>
+                        <h3 class="text-base md:text-[17px] font-semibold text-white leading-snug">
+                            Nền tảng quản lý ao nuôi thông minh<br>Made in Cà Mau
+                        </h3>
+                    </div>
+
+                    <div class="relative z-10 pt-2">
+                        <p class="text-xs md:text-sm text-slate-200 leading-relaxed font-normal">
+                            Giải pháp giúp 200+ hộ nuôi tôm tăng năng suất 20% và giảm chi phí 15%.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Story 2 -->
-                <div class="relative h-64 rounded-3xl overflow-hidden shadow-md group cursor-pointer border border-slate-200/80">
-                    <img src="assets/img/intro-building.jpg" alt="Impact Story" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#02185D] via-[#02185D]/60 to-transparent p-6 flex flex-col justify-between">
-                        <div>
-                            <span class="bg-[#71A800] text-white text-[9px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-sm inline-block">
-                                Chuyển đổi số
-                            </span>
-                        </div>
-                        <div class="space-y-1.5 text-left">
-                            <h3 class="text-body-md font-extrabold text-white leading-snug group-hover:text-[#C1FF72] transition-colors">
-                                Nền tảng quản lý ao nuôi thông minh Made in Cà Mau
-                            </h3>
-                            <p class="text-[11px] text-slate-200 font-light leading-relaxed line-clamp-2">
-                                Giải pháp giúp 200+ hộ nuôi tôm tăng năng suất 20% và giảm chi phí 15%.
-                            </p>
-                        </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md group min-h-[224px] p-6 flex flex-col justify-between border border-slate-200/50">
+                    <!-- Ảnh nền câu chuyện -->
+                    <img src="assets/img/impact_story_bg.png" alt="Nền tảng quản lý ao nuôi thông minh" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- Lớp phủ gradient mờ tối bảo đảm độ tương phản chữ -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/65 to-slate-900/35"></div>
+
+                    <!-- Nội dung nổi phía trên -->
+                    <div class="relative z-10 space-y-2">
+                        <span class="inline-block bg-[#7BC612] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Chuyển đổi số
+                        </span>
+                        <h3 class="text-base md:text-[17px] font-semibold text-white leading-snug">
+                            Nền tảng quản lý ao nuôi thông minh<br>Made in Cà Mau
+                        </h3>
+                    </div>
+
+                    <div class="relative z-10 pt-2">
+                        <p class="text-xs md:text-sm text-slate-200 leading-relaxed font-normal">
+                            Giải pháp giúp 200+ hộ nuôi tôm tăng năng suất 20% và giảm chi phí 15%.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Story 3 -->
-                <div class="relative h-64 rounded-3xl overflow-hidden shadow-md group cursor-pointer border border-slate-200/80">
-                    <img src="assets/img/office.png" alt="Impact Story" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#02185D] via-[#02185D]/60 to-transparent p-6 flex flex-col justify-between">
-                        <div>
-                            <span class="bg-[#71A800] text-white text-[9px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-sm inline-block">
-                                Chuyển đổi số
-                            </span>
-                        </div>
-                        <div class="space-y-1.5 text-left">
-                            <h3 class="text-body-md font-extrabold text-white leading-snug group-hover:text-[#C1FF72] transition-colors">
-                                Nền tảng quản lý ao nuôi thông minh Made in Cà Mau
-                            </h3>
-                            <p class="text-[11px] text-slate-200 font-light leading-relaxed line-clamp-2">
-                                Giải pháp giúp 200+ hộ nuôi tôm tăng năng suất 20% và giảm chi phí 15%.
-                            </p>
-                        </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-md group min-h-[224px] p-6 flex flex-col justify-between border border-slate-200/50">
+                    <!-- Ảnh nền câu chuyện -->
+                    <img src="assets/img/impact_story_bg.png" alt="Nền tảng quản lý ao nuôi thông minh" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- Lớp phủ gradient mờ tối bảo đảm độ tương phản chữ -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/65 to-slate-900/35"></div>
+
+                    <!-- Nội dung nổi phía trên -->
+                    <div class="relative z-10 space-y-2">
+                        <span class="inline-block bg-[#7BC612] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                            Chuyển đổi số
+                        </span>
+                        <h3 class="text-base md:text-[17px] font-semibold text-white leading-snug">
+                            Nền tảng quản lý ao nuôi thông minh<br>Made in Cà Mau
+                        </h3>
+                    </div>
+
+                    <div class="relative z-10 pt-2">
+                        <p class="text-xs md:text-sm text-slate-200 leading-relaxed font-normal">
+                            Giải pháp giúp 200+ hộ nuôi tôm tăng năng suất 20% và giảm chi phí 15%.
+                        </p>
                     </div>
                 </div>
+
             </div>
-        </div>
+        </section>
 
     </div>
 </div>
