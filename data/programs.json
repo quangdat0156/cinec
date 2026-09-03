@@ -1,0 +1,290 @@
+{
+    "PLATFORM": {
+        "id": "PLATFORM",
+        "code": "INNOVATION PLATFORM",
+        "title": "Nền tảng Đổi mới sáng tạo",
+        "name": "Nền tảng Đổi mới sáng tạo Cà Mau",
+        "short_name": "Nền tảng Đổi mới sáng tạo",
+        "sub_title": "Ca Mau Innovation Platform",
+        "slug": "chuong-trinh-platform.php",
+        "icon": "layers",
+        "badge": "Thể chế & Dữ liệu",
+        "color": "from-blue-600 to-indigo-600",
+        "bg_light": "bg-blue-50",
+        "text_color": "text-blue-600",
+        "border_color": "border-blue-200",
+        "short_desc": "Khung chính sách Sandbox, Nền tảng dữ liệu ra quyết định và đo lường Chỉ số PII cấp tỉnh.",
+        "main_function": "Kiến tạo thể chế, khung chính sách sandbox, nền tảng dữ liệu điều hành và đo lường Chỉ số PII cấp tỉnh.",
+        "desc": "Chương trình thành phần số 01 chịu trách nhiệm kiến tạo hạ tầng thể chế, môi trường chính sách, quy chế thử nghiệm Sandbox, đo lường Bộ chỉ số Đổi mới sáng tạo cấp địa phương (PII) và xây dựng mạng lưới chuyên gia, hội đồng tư vấn dẫn dắt toàn hệ sinh thái Cà Mau.",
+        "target_audience": "Toàn hệ sinh thái: Doanh nghiệp, tổ chức, viện trường, học sinh, sinh viên và người dân Cà Mau.",
+        "core_activities": [
+            {
+                "title": "Khung chính sách & Quy chế Sandbox",
+                "desc": "Xây dựng quy chế thử nghiệm thể chế cho các mô hình kinh doanh & công nghệ mới.",
+                "icon": "file-text"
+            },
+            {
+                "title": "Nền tảng Dữ liệu Đổi mới sáng tạo Cà Mau",
+                "desc": "Hệ thống dữ liệu số tập trung hỗ trợ lãnh đạo & doanh nghiệp ra quyết định chính xác.",
+                "icon": "database"
+            },
+            {
+                "title": "Đo & Cải thiện Chỉ số PII",
+                "desc": "Theo dõi, đánh giá và giải pháp thúc đẩy Bộ chỉ số Đổi mới sáng tạo cấp địa phương.",
+                "icon": "bar-chart-3"
+            },
+            {
+                "title": "Truyền thông & Mạng lưới Cố vấn",
+                "desc": "Kết nối mạng lưới chuyên gia, các hội đồng tư vấn và lan tỏa tinh thần đổi mới sáng tạo.",
+                "icon": "globe"
+            }
+        ],
+        "outputs": [
+            {
+                "title": "Quy chế Sandbox chính thức",
+                "desc": "Khung pháp lý cho phép thử nghiệm mô hình mới an toàn.",
+                "icon": "shield-check"
+            },
+            {
+                "title": "Báo cáo Chỉ số PII hàng năm",
+                "desc": "Đánh giá xếp hạng và dư địa cải thiện PII tỉnh Cà Mau.",
+                "icon": "pie-chart"
+            },
+            {
+                "title": "Mạng lưới Hội đồng Chuyên gia",
+                "desc": "Cơ sở dữ liệu chuyên gia tư vấn chiến lược cho tỉnh.",
+                "icon": "users"
+            }
+        ],
+        "key_metrics": [
+            {
+                "number": "100%",
+                "label": "Bao phủ hệ sinh thái"
+            },
+            {
+                "number": "Sandbox",
+                "label": "Quy chế thử nghiệm"
+            },
+            {
+                "number": "PII Top",
+                "label": "Mục tiêu chỉ số PII"
+            }
+        ]
+    },
+    "JOURNEY": {
+        "id": "JOURNEY",
+        "code": "STARTUP JOURNEY",
+        "title": "Hành trình Khởi nghiệp",
+        "name": "Khởi nghiệp - Ươm tạo - Tăng tốc Cà Mau",
+        "short_name": "Hành trình Khởi nghiệp",
+        "sub_title": "Ca Mau Startup Journey",
+        "slug": "chuong-trinh-journey.php",
+        "icon": "rocket",
+        "badge": "Ươm tạo & Tăng tốc",
+        "color": "from-amber-500 to-orange-600",
+        "bg_light": "bg-amber-50",
+        "text_color": "text-amber-600",
+        "border_color": "border-amber-200",
+        "short_desc": "Quy trình liên thông 4 bước: Săn nguồn cuộc thi ➔ Ươm tạo 6-12 tháng ➔ Tăng tốc 1:1 ➔ Mở rộng thị trường.",
+        "main_function": "Vận hành quy trình 04 bước liên thông hỗ trợ khởi nghiệp từ ý tưởng sơ khai đến phát triển bứt phá và gọi vốn.",
+        "desc": "Chương trình thành phần số 02 vận hành quy trình 04 bước liên thông từ săn tìm ý tưởng cuộc thi, ươm tạo 6-12 tháng tại Lab dùng chung, tăng tốc 3-6 tháng đồng tài trợ 1:1 đến mở rộng quy mô, gọi vốn và chiếm lĩnh thị trường.",
+        "target_audience": "Cá nhân, nhóm, doanh nghiệp khởi nghiệp từ ý tưởng đến tăng trưởng.",
+        "core_activities": [
+            {
+                "title": "Bước 1: Săn nguồn & Tiền ươm tạo",
+                "desc": "Tìm kiếm dự án tiềm năng qua các cuộc thi khởi nghiệp và tài trợ vốn mồi giai đoạn đầu.",
+                "icon": "search"
+            },
+            {
+                "title": "Bước 2: Ươm tạo 6-12 tháng",
+                "desc": "Huấn luyện chuyên sâu kết hợp sử dụng Lab phòng thí nghiệm kỹ thuật dùng chung.",
+                "icon": "cpu"
+            },
+            {
+                "title": "Bước 3: Tăng tốc 3-6 tháng (Đồng tài trợ 1:1)",
+                "desc": "Tăng tốc doanh thu với cơ chế đồng tài trợ vốn đối ứng 1:1 từ ngân sách.",
+                "icon": "trending-up"
+            },
+            {
+                "title": "Bước 4: Mở rộng thị trường & Gọi vốn",
+                "desc": "Kết nối Quỹ đầu tư mạo hiểm, mở rộng quy mô thị trường trong và ngoài nước.",
+                "icon": "globe-2"
+            }
+        ],
+        "outputs": [
+            {
+                "title": "Quy trình liên thông 4 bước",
+                "desc": "Hệ thống hỗ trợ startup liên tục không bị đứt gãy.",
+                "icon": "repeat"
+            },
+            {
+                "title": "Doanh nghiệp Startup thành công",
+                "desc": "Các startup hoàn thiện sản phẩm, có doanh thu & gọi vốn.",
+                "icon": "award"
+            },
+            {
+                "title": "Quỹ đồng tài trợ 1:1",
+                "desc": "Cơ chế giải ngân tài trợ vốn đối ứng minh bạch.",
+                "icon": "coins"
+            }
+        ],
+        "key_metrics": [
+            {
+                "number": "4 Bước",
+                "label": "Quy trình liên thông"
+            },
+            {
+                "number": "6-12Th",
+                "label": "Ươm tạo kỹ thuật Lab"
+            },
+            {
+                "number": "1:1",
+                "label": "Cơ chế đồng tài trợ"
+            }
+        ]
+    },
+    "SME": {
+        "id": "SME",
+        "code": "DIGITAL SME",
+        "title": "Doanh nghiệp số",
+        "name": "Doanh nghiệp số Cà Mau",
+        "short_name": "Doanh nghiệp số",
+        "sub_title": "Ca Mau Digital SME",
+        "slug": "chuong-trinh-sme.php",
+        "icon": "shopping-bag",
+        "badge": "Chuyển đổi số & OCOP",
+        "color": "from-emerald-600 to-teal-500",
+        "bg_light": "bg-emerald-50",
+        "text_color": "text-emerald-600",
+        "border_color": "border-emerald-200",
+        "short_desc": "Voucher CĐS + Mentor KPI 90 ngày; ứng dụng AI, TMĐT, Logistics số & Nâng giá trị OCOP.",
+        "main_function": "Thúc đẩy chuyển đổi số thực chiến cho doanh nghiệp SME, HTX, hộ kinh doanh và nâng cao giá trị sản phẩm OCOP Cà Mau.",
+        "desc": "Chương trình thành phần số 03 tập trung chuyển đổi số thực chiến cho lực lượng doanh nghiệp trụ cột của tỉnh Cà Mau. Thông qua cơ chế Voucher CĐS gắn nhà cung cấp thẩm định, kết hợp Mentor theo dõi KPI 90 ngày, ứng dụng AI, Thương mại điện tử, Logistics số để nâng tầm chuỗi giá trị nông sản & OCOP.",
+        "target_audience": "Doanh nghiệp nhỏ và vừa (SME), Hợp tác xã, Hộ kinh doanh, Chủ thể OCOP, Doanh nghiệp 1 người (OPC).",
+        "core_activities": [
+            {
+                "title": "Voucher CĐS & Thẩm định nhà cung cấp",
+                "desc": "Cấp voucher giảm chi phí phần mềm\/công nghệ từ nhà cung cấp uy tín.",
+                "icon": "ticket"
+            },
+            {
+                "title": "Mentor & Đánh giá KPI 90 ngày",
+                "desc": "Cố vấn đồng hành đo lường hiệu quả chuyển đổi số sau 90 ngày áp dụng.",
+                "icon": "check-square"
+            },
+            {
+                "title": "Ứng dụng AI, Dữ liệu & TMĐT",
+                "desc": "Đưa AI vào quản trị, số hóa quy trình và đẩy mạnh bán hàng trên sàn TMĐT.",
+                "icon": "sparkles"
+            },
+            {
+                "title": "Logistics số & Nâng tầm OCOP",
+                "desc": "Tối ưu hóa chuỗi cung ứng, truy xuất nguồn gốc và nâng giá trị OCOP Cà Mau.",
+                "icon": "truck"
+            }
+        ],
+        "outputs": [
+            {
+                "title": "Voucher Chuyển đổi số",
+                "desc": "Hàng trăm doanh nghiệp\/hộ kinh doanh nhận hỗ trợ.",
+                "icon": "badge-check"
+            },
+            {
+                "title": "Sản phẩm OCOP số hóa",
+                "desc": "Nâng chuẩn OCOP trên các nền tảng TMĐT & xuất khẩu.",
+                "icon": "star"
+            },
+            {
+                "title": "Báo cáo KPI CĐS 90 ngày",
+                "desc": "Đo lường tăng trưởng doanh thu & năng suất rõ rệt.",
+                "icon": "line-chart"
+            }
+        ],
+        "key_metrics": [
+            {
+                "number": "90 Ngày",
+                "label": "Đo lường KPI CĐS"
+            },
+            {
+                "number": "Voucher",
+                "label": "Hỗ trợ công nghệ"
+            },
+            {
+                "number": "OCOP",
+                "label": "Nâng chuẩn đặc sản"
+            }
+        ]
+    },
+    "TALENT": {
+        "id": "TALENT",
+        "code": "CAMAU TALENT",
+        "title": "Nhân tài số",
+        "name": "Nhân tài số Cà Mau",
+        "short_name": "Nhân tài số",
+        "sub_title": "Ca Mau Talent",
+        "slug": "chuong-trinh-talent.php",
+        "icon": "graduation-cap",
+        "badge": "Học bổng & Nhân lực",
+        "color": "from-purple-600 to-pink-600",
+        "bg_light": "bg-purple-50",
+        "text_color": "text-purple-600",
+        "border_color": "border-purple-200",
+        "short_desc": "Học bổng tài năng theo nhóm năng lực; Giáo dục khởi nghiệp \/ Đại học khởi nghiệp & Kinh tế sáng tạo.",
+        "main_function": "Thu hút, đào tạo và phát triển lực lượng nhân tài số, kỹ sư, nhà nghiên cứu và xây dựng mạng lưới tri thức Cà Mau.",
+        "desc": "Chương trình thành phần số 04 hướng tới con người - nhân tố quyết định sự phát triển bền vững. Thông qua chính sách học bổng tài năng theo nhóm năng lực, thúc đẩy mô hình Đại học khởi nghiệp, quy tụ mạng lưới nhân tài số trong\/ngoài tỉnh và phát triển nền Kinh tế sáng tạo Cà Mau.",
+        "target_audience": "Thanh niên, sinh viên, kỹ sư, nhà nghiên cứu, freelancer, maker, chuyên gia số.",
+        "core_activities": [
+            {
+                "title": "Học bổng Tài năng theo Nhóm năng lực",
+                "desc": "Trao học bổng đào tạo chuyên sâu về AI, Công nghệ số, Lập trình & Đổi mới sáng tạo.",
+                "icon": "award"
+            },
+            {
+                "title": "Giáo dục Khởi nghiệp & ĐH Khởi nghiệp",
+                "desc": "Đưa tư duy khởi nghiệp & đổi mới sáng tạo vào các trường đại học, cao đẳng địa phương.",
+                "icon": "book-open"
+            },
+            {
+                "title": "Mạng lưới Nhân tài Trong & Ngoài tỉnh",
+                "desc": "Kết nối mạng lưới chuyên gia, kiều bào và trí thức Cà Mau toàn cầu.",
+                "icon": "network"
+            },
+            {
+                "title": "Phát triển Kinh tế Sáng tạo",
+                "desc": "Ươm mầm các ngành kinh tế dựa trên tri thức, văn hóa & công nghệ số.",
+                "icon": "palette"
+            }
+        ],
+        "outputs": [
+            {
+                "title": "Quỹ Học bổng Nhân tài số",
+                "desc": "Hàng trăm học bổng chất lượng cao cho thanh niên Cà Mau.",
+                "icon": "gift"
+            },
+            {
+                "title": "Mô hình Đại học Khởi nghiệp",
+                "desc": "Hệ thống giáo dục gắn liền với thực tiễn khởi nghiệp.",
+                "icon": "school"
+            },
+            {
+                "title": "Mạng lưới Chuyên gia Tri thức",
+                "desc": "Cộng đồng nhân tài số đồng hành phát triển quê hương.",
+                "icon": "users"
+            }
+        ],
+        "key_metrics": [
+            {
+                "number": "100+",
+                "label": "Suất học bổng chuyên sâu"
+            },
+            {
+                "number": "ĐH KNiệp",
+                "label": "Mô hình giáo dục"
+            },
+            {
+                "number": "Global",
+                "label": "Mạng lưới nhân tài Cà Mau"
+            }
+        ]
+    }
+}

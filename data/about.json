@@ -1,0 +1,91 @@
+{
+    "hero_title": "Trung tâm Khởi nghiệp và Đổi mới sáng tạo",
+    "hero_desc": "Trung tâm Khởi nghiệp và Đổi mới sáng tạo tỉnh Cà Mau thực hiện chức năng nghiên cứu, hoạt động sự nghiệp và cung cấp dịch vụ liên quan đến hỗ trợ và phát triển doanh nghiệp khởi nghiệp, hệ sinh thái khởi nghiệp, khởi nghiệp sáng tạo, thúc đẩy đổi mới sáng tạo của tỉnh Cà Mau, góp phần đổi mới mô hình tăng trưởng dựa trên nền tảng khoa học và công nghệ.",
+    "vision": "Đến 2030, CiNEC là đầu mối đổi mới sáng tạo dẫn dắt Đồng bằng sông Cửu Long, kết nối quốc gia và quốc tế.",
+    "mission": "Ươm tạo doanh nghiệp đổi mới, thúc đẩy ứng dụng khoa học, công nghệ và chuyển đổi số, góp phần chuyển đổi mô hình tăng trưởng bền vững cho tỉnh Cà Mau.",
+    "values": [
+        {
+            "title": "Đổi mới",
+            "desc": "Luôn tiên phong và đột phá"
+        },
+        {
+            "title": "Kết nối",
+            "desc": "Mạng lưới đồng hành toàn diện"
+        },
+        {
+            "title": "Thực chiến",
+            "desc": "Hành động vì kết quả bền vững"
+        },
+        {
+            "title": "Bản địa",
+            "desc": "Tận dụng thế mạnh địa phương"
+        },
+        {
+            "title": "Vươn xa",
+            "desc": "Hội nhập khu vực và toàn cầu"
+        }
+    ],
+    "team": [
+        {
+            "name": "Nguyễn Văn A",
+            "role": "Giám đốc",
+            "org": "Trung tâm CINEC",
+            "avatar": "assets\/img\/avatar_director.jpg",
+            "bio": "Hơn 15 năm kinh nghiệm trong quản lý và thúc đẩy các chính sách chuyển giao khoa học công nghệ, phát triển cộng đồng khởi nghiệp.",
+            "linkedin": "#"
+        },
+        {
+            "name": "Phạm Thùy Linh",
+            "role": "Phó Giám đốc",
+            "org": "Trung tâm CINEC",
+            "avatar": "assets\/img\/avatar_deputy1.jpg",
+            "bio": "Chuyên gia tư vấn ươm tạo doanh nghiệp khởi nghiệp, thiết kế các chương trình đào tạo kỹ năng số và tư duy đổi mới sáng tạo.",
+            "linkedin": "#"
+        },
+        {
+            "name": "Trần Trung C",
+            "role": "Phó Giám đốc",
+            "org": "Trung tâm CINEC",
+            "avatar": "assets\/img\/avatar_deputy2.jpg",
+            "bio": "Phụ trách mảng kết nối đầu tư, xúc tiến thương mại và xây dựng hạ tầng kỹ thuật hỗ trợ các phòng lab đổi mới sáng tạo.",
+            "linkedin": "#"
+        }
+    ],
+    "advisors": [
+        {
+            "name": "TS. Nguyễn Minh Triết",
+            "role": "Cố vấn Đổi mới sáng tạo",
+            "org": "Viện Khoa học & Công nghệ ĐBSCL",
+            "avatar": "assets\/img\/advisor_triet.jpg"
+        },
+        {
+            "name": "Bà Lê Hoàng Uyên Vy",
+            "role": "Cố vấn Đầu tư",
+            "org": "Quỹ đầu tư mạo hiểm Do Ventures",
+            "avatar": "assets\/img\/advisor_vy.jpg"
+        },
+        {
+            "name": "Ông Trần Anh Tuấn",
+            "role": "Chuyên gia Công nghệ",
+            "org": "Cựu Kiến trúc sư giải pháp Tập đoàn AWS",
+            "avatar": "assets\/img\/advisor_tuan.jpg"
+        }
+    ],
+    "startups": [
+        {
+            "name": "Cà Mau ShrimpTech",
+            "field": "Nông nghiệp thông minh",
+            "desc": "Thiết bị IoT giám sát chỉ số nước ao nuôi tôm tự động kết nối app điện thoại."
+        },
+        {
+            "name": "Bac Lieu Salt Organic",
+            "field": "Sản phẩm bản địa",
+            "desc": "Quy trình sản xuất muối thảo dược vi lượng tinh khiết thân thiện sức khỏe."
+        },
+        {
+            "name": "EcoStraw Mekong",
+            "field": "Môi trường & Tuần hoàn",
+            "desc": "Ống hút tự nhiên làm từ cây bồn bồn bản địa Cà Mau có khả năng tự phân hủy."
+        }
+    ]
+}

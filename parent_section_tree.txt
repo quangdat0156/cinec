@@ -1,0 +1,3 @@
+Frame 2147223371 [FRAME]
+  CHƯƠNG TRÌNH NỔI BẬT [TEXT] -> "CHƯƠNG TRÌNH NỔI BẬT"
+  Đồng hành cùng bạn trên hành trình đối mới [TEXT] -> "Đồng hành cùng bạn\ntrên hành trình đối mới"

@@ -1,0 +1,405 @@
+Liên kết [SECTION]
+  Liên kết [FRAME]
+    image 47 [RECTANGLE]
+    image 9 [RECTANGLE]
+    Frame 2147223324 [INSTANCE]
+      Frame 2147223311 [FRAME]
+        Frame 2147223302 [FRAME]
+          g10 [GROUP]
+            Clip path group [GROUP]
+              g16 [GROUP]
+                g22 [GROUP]
+                  path24 [VECTOR]
+                g26 [GROUP]
+                  path28 [VECTOR]
+                g30 [GROUP]
+                  path32 [VECTOR]
+                g34 [GROUP]
+                  path36 [VECTOR]
+                g38 [GROUP]
+                  path40 [VECTOR]
+      Frame 2147223332 [FRAME]
+        Frame 2147223324 [FRAME]
+          Trang chủ [TEXT] -> "Trang chủ"
+        Frame 2147223325 [FRAME]
+          Giới thiệu [TEXT] -> "Giới thiệu"
+        Frame 2147223326 [FRAME]
+          Chương trình [TEXT] -> "Chương trình"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+        Frame 2147223327 [FRAME]
+          Sự kiện [TEXT] -> "Sự kiện"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+        Frame 2147223328 [FRAME]
+          Tin tức & Insignt [TEXT] -> "Tin tức & Insignt"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+        Frame 2147223329 [FRAME]
+          Impact [TEXT] -> "Impact"
+        Frame 2147223330 [FRAME]
+          Đối tác [TEXT] -> "Đối tác"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+      Frame 2147223331 [FRAME]
+        Dịch vụ CiNEC [TEXT] -> "Dịch vụ CiNEC"
+      Frame 2147223334 [FRAME]
+        Frame 2147223328 [FRAME]
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+          VN [TEXT] -> "VN"
+        Frame 2147223330 [FRAME]
+          Liên hệ [TEXT] -> "Liên hệ"
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+              Vector [VECTOR]
+    Frame 2147223430 [FRAME]
+      Frame 2147223445 [FRAME]
+        Frame 2147223452 [FRAME]
+          Frame 2147223444 [FRAME]
+            Trang chủ [TEXT] -> "Trang chủ"
+            tabler-icon-chevron-right [FRAME]
+              Vector [VECTOR]
+            Liên hệ [TEXT] -> "Liên hệ"
+          Frame 2147223447 [FRAME]
+            Liên hệ & Kết nối [TEXT] -> "Liên hệ & Kết nối"
+            CiNEC luôn sẵn sàng lắng nghe và đồng hành cùng bạn. Hãy liên hệ với chúng tôi để được hỗ trợ nhanh chóng và hiệu quả. [TEXT] -> "CiNEC luôn sẵn sàng lắng nghe và đồng hành cùng bạn.\nHãy liên hệ với chúng tôi để được hỗ trợ nhanh chóng và hiệu quả."
+          Frame 2147223330 [FRAME]
+            Tải báo cáo [TEXT] -> "Tải báo cáo"
+            Frame 2147223333 [FRAME]
+              tabler-icon-arrow-left [FRAME]
+                Vector [VECTOR]
+        Frame 2147223549 [FRAME]
+          Frame 2147223550 [FRAME]
+            tabler-icon-headset [FRAME]
+              Vector [VECTOR]
+          Frame 2147223551 [FRAME]
+            Tổng đài hỗ trợ [TEXT] -> "Tổng đài hỗ trợ"
+            0908736777 [TEXT] -> "0908736777"
+            Thời gian hỗ trợ: Luôn mở cửa [TEXT] -> "Thời gian hỗ trợ: Luôn mở cửa"
+    Frame 2147223461 [FRAME]
+      Frame 2147223552 [FRAME]
+        Frame 2147223553 [FRAME]
+          Frame 2147223554 [FRAME]
+            Gửi yêu cầu liên hệ [TEXT] -> "Gửi yêu cầu liên hệ"
+            Vui lòng điền thông tin bên dười, chúng tôi sẽ phản hồi trong thời gian sớm nhất. [TEXT] -> "Vui lòng điền thông tin bên dười, chúng tôi sẽ phản hồi trong thời gian sớm nhất."
+          Frame 2147223557 [FRAME]
+            Frame 2147223555 [FRAME]
+              Họ và tên * [TEXT] -> "Họ và tên *"
+              Frame 2147223556 [FRAME]
+                Nhập họ và tên [TEXT] -> "Nhập họ và tên"
+            Frame 2147223556 [FRAME]
+              Email * [TEXT] -> "Email *"
+              Frame 2147223556 [FRAME]
+                Nhập họ và tên [TEXT] -> "Nhập họ và tên"
+          Frame 2147223558 [FRAME]
+            Frame 2147223555 [FRAME]
+              Số điện thoại * [TEXT] -> "Số điện thoại *"
+              Frame 2147223556 [FRAME]
+                Nhập số điện thoại [TEXT] -> "Nhập số điện thoại"
+            Frame 2147223556 [FRAME]
+              Chủ đề * [TEXT] -> "Chủ đề *"
+              Frame 2147223556 [FRAME]
+                Nhập chủ đề [TEXT] -> "Nhập chủ đề"
+                tabler-icon-chevron-right [FRAME]
+                  Vector [VECTOR]
+          Frame 2147223555 [FRAME]
+            Nội dung tin nhắn * [TEXT] -> "Nội dung tin nhắn *"
+            Frame 2147223556 [FRAME]
+              Nhập nội dung tin nhắn của bạn... [TEXT] -> "Nhập nội dung tin nhắn của bạn..."
+          Frame 2147223559 [FRAME]
+            Frame 2147223560 [FRAME]
+            Tôi đồng ý với Chính sách bảo mật và Điều khoản sử dụng của CiNEC. [TEXT] -> "Tôi đồng ý với Chính sách bảo mật và Điều khoản sử dụng của CiNEC."
+          Frame 2147223330 [FRAME]
+            Gửi yêu cầu [TEXT] -> "Gửi yêu cầu"
+            Frame 2147223333 [FRAME]
+              tabler-icon-send [FRAME]
+                Vector [VECTOR]
+        Line 7 [LINE]
+        Frame 2147223555 [FRAME]
+          Frame 2147223554 [FRAME]
+            Thông tin liên hệ [TEXT] -> "Thông tin liên hệ"
+            Kết nối với CiNEC qua các kêth chính thức [TEXT] -> "Kết nối với CiNEC qua các kêth chính thức"
+          Frame 2147223556 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-map-pin [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Địa chỉ [TEXT] -> "Địa chỉ"
+              Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam [TEXT] -> "Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam"
+          Frame 2147223558 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-phone [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Điện thoại [TEXT] -> "Điện thoại"
+              090 873 6777 [TEXT] -> "090 873 6777"
+          Frame 2147223560 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-mail [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Email [TEXT] -> "Email"
+              cinecvietnam@gmail.com [TEXT] -> "cinecvietnam@gmail.com"
+          Frame 2147223557 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-world [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Website [TEXT] -> "Website"
+              cinec.com.vn [TEXT] -> "cinec.com.vn"
+          Frame 2147223559 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-clock-hour-3 [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Giờ làm việc [TEXT] -> "Giờ làm việc"
+              Luôn mở cửa [TEXT] -> "Luôn mở cửa"
+      image 46 [RECTANGLE]
+    Frame 2147223386 [FRAME]
+      Frame 2147223399 [FRAME]
+        Frame 2147223387 [FRAME]
+          Frame 2147223311 [FRAME]
+            Frame 2147223302 [FRAME]
+              g10 [GROUP]
+                Clip path group [GROUP]
+                  g16 [GROUP]
+                    g22 [GROUP]
+                    g26 [GROUP]
+                    g30 [GROUP]
+                    g34 [GROUP]
+                    g38 [GROUP]
+          kết nối - Ươm tạo - Tăng tốc - Đổi mới để kiến tạo tương lai cho Cà Mau và cộng đồng. [TEXT] -> "kết nối - Ươm tạo - Tăng tốc -\nĐổi mới để kiến tạo tương lai\ncho Cà Mau và cộng đồng."
+          Frame 2147223389 [FRAME]
+            Frame 2147223388 [FRAME]
+              tabler-icon-brand-facebook [FRAME]
+                Vector [VECTOR]
+            Frame 2147223390 [FRAME]
+              tabler-icon-brand-linkedin [FRAME]
+                Vector [VECTOR]
+            Frame 2147223391 [FRAME]
+              tabler-icon-brand-youtube [FRAME]
+                Vector [VECTOR]
+        Frame 2147223392 [FRAME]
+          VỀ CINEC [TEXT] -> "VỀ CINEC"
+          Giới thiệu [TEXT] -> "Giới thiệu"
+          Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Đội ngũ [TEXT] -> "Đội ngũ"
+          Cơ sở vật chất [TEXT] -> "Cơ sở vật chất"
+        Frame 2147223393 [FRAME]
+          CHƯƠNG TRÌNH [TEXT] -> "CHƯƠNG TRÌNH"
+          CINEC INNO [TEXT] -> "CINEC INNO"
+          CINEC START [TEXT] -> "CINEC START"
+          CINEC HUB [TEXT] -> "CINEC HUB"
+          CINEC LAUNCH [TEXT] -> "CINEC LAUNCH"
+          CINEC TALENT [TEXT] -> "CINEC TALENT"
+        Frame 2147223394 [FRAME]
+          HỖ TRỢ [TEXT] -> "HỖ TRỢ"
+          Dịch vụ [TEXT] -> "Dịch vụ"
+          Quỷ đầu tư [TEXT] -> "Quỷ đầu tư"
+          Mentors [TEXT] -> "Mentors"
+          Dự án khởi nghiệp [TEXT] -> "Dự án khởi nghiệp"
+          Liên hệ [TEXT] -> "Liên hệ"
+        Frame 2147223395 [FRAME]
+          LIÊN HỆ [TEXT] -> "LIÊN HỆ"
+          Frame 2147223396 [FRAME]
+            tabler-icon-map-pin [FRAME]
+              Vector [VECTOR]
+            Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam [TEXT] -> "Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam"
+          Frame 2147223397 [FRAME]
+            tabler-icon-phone [FRAME]
+              Vector [VECTOR]
+            Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Frame 2147223398 [FRAME]
+            tabler-icon-world [FRAME]
+              Vector [VECTOR]
+            cinec.com.vn [TEXT] -> "cinec.com.vn"
+      Frame 2147223400 [FRAME]
+        @2025 CINEC. All rights reserved. [TEXT] -> "@2025 CINEC. All rights reserved."
+        Frame 2147223401 [FRAME]
+          Chính sách bảo mật [TEXT] -> "Chính sách bảo mật"
+          Điều khoản sử dụng [TEXT] -> "Điều khoản sử dụng"
+  Liên kết - Mobile [FRAME]
+    image 47 [RECTANGLE]
+    Frame 2147223564 [INSTANCE]
+      Frame 2147223311 [FRAME]
+        Frame 2147223302 [FRAME]
+          g10 [GROUP]
+            Clip path group [GROUP]
+              g16 [GROUP]
+                g22 [GROUP]
+                  path24 [VECTOR]
+                g26 [GROUP]
+                  path28 [VECTOR]
+                g30 [GROUP]
+                  path32 [VECTOR]
+                g34 [GROUP]
+                  path36 [VECTOR]
+                g38 [GROUP]
+                  path40 [VECTOR]
+      Frame 2147223331 [FRAME]
+        Dịch vụ CiNEC [TEXT] -> "Dịch vụ CiNEC"
+      Frame 2147223334 [FRAME]
+        Frame 2147223330 [FRAME]
+          Liên hệ [TEXT] -> "Liên hệ"
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+              Vector [VECTOR]
+        tabler-icon-menu-2 [FRAME]
+          Vector [VECTOR]
+    Frame 2147223519 [FRAME]
+      Frame 2147223452 [FRAME]
+        Frame 2147223448 [FRAME]
+          Trang chủ [TEXT] -> "Trang chủ"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+          Liên hệ [TEXT] -> "Liên hệ"
+        Frame 2147223447 [FRAME]
+          Liên hệ & Kết nối [TEXT] -> "Liên hệ & Kết nối"
+          CiNEC luôn sẵn sàng lắng nghe và đồng hành cùng bạn. Hãy liên hệ với chúng tôi để được hỗ trợ nhanh chóng và hiệu quả. [TEXT] -> "CiNEC luôn sẵn sàng lắng nghe và đồng hành cùng bạn.\nHãy liên hệ với chúng tôi để được hỗ trợ nhanh chóng và hiệu quả."
+        Frame 2147223330 [FRAME]
+          Tải báo cáo [TEXT] -> "Tải báo cáo"
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+              Vector [VECTOR]
+    Frame 2147223563 [FRAME]
+      Frame 2147223552 [FRAME]
+        Frame 2147223555 [FRAME]
+          Frame 2147223554 [FRAME]
+            Thông tin liên hệ [TEXT] -> "Thông tin liên hệ"
+            Kết nối với CiNEC qua các kênh chính thức [TEXT] -> "Kết nối với CiNEC qua các kênh chính thức"
+          Frame 2147223556 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-map-pin [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Địa chỉ [TEXT] -> "Địa chỉ"
+              Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam [TEXT] -> "Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam"
+          Frame 2147223558 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-phone [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Điện thoại [TEXT] -> "Điện thoại"
+              090 873 6777 [TEXT] -> "090 873 6777"
+          Frame 2147223560 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-mail [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Email [TEXT] -> "Email"
+              cinecvietnam@gmail.com [TEXT] -> "cinecvietnam@gmail.com"
+          Frame 2147223557 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-world [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Website [TEXT] -> "Website"
+              cinec.com.vn [TEXT] -> "cinec.com.vn"
+          Frame 2147223559 [FRAME]
+            Frame 2147223561 [FRAME]
+              tabler-icon-clock-hour-3 [FRAME]
+                Vector [VECTOR]
+            Frame 2147223562 [FRAME]
+              Giờ làm việc [TEXT] -> "Giờ làm việc"
+              Luôn mở cửa [TEXT] -> "Luôn mở cửa"
+        Frame 2147223553 [FRAME]
+          Frame 2147223554 [FRAME]
+            Gửi yêu cầu liên hệ [TEXT] -> "Gửi yêu cầu liên hệ"
+            Vui lòng điền thông tin bên dười, chúng tôi sẽ phản hồi trong thời gian sớm nhất. [TEXT] -> "Vui lòng điền thông tin bên dười, chúng tôi sẽ phản hồi trong thời gian sớm nhất."
+          Frame 2147223557 [FRAME]
+            Frame 2147223555 [FRAME]
+              Họ và tên * [TEXT] -> "Họ và tên *"
+              Frame 2147223556 [FRAME]
+                Nhập họ và tên [TEXT] -> "Nhập họ và tên"
+            Frame 2147223556 [FRAME]
+              Email * [TEXT] -> "Email *"
+              Frame 2147223556 [FRAME]
+                Nhập họ và tên [TEXT] -> "Nhập họ và tên"
+          Frame 2147223558 [FRAME]
+            Frame 2147223555 [FRAME]
+              Số điện thoại * [TEXT] -> "Số điện thoại *"
+              Frame 2147223556 [FRAME]
+                Nhập số điện thoại [TEXT] -> "Nhập số điện thoại"
+            Frame 2147223556 [FRAME]
+              Chủ đề * [TEXT] -> "Chủ đề *"
+              Frame 2147223556 [FRAME]
+                Nhập chủ đề [TEXT] -> "Nhập chủ đề"
+                tabler-icon-chevron-right [FRAME]
+                  Vector [VECTOR]
+          Frame 2147223555 [FRAME]
+            Nội dung tin nhắn * [TEXT] -> "Nội dung tin nhắn *"
+            Frame 2147223556 [FRAME]
+              Nhập nội dung tin nhắn của bạn... [TEXT] -> "Nhập nội dung tin nhắn của bạn..."
+          Frame 2147223559 [FRAME]
+            Frame 2147223560 [FRAME]
+            Tôi đồng ý với Chính sách bảo mật và Điều khoản sử dụng của CiNEC. [TEXT] -> "Tôi đồng ý với Chính sách bảo mật và Điều khoản sử dụng của CiNEC."
+          Frame 2147223330 [FRAME]
+            Gửi yêu cầu [TEXT] -> "Gửi yêu cầu"
+            Frame 2147223333 [FRAME]
+              tabler-icon-send [FRAME]
+                Vector [VECTOR]
+      image 46 [RECTANGLE]
+    Frame 2147223549 [FRAME]
+      Frame 2147223399 [FRAME]
+        Frame 2147223387 [FRAME]
+          Frame 2147223311 [FRAME]
+            Frame 2147223302 [FRAME]
+              g10 [GROUP]
+                Clip path group [GROUP]
+                  g16 [GROUP]
+                    g22 [GROUP]
+                    g26 [GROUP]
+                    g30 [GROUP]
+                    g34 [GROUP]
+                    g38 [GROUP]
+          kết nối - Ươm tạo - Tăng tốc - Đổi mới để kiến tạo tương lai cho Cà Mau và cộng đồng. [TEXT] -> "kết nối - Ươm tạo - Tăng tốc - Đổi mới để kiến tạo tương lai cho Cà Mau và cộng đồng."
+          Frame 2147223389 [FRAME]
+            Frame 2147223388 [FRAME]
+              tabler-icon-brand-facebook [FRAME]
+                Vector [VECTOR]
+            Frame 2147223390 [FRAME]
+              tabler-icon-brand-linkedin [FRAME]
+                Vector [VECTOR]
+            Frame 2147223391 [FRAME]
+              tabler-icon-brand-youtube [FRAME]
+                Vector [VECTOR]
+        Frame 2147223392 [FRAME]
+          VỀ CINEC [TEXT] -> "VỀ CINEC"
+          Giới thiệu [TEXT] -> "Giới thiệu"
+          Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Đội ngũ [TEXT] -> "Đội ngũ"
+          Cơ sở vật chất [TEXT] -> "Cơ sở vật chất"
+        Frame 2147223393 [FRAME]
+          CHƯƠNG TRÌNH [TEXT] -> "CHƯƠNG TRÌNH"
+          CINEC INNO [TEXT] -> "CINEC INNO"
+          CINEC START [TEXT] -> "CINEC START"
+          CINEC HUB [TEXT] -> "CINEC HUB"
+          CINEC LAUNCH [TEXT] -> "CINEC LAUNCH"
+          CINEC TALENT [TEXT] -> "CINEC TALENT"
+        Frame 2147223394 [FRAME]
+          HỖ TRỢ [TEXT] -> "HỖ TRỢ"
+          Dịch vụ [TEXT] -> "Dịch vụ"
+          Quỷ đầu tư [TEXT] -> "Quỷ đầu tư"
+          Mentors [TEXT] -> "Mentors"
+          Dự án khởi nghiệp [TEXT] -> "Dự án khởi nghiệp"
+          Liên hệ [TEXT] -> "Liên hệ"
+        Frame 2147223395 [FRAME]
+          LIÊN HỆ [TEXT] -> "LIÊN HỆ"
+          Frame 2147223396 [FRAME]
+            tabler-icon-map-pin [FRAME]
+              Vector [VECTOR]
+            Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam [TEXT] -> "Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam"
+          Frame 2147223397 [FRAME]
+            tabler-icon-phone [FRAME]
+              Vector [VECTOR]
+            Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Frame 2147223398 [FRAME]
+            tabler-icon-world [FRAME]
+              Vector [VECTOR]
+            cinec.com.vn [TEXT] -> "cinec.com.vn"
+      Frame 2147223400 [FRAME]
+        @2025 CINEC. All rights reserved. [TEXT] -> "@2025 CINEC. All rights reserved."
+        Frame 2147223401 [FRAME]
+          Chính sách bảo mật [TEXT] -> "Chính sách bảo mật"
+          Điều khoản sử dụng [TEXT] -> "Điều khoản sử dụng"

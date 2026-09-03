@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "Diễn đàn Khởi nghiệp Đổi mới Sáng tạo Cà Mau - Bạc Liêu 2026",
+        "status": "ongoing",
+        "status_text": "Đang diễn ra",
+        "date_day": "15",
+        "date_month": "Th07",
+        "date_full": "15 tháng 7, 2026",
+        "time": "08:00 - 17:00",
+        "location": "Hội trường Lớn, Tòa nhà CINEC, TP. Cà Mau",
+        "desc": "Nơi kết nối các nhà hoạch định chính sách, doanh nghiệp công nghệ hàng đầu và startups vùng ĐBSCL.",
+        "image": "assets\/img\/event_forum.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Hội thảo Chuyển đổi số & Ứng dụng AI trong Nông nghiệp Thủy sản Công nghệ cao",
+        "status": "upcoming",
+        "status_text": "Sắp diễn ra",
+        "date_day": "28",
+        "date_month": "Th07",
+        "date_full": "28 tháng 7, 2026",
+        "time": "13:30 - 17:00",
+        "location": "Phòng Hội thảo KVIP Hub, TP. Bạc Liêu",
+        "desc": "Giới thiệu các giải pháp IoT giám sát nguồn nước nuôi tôm siêu thâm canh và phân tích hình ảnh AI dự báo dịch bệnh.",
+        "image": "assets\/img\/event_ai_agri.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Workshop: Kỹ năng gọi vốn và chuẩn bị Pitch Deck chuyên nghiệp cho Startup",
+        "status": "upcoming",
+        "status_text": "Sắp diễn ra",
+        "date_day": "10",
+        "date_month": "Th08",
+        "date_full": "10 tháng 8, 2026",
+        "time": "09:00 - 11:30",
+        "location": "Không gian Co-working, CINEC HUB Cà Mau",
+        "desc": "Làm việc trực tiếp cùng các chuyên gia tài chính từ VinaCapital và NIIC để hoàn thiện bài thuyết trình gọi vốn.",
+        "image": "assets\/img\/event_pitching.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Triển lãm Techfest Mekong 2026 & Kết nối Đầu tư Công nghệ",
+        "status": "completed",
+        "status_text": "Đã diễn ra",
+        "date_day": "12",
+        "date_month": "Th06",
+        "date_full": "12 tháng 6, 2026",
+        "time": "08:00 - 18:00",
+        "location": "Trung tâm Hội nghị Tỉnh Cà Mau",
+        "desc": "Sự kiện thường niên thu hút hơn 100 gian hàng khởi nghiệp và hơn 2,000 lượt khách tham quan, trải nghiệm công nghệ.",
+        "image": "assets\/img\/event_techfest.jpg"
+    },
+    {
+        "id": 5,
+        "title": "dsadasdas",
+        "status": "upcoming",
+        "status_text": "Sắp diễn ra",
+        "date_day": "15",
+        "date_month": "Th08",
+        "date_full": "15 Th08, 2026",
+        "time": "08:00 - 17:00",
+        "location": "Hội trường Lớn, Tòa nhà CiNEC, TP. Cà Mau",
+        "desc": "",
+        "content": "<h3>đâsdsadasdsadas<\/h3>",
+        "image": "assets\/img\/event_forum.jpg"
+    }
+]

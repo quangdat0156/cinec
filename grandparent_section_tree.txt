@@ -1,0 +1,99 @@
+Frame 2147223368 [FRAME]
+  Frame 2147223378 [FRAME]
+  Frame 2147223371 [FRAME]
+    CHƯƠNG TRÌNH NỔI BẬT [TEXT] -> "CHƯƠNG TRÌNH NỔI BẬT"
+    Đồng hành cùng bạn trên hành trình đối mới [TEXT] -> "Đồng hành cùng bạn\ntrên hành trình đối mới"
+  Frame 2147223681 [FRAME]
+  Frame 2147223598 [FRAME]
+    Frame 2147223596 [FRAME]
+      Frame 2147223590 [FRAME]
+        Frame 2147223589 [FRAME]
+          Frame 2147223578 [FRAME]
+          Frame 2147223576 [FRAME]
+            Frame 2147223570 [FRAME]
+              Frame 2147223571 [FRAME]
+                tabler-icon-spaces [FRAME]
+              Frame 2147223572 [FRAME]
+                Không gian Sáng tạo [TEXT] -> "Không gian Sáng tạo"
+                Workspace hiện đại và hạ tầng kỹ thuật [TEXT] -> "Workspace hiện đại và\nhạ tầng kỹ thuật"
+        Frame 2147223587 [FRAME]
+          Frame 2147223571 [FRAME]
+            Frame 2147223571 [FRAME]
+              Frame 2147223583 [FRAME]
+                Vector 3 [VECTOR]
+            Frame 2147223572 [FRAME]
+              Viện - Trường [TEXT] -> "Viện - Trường"
+              Chuyển giao công nghệ và hợp tác nhân sự [TEXT] -> "Chuyển giao công nghệ và hợp tác nhân sự"
+          Frame 2147223581 [FRAME]
+        Frame 2147223586 [FRAME]
+          Frame 2147223575 [FRAME]
+            Frame 2147223570 [FRAME]
+              Frame 2147223571 [FRAME]
+                tabler-icon-scale [FRAME]
+              Frame 2147223572 [FRAME]
+                Chính sách & Pháp lý [TEXT] -> "Chính sách & Pháp lý"
+                Quy định pháp luật và bảo hộ sở hữu trí tuệ [TEXT] -> "Quy định pháp luật và bảo hộ sở hữu trí tuệ"
+          Frame 2147223577 [FRAME]
+        Frame 2147223588 [FRAME]
+          Frame 2147223572 [FRAME]
+            Frame 2147223571 [FRAME]
+              tabler-icon-chart-histogram [FRAME]
+                Vector [VECTOR]
+            Frame 2147223572 [FRAME]
+              Kết nối Thị trường [TEXT] -> "Kết nối Thị trường"
+              Mở rộng thị trường và kết nối đối tác [TEXT] -> "Mở rộng thị trường và\nkết nối đối tác"
+          Frame 2147223581 [FRAME]
+      Frame 2147223595 [FRAME]
+        Frame 2147223576 [FRAME]
+          Frame 2147223593 [FRAME]
+            Frame 2147223570 [FRAME]
+              Frame 2147223571 [FRAME]
+                tabler-icon-seedling [FRAME]
+              Frame 2147223572 [FRAME]
+                Ươm tạo & Tăng tốc [TEXT] -> "Ươm tạo & Tăng tốc"
+                Môi trường chuyên nghiệp và lộ trình đào tạo [TEXT] -> "Môi trường chuyên nghiệp và lộ trình đào tạo"
+            Frame 2147223582 [FRAME]
+        Frame 2147223594 [FRAME]
+          Frame 2147223579 [FRAME]
+          Frame 2147223572 [FRAME]
+            Frame 2147223571 [FRAME]
+              tabler-icon-user-pentagon [FRAME]
+                Vector [VECTOR]
+            Frame 2147223572 [FRAME]
+              Mentor & Cố vấn [TEXT] -> "Mentor & Cố vấn"
+              Mạng lưới chuyên gia và hỗ trợ chiến lược [TEXT] -> "Mạng lưới chuyên gia\nvà hỗ trợ chiến lược"
+        Frame 2147223591 [FRAME]
+          Frame 2147223571 [FRAME]
+            Frame 2147223571 [FRAME]
+              tabler-icon-school [FRAME]
+                Vector [VECTOR]
+            Frame 2147223572 [FRAME]
+              Đào tạo & Phát triển [TEXT] -> "Đào tạo & Phát triển"
+              Kỹ năng kinh doanh và quản lý chuyên nghiệp [TEXT] -> "Kỹ năng kinh doanh và\nquản lý chuyên nghiệp"
+          Frame 2147223580 [FRAME]
+        Frame 2147223592 [FRAME]
+          Frame 2147223575 [FRAME]
+            Frame 2147223570 [FRAME]
+              Frame 2147223571 [FRAME]
+                tabler-icon-currency-dollar [FRAME]
+              Frame 2147223572 [FRAME]
+                Vốn & Đầu tư [TEXT] -> "Vốn & Đầu tư"
+                Quy định pháp luật và bảo hộ sở hữu trí tuệ [TEXT] -> "Quy định pháp luật và bảo hộ sở hữu trí tuệ"
+          Frame 2147223582 [FRAME]
+    Frame 2147223600 [FRAME]
+      Frame 2147223598 [FRAME]
+        Ellipse 3 [ELLIPSE]
+        Ellipse 3 [ELLIPSE]
+        Ellipse 4 [ELLIPSE]
+        Ellipse 5 [ELLIPSE]
+        Ellipse 3 [ELLIPSE]
+        Ellipse 4 [ELLIPSE]
+        Ellipse 5 [ELLIPSE]
+        Ellipse 3 [ELLIPSE]
+      Frame 2147223599 [FRAME]
+        Frame 2147223567 [FRAME]
+          Frame 2147223565 [FRAME]
+            Frame 2147223566 [FRAME]
+              Frame 2147223311 [FRAME]
+                Frame 2147223302 [FRAME]
+              Kết nổi - Ươm tạo - Tầng tốc Kiển tạo tương lai cho Cà Mau và cộng đồng [TEXT] -> "Kết nổi - Ươm tạo - Tầng tốc\nKiển tạo tương lai cho\nCà Mau và cộng đồng"

@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "title": "CINEC chính thức ra mắt hệ sinh thái hỗ trợ khởi nghiệp toàn diện tại Cà Mau - Bạc Liêu",
+        "category": "startup",
+        "category_name": "Khởi nghiệp",
+        "date": "25\/06\/2026",
+        "author": "Ban Biên Tập CINEC",
+        "summary": "Sự kiện đánh dấu cột mốc quan trọng trong việc thúc đẩy đổi mới sáng tạo, chuyển giao khoa học kỹ thuật và xây dựng không gian làm việc chuyên nghiệp tại khu vực bán đảo Cà Mau.",
+        "image": "assets\/img\/news_launch.jpg",
+        "featured": true
+    },
+    {
+        "id": 2,
+        "title": "Chính sách hỗ trợ thuế và hạ tầng mặt bằng cho các doanh nghiệp đổi mới sáng tạo từ năm 2026",
+        "category": "policy",
+        "category_name": "Chính sách",
+        "date": "28\/06\/2026",
+        "author": "Thế Anh",
+        "summary": "Ủy ban nhân dân tỉnh ban hành nghị quyết mới nhằm giảm thiểu rủi ro pháp lý và chi phí ban đầu cho các dự án khởi nghiệp sáng tạo.",
+        "image": "assets\/img\/news_policy.jpg",
+        "featured": false
+    },
+    {
+        "id": 3,
+        "title": "Ứng dụng công nghệ IoT và AI trong nuôi tôm siêu thâm canh đạt hiệu quả năng suất đột phá",
+        "category": "technology",
+        "category_name": "Công nghệ",
+        "date": "18\/06\/2026",
+        "author": "Minh Nhật",
+        "summary": "Một mô hình startup do CINEC ươm tạo đã ứng dụng thành công cảm biến thông minh tự động hóa toàn bộ quy trình đo độ mặn và pH.",
+        "image": "assets\/img\/news_iot.jpg",
+        "featured": false
+    },
+    {
+        "id": 4,
+        "title": "Quỹ đầu tư mạo hiểm VinaCapital kết nối khảo sát các dự án nông nghiệp xanh tại CINEC HUB Bạc Liêu",
+        "category": "investment",
+        "category_name": "Đầu tư",
+        "date": "12\/06\/2026",
+        "author": "Khánh Linh",
+        "summary": "Các dự án sản xuất muối hữu cơ và ống hút sinh học thân thiện môi trường đang lọt vào tầm ngắm gọi vốn hạt giống.",
+        "image": "assets\/img\/news_invest.jpg",
+        "featured": false
+    },
+    {
+        "id": 5,
+        "title": "Thúc đẩy chuyển đổi số và áp dụng chỉ số ESG cho các doanh nghiệp SME trên địa bàn tỉnh",
+        "category": "policy",
+        "category_name": "Chính sách",
+        "date": "05\/06\/2026",
+        "author": "Quốc Khánh",
+        "summary": "Chương trình hợp tác toàn diện giữa CINEC và các tổ chức quốc tế nhằm nâng cao năng lực phát triển bền vững của doanh nghiệp.",
+        "image": "assets\/img\/news_esg.jpg",
+        "featured": false
+    }
+]

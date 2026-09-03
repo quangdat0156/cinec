@@ -1,0 +1,673 @@
+Sự kiện [SECTION]
+  Sự kiện [FRAME]
+    Frame 2147223324 [INSTANCE]
+      Frame 2147223311 [FRAME]
+        Frame 2147223302 [FRAME]
+          g10 [GROUP]
+            Clip path group [GROUP]
+              g16 [GROUP]
+                g22 [GROUP]
+                  path24 [VECTOR]
+                g26 [GROUP]
+                  path28 [VECTOR]
+                g30 [GROUP]
+                  path32 [VECTOR]
+                g34 [GROUP]
+                  path36 [VECTOR]
+                g38 [GROUP]
+                  path40 [VECTOR]
+      Frame 2147223332 [FRAME]
+        Frame 2147223324 [FRAME]
+          Trang chủ [TEXT] -> "Trang chủ"
+        Frame 2147223325 [FRAME]
+          Giới thiệu [TEXT] -> "Giới thiệu"
+        Frame 2147223326 [FRAME]
+          Chương trình [TEXT] -> "Chương trình"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+        Frame 2147223327 [FRAME]
+          Sự kiện [TEXT] -> "Sự kiện"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+        Frame 2147223328 [FRAME]
+          Tin tức & Insignt [TEXT] -> "Tin tức & Insignt"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+        Frame 2147223329 [FRAME]
+          Impact [TEXT] -> "Impact"
+        Frame 2147223330 [FRAME]
+          Đối tác [TEXT] -> "Đối tác"
+          tabler-icon-chevron-right [FRAME]
+            Vector [VECTOR]
+      Frame 2147223331 [FRAME]
+        Dịch vụ CiNEC [TEXT] -> "Dịch vụ CiNEC"
+      Frame 2147223334 [FRAME]
+        Frame 2147223328 [FRAME]
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+          VN [TEXT] -> "VN"
+        Frame 2147223330 [FRAME]
+          Liên hệ [TEXT] -> "Liên hệ"
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+              Vector [VECTOR]
+    Frame 2147223430 [FRAME]
+      Frame 2147223444 [FRAME]
+        Trang chủ [TEXT] -> "Trang chủ"
+        tabler-icon-chevron-right [FRAME]
+          Vector [VECTOR]
+        Sự kiện [TEXT] -> "Sự kiện"
+        tabler-icon-chevron-right [FRAME]
+          Vector [VECTOR]
+        Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số [TEXT] -> "Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số"
+      Frame 2147223445 [FRAME]
+        image 26 [RECTANGLE]
+        Frame 2147223452 [FRAME]
+          Frame 2147223447 [FRAME]
+            Frame 2147223446 [FRAME]
+              SỰ KIỆN SẮP DIỄN RA [TEXT] -> "SỰ KIỆN SẮP DIỄN RA"
+            Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số [TEXT] -> "Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số"
+            Từ nhận thức → Hành động [TEXT] -> "Từ nhận thức → Hành động"
+            Hội thảo quy tụ chuyên gia, doanh nghiệp và các đơn vị công nghệ cùng chia sẻ giải pháp thực tế, dễ áp dụng cho doanh nghiệp vừa và nhỏ. [TEXT] -> "Hội thảo quy tụ chuyên gia, doanh nghiệp và các đơn vị công nghệ cùng chia sẻ giải pháp thực tế, dễ áp dụng cho doanh nghiệp vừa và nhỏ."
+          Frame 2147223448 [FRAME]
+            Frame 2147223449 [FRAME]
+              tabler-icon-calendar-week [FRAME]
+                Vector [VECTOR]
+              14/04/2026 [TEXT] -> "14/04/2026"
+            Frame 2147223450 [FRAME]
+              tabler-icon-clock-hour-3 [FRAME]
+                Vector [VECTOR]
+              07:30 – 11:00 [TEXT] -> "07:30 – 11:00"
+            Frame 2147223451 [FRAME]
+              tabler-icon-map-pin [FRAME]
+                Vector [VECTOR]
+              Hội trường Tầng 2 – Toà nhà VNPT Cà Mau Số 03 Lưu Tấn Tài, P. Tân Thành, tỉnh Cà Mau [TEXT] -> "Hội trường Tầng 2 – Toà nhà VNPT Cà Mau\nSố 03 Lưu Tấn Tài, P. Tân Thành, tỉnh Cà Mau"
+        Frame 2147223453 [FRAME]
+          Frame 2147223454 [FRAME]
+            Đăng ký tham dự [TEXT] -> "Đăng ký tham dự"
+            Tham gia sự kiện ngay hôm nay! [TEXT] -> "Tham gia sự kiện ngay hôm nay!"
+          Frame 2147223459 [FRAME]
+            Frame 2147223455 [FRAME]
+              tabler-icon-user-circle [FRAME]
+                Vector [VECTOR]
+              Họ và tên [TEXT] -> "Họ và tên"
+            Frame 2147223456 [FRAME]
+              tabler-icon-mail [FRAME]
+                Vector [VECTOR]
+              Email [TEXT] -> "Email"
+            Frame 2147223457 [FRAME]
+              tabler-icon-phone [FRAME]
+                Vector [VECTOR]
+              Số điện thoại [TEXT] -> "Số điện thoại"
+            Frame 2147223458 [FRAME]
+              Frame 2147223460 [FRAME]
+                tabler-icon-brand-google-home [FRAME]
+                  Vector [VECTOR]
+                Đơn vị / Tổ chức [TEXT] -> "Đơn vị / Tổ chức"
+              tabler-icon-chevron-right [FRAME]
+                Vector [VECTOR]
+            Frame 2147223459 [FRAME]
+              Frame 2147223460 [FRAME]
+                tabler-icon-user-screen [FRAME]
+                  Vector [VECTOR]
+                Bạn là? (Nhà đầu tư/Starup/Khác) [TEXT] -> "Bạn là? (Nhà đầu tư/Starup/Khác)"
+              tabler-icon-chevron-right [FRAME]
+                Vector [VECTOR]
+          Frame 2147223330 [FRAME]
+            Đăng ký ngay [TEXT] -> "Đăng ký ngay"
+            Frame 2147223333 [FRAME]
+              tabler-icon-arrow-left [FRAME]
+                Vector [VECTOR]
+          Hạn đăng ký: 11/04/2026 [TEXT] -> "Hạn đăng ký: 11/04/2026"
+    Frame 2147223461 [FRAME]
+      Frame 2147223466 [FRAME]
+        Lịch trình sự kiện [TEXT] -> "Lịch trình sự kiện"
+        Frame 2147223465 [FRAME]
+          Frame 2147223469 [FRAME]
+            08:00 - 08:30 [TEXT] -> "08:00 - 08:30"
+            Line 6 [LINE]
+            Đón khách - Check in [TEXT] -> "Đón khách - Check in"
+          Frame 2147223470 [FRAME]
+            08:00 - 08:05 [TEXT] -> "08:00 - 08:05"
+            Line 6 [LINE]
+            Tuyên bố lý do, giới thiệu đại biểu [TEXT] -> "Tuyên bố lý do, giới thiệu đại biểu"
+          Frame 2147223471 [FRAME]
+            08:05 - 08:15 [TEXT] -> "08:05 - 08:15"
+            Line 6 [LINE]
+            Trình chiếu Video giới thiệu đơn vị chủ trì cDXA [TEXT] -> "Trình chiếu Video giới thiệu đơn vị chủ trì cDXA"
+          Frame 2147223472 [FRAME]
+            08:15 - 08:20 [TEXT] -> "08:15 - 08:20"
+            Line 6 [LINE]
+            Phát biểu Khai mạc [TEXT] -> "Phát biểu Khai mạc"
+          Frame 2147223473 [FRAME]
+            08:20 - 08:35 [TEXT] -> "08:20 - 08:35"
+            Line 6 [LINE]
+            Chia sẻ thực tế chuyển đổi số trong doanh nghiệp và kết quả thực tiễn [TEXT] -> "Chia sẻ thực tế chuyển đổi số trong doanh nghiệp và kết quả thực tiễn"
+          Frame 2147223474 [FRAME]
+            08:35 - 08:50 [TEXT] -> "08:35 - 08:50"
+            Line 6 [LINE]
+            Xu hướng AI và lộ trình chuyển đổi số cho doanh nghiệp [TEXT] -> "Xu hướng AI và lộ trình chuyển đổi số cho doanh nghiệp"
+          Frame 2147223475 [FRAME]
+            08:50 - 09:05 [TEXT] -> "08:50 - 09:05"
+            Line 6 [LINE]
+            Khai phóng vận hành bằng chuyển đổi số tích hợp AI - Giải pháp quản trị doanh nghiệp toàn diện [TEXT] -> "Khai phóng vận hành bằng chuyển đổi số tích hợp AI - Giải pháp quản trị doanh nghiệp toàn diện"
+          Frame 2147223476 [FRAME]
+            09:05 - 09:20 [TEXT] -> "09:05 - 09:20"
+            Line 6 [LINE]
+            Giải pháp hợp đồng điện tử cho doanh nghiệp [TEXT] -> "Giải pháp hợp đồng điện tử cho doanh nghiệp"
+          Frame 2147223477 [FRAME]
+            09:20 - 09:45 [TEXT] -> "09:20 - 09:45"
+            Line 6 [LINE]
+            Nghỉ giữa giờ - tham quan khu trải nghiệm [TEXT] -> "Nghỉ giữa giờ - tham quan khu trải nghiệm"
+          Frame 2147223478 [FRAME]
+            09:45 - 10:25 [TEXT] -> "09:45 - 10:25"
+            Line 6 [LINE]
+            Giới thiệu Chương trinh hỗ trợ doanh nghiệp chuyển đổi số [TEXT] -> "Giới thiệu Chương trinh hỗ trợ doanh nghiệp chuyển đổi số"
+          Frame 2147223479 [FRAME]
+            10:25 - 10:45 [TEXT] -> "10:25 - 10:45"
+            Line 6 [LINE]
+            Giới thiệu và nền tảng Hỗ trợ Chuyển đổi số trong doanh nghiệp (SME) tính Cà Mau và phát động CaMauConnect - kết nối hệ sinh thái chuyển đổi số hỗ trợ doanh nghiệp [TEXT] -> "Giới thiệu và nền tảng Hỗ trợ Chuyển đổi số trong doanh nghiệp (SME) tính Cà Mau và phát động CaMauConnect - kết nối hệ sinh thái chuyển đổi số hỗ trợ doanh nghiệp"
+          Frame 2147223480 [FRAME]
+            10:45 - 10:55 [TEXT] -> "10:45 - 10:55"
+            Line 6 [LINE]
+            Phát biểu chỉ đạo [TEXT] -> "Phát biểu chỉ đạo"
+          Frame 2147223481 [FRAME]
+            10:55 - 11:00 [TEXT] -> "10:55 - 11:00"
+            Line 6 [LINE]
+            Chụp ảnh lưu niệm [TEXT] -> "Chụp ảnh lưu niệm"
+          Frame 2147223482 [FRAME]
+            Frame 2147223605 [FRAME]
+              Tải agenda chi tiết [TEXT] -> "Tải agenda chi tiết"
+              Frame 2147223333 [FRAME]
+                tabler-icon-arrow-left [FRAME]
+                  Vector [VECTOR]
+      Frame 2147223467 [FRAME]
+        Frame 2147223468 [FRAME]
+          Diễn giả & Ban giám khảo [TEXT] -> "Diễn giả & Ban giám khảo"
+          Frame 2147223353 [FRAME]
+            Xem tất cả [TEXT] -> "Xem tất cả"
+            tabler-icon-chevron-right [FRAME]
+              Vector [VECTOR]
+        Frame 2147223465 [FRAME]
+          Frame 2147223435 [FRAME]
+            Frame 2147223443 [FRAME]
+              Frame 2147223434 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Phạm Thùy B [TEXT] -> "Phạm Thùy B"
+                Phó Giám Đốc [TEXT] -> "Phó Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223441 [FRAME]
+              Frame 2147223439 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Nguyễn Văn A [TEXT] -> "Nguyễn Văn A"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223442 [FRAME]
+              Frame 2147223440 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 23 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Trần Trung C [TEXT] -> "Trần Trung C"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+          Frame 2147223436 [FRAME]
+            Frame 2147223443 [FRAME]
+              Frame 2147223434 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Phạm Thùy B [TEXT] -> "Phạm Thùy B"
+                Phó Giám Đốc [TEXT] -> "Phó Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223441 [FRAME]
+              Frame 2147223439 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Nguyễn Văn A [TEXT] -> "Nguyễn Văn A"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223442 [FRAME]
+              Frame 2147223440 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 23 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Trần Trung C [TEXT] -> "Trần Trung C"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+    Frame 2147223483 [FRAME]
+      Frame 2147223484 [FRAME]
+        Tham gia để nhận được gì? [TEXT] -> "Tham gia để nhận được gì?"
+        Frame 2147223423 [FRAME]
+          Frame 2147223486 [FRAME]
+            Frame 2147223424 [FRAME]
+              Kết nối chuyên gia [TEXT] -> "Kết nối chuyên gia"
+              Gặp gỡ các chuyên gia AI & chuyển đổi số hàng đầu [TEXT] -> "Gặp gỡ các chuyên gia AI & chuyển đổi số hàng đầu"
+            Line 4 [LINE]
+            Frame 2147223425 [FRAME]
+              Tối ưu vận hành [TEXT] -> "Tối ưu vận hành"
+              Khám phá cách số hóa quy trình và nâng cao hiệu suất doanh nghiệp [TEXT] -> "Khám phá cách số hóa quy trình và nâng cao hiệu suất doanh nghiệp"
+          Frame 2147223487 [FRAME]
+            Frame 2147223426 [FRAME]
+              Cập nhật xu hướng AI [TEXT] -> "Cập nhật xu hướng AI"
+              Nắm bắt xu hướng AI mới nhất dành cho doanh nghiệp địa phương [TEXT] -> "Nắm bắt xu hướng AI mới nhất dành cho doanh nghiệp địa phương"
+            Line 1 [LINE]
+            Frame 2147223427 [FRAME]
+              Hỗ trợ chuyển đổi số [TEXT] -> "Hỗ trợ chuyển đổi số"
+              Tiếp cận chương trình hỗ trợ và nền tảng dành cho doanh nghiệp Cà Mau [TEXT] -> "Tiếp cận chương trình hỗ trợ và nền tảng dành cho doanh nghiệp Cà Mau"
+      Frame 2147223485 [FRAME]
+        Đối tượng tham gia [TEXT] -> "Đối tượng tham gia"
+        Frame 2147223423 [FRAME]
+          • Doanh nghiệp vừa và nhỏ [TEXT] -> "• Doanh nghiệp vừa và nhỏ"
+          • Hộ kinh doanh, startup [TEXT] -> "• Hộ kinh doanh, startup"
+          • Lãnh đạo, quản lý quan tâm ứng dụng AI & chuyển đổi số [TEXT] -> "• Lãnh đạo, quản lý quan tâm ứng dụng AI & chuyển đổi số"
+    Frame 2147223484 [FRAME]
+      Frame 2147223399 [FRAME]
+        Frame 2147223387 [FRAME]
+          Frame 2147223311 [FRAME]
+            Frame 2147223302 [FRAME]
+              g10 [GROUP]
+                Clip path group [GROUP]
+                  g16 [GROUP]
+                    g22 [GROUP]
+                    g26 [GROUP]
+                    g30 [GROUP]
+                    g34 [GROUP]
+                    g38 [GROUP]
+          kết nối - Ươm tạo - Tăng tốc - Đổi mới để kiến tạo tương lai cho Cà Mau và cộng đồng. [TEXT] -> "kết nối - Ươm tạo - Tăng tốc -\nĐổi mới để kiến tạo tương lai\ncho Cà Mau và cộng đồng."
+          Frame 2147223389 [FRAME]
+            Frame 2147223388 [FRAME]
+              tabler-icon-brand-facebook [FRAME]
+                Vector [VECTOR]
+            Frame 2147223390 [FRAME]
+              tabler-icon-brand-linkedin [FRAME]
+                Vector [VECTOR]
+            Frame 2147223391 [FRAME]
+              tabler-icon-brand-youtube [FRAME]
+                Vector [VECTOR]
+        Frame 2147223392 [FRAME]
+          VỀ CINEC [TEXT] -> "VỀ CINEC"
+          Giới thiệu [TEXT] -> "Giới thiệu"
+          Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Đội ngũ [TEXT] -> "Đội ngũ"
+          Cơ sở vật chất [TEXT] -> "Cơ sở vật chất"
+        Frame 2147223393 [FRAME]
+          CHƯƠNG TRÌNH [TEXT] -> "CHƯƠNG TRÌNH"
+          CINEC INNO [TEXT] -> "CINEC INNO"
+          CINEC START [TEXT] -> "CINEC START"
+          CINEC HUB [TEXT] -> "CINEC HUB"
+          CINEC LAUNCH [TEXT] -> "CINEC LAUNCH"
+          CINEC TALENT [TEXT] -> "CINEC TALENT"
+        Frame 2147223394 [FRAME]
+          HỖ TRỢ [TEXT] -> "HỖ TRỢ"
+          Dịch vụ [TEXT] -> "Dịch vụ"
+          Quỷ đầu tư [TEXT] -> "Quỷ đầu tư"
+          Mentors [TEXT] -> "Mentors"
+          Dự án khởi nghiệp [TEXT] -> "Dự án khởi nghiệp"
+          Liên hệ [TEXT] -> "Liên hệ"
+        Frame 2147223395 [FRAME]
+          LIÊN HỆ [TEXT] -> "LIÊN HỆ"
+          Frame 2147223396 [FRAME]
+            tabler-icon-map-pin [FRAME]
+              Vector [VECTOR]
+            Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam [TEXT] -> "Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam"
+          Frame 2147223397 [FRAME]
+            tabler-icon-phone [FRAME]
+              Vector [VECTOR]
+            Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Frame 2147223398 [FRAME]
+            tabler-icon-world [FRAME]
+              Vector [VECTOR]
+            cinec.com.vn [TEXT] -> "cinec.com.vn"
+      Frame 2147223400 [FRAME]
+        @2025 CINEC. All rights reserved. [TEXT] -> "@2025 CINEC. All rights reserved."
+        Frame 2147223401 [FRAME]
+          Chính sách bảo mật [TEXT] -> "Chính sách bảo mật"
+          Điều khoản sử dụng [TEXT] -> "Điều khoản sử dụng"
+  Sự kiện - Mobile [FRAME]
+    image 26 [RECTANGLE]
+    Frame 2147223550 [INSTANCE]
+      Frame 2147223311 [FRAME]
+        Frame 2147223302 [FRAME]
+          g10 [GROUP]
+            Clip path group [GROUP]
+              g16 [GROUP]
+                g22 [GROUP]
+                  path24 [VECTOR]
+                g26 [GROUP]
+                  path28 [VECTOR]
+                g30 [GROUP]
+                  path32 [VECTOR]
+                g34 [GROUP]
+                  path36 [VECTOR]
+                g38 [GROUP]
+                  path40 [VECTOR]
+      Frame 2147223331 [FRAME]
+        Dịch vụ CiNEC [TEXT] -> "Dịch vụ CiNEC"
+      Frame 2147223334 [FRAME]
+        Frame 2147223330 [FRAME]
+          Liên hệ [TEXT] -> "Liên hệ"
+          Frame 2147223333 [FRAME]
+            tabler-icon-arrow-left [FRAME]
+              Vector [VECTOR]
+        tabler-icon-menu-2 [FRAME]
+          Vector [VECTOR]
+    Frame 2147223519 [FRAME]
+      Frame 2147223444 [FRAME]
+        Trang chủ [TEXT] -> "Trang chủ"
+        tabler-icon-chevron-right [FRAME]
+          Vector [VECTOR]
+        Sự kiện [TEXT] -> "Sự kiện"
+        tabler-icon-chevron-right [FRAME]
+          Vector [VECTOR]
+        Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số [TEXT] -> "Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số"
+      Frame 2147223536 [FRAME]
+        Frame 2147223452 [FRAME]
+          Frame 2147223447 [FRAME]
+            Frame 2147223446 [FRAME]
+              SỰ KIỆN SẮP DIỄN RA [TEXT] -> "SỰ KIỆN SẮP DIỄN RA"
+            Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số [TEXT] -> "Hội thảo chuyên đề: Trí tuệ nhân tạo(AI) và chuyển đổi số"
+            Từ nhận thức → Hành động [TEXT] -> "Từ nhận thức → Hành động"
+            Hội thảo quy tụ chuyên gia, doanh nghiệp và các đơn vị công nghệ cùng chia sẻ giải pháp thực tế, dễ áp dụng cho doanh nghiệp vừa và nhỏ. [TEXT] -> "Hội thảo quy tụ chuyên gia, doanh nghiệp và các đơn vị công nghệ cùng chia sẻ giải pháp thực tế, dễ áp dụng cho doanh nghiệp vừa và nhỏ."
+          Frame 2147223448 [FRAME]
+            Frame 2147223449 [FRAME]
+              tabler-icon-calendar-week [FRAME]
+                Vector [VECTOR]
+              14/04/2026 [TEXT] -> "14/04/2026"
+            Frame 2147223450 [FRAME]
+              tabler-icon-clock-hour-3 [FRAME]
+                Vector [VECTOR]
+              07:30 – 11:00 [TEXT] -> "07:30 – 11:00"
+            Frame 2147223451 [FRAME]
+              tabler-icon-map-pin [FRAME]
+                Vector [VECTOR]
+              Hội trường Tầng 2 – Toà nhà VNPT Cà Mau Số 03 Lưu Tấn Tài, P. Tân Thành, tỉnh Cà Mau [TEXT] -> "Hội trường Tầng 2 – Toà nhà VNPT Cà Mau\nSố 03 Lưu Tấn Tài, P. Tân Thành, tỉnh Cà Mau"
+        Frame 2147223453 [FRAME]
+          Frame 2147223454 [FRAME]
+            Đăng ký tham dự [TEXT] -> "Đăng ký tham dự"
+            Tham gia sự kiện ngay hôm nay! [TEXT] -> "Tham gia sự kiện ngay hôm nay!"
+          Frame 2147223459 [FRAME]
+            Frame 2147223455 [FRAME]
+              tabler-icon-user-circle [FRAME]
+                Vector [VECTOR]
+              Họ và tên [TEXT] -> "Họ và tên"
+            Frame 2147223456 [FRAME]
+              tabler-icon-mail [FRAME]
+                Vector [VECTOR]
+              Email [TEXT] -> "Email"
+            Frame 2147223457 [FRAME]
+              tabler-icon-phone [FRAME]
+                Vector [VECTOR]
+              Số điện thoại [TEXT] -> "Số điện thoại"
+            Frame 2147223458 [FRAME]
+              Frame 2147223460 [FRAME]
+                tabler-icon-brand-google-home [FRAME]
+                  Vector [VECTOR]
+                Đơn vị / Tổ chức [TEXT] -> "Đơn vị / Tổ chức"
+              tabler-icon-chevron-right [FRAME]
+                Vector [VECTOR]
+            Frame 2147223459 [FRAME]
+              Frame 2147223460 [FRAME]
+                tabler-icon-user-screen [FRAME]
+                  Vector [VECTOR]
+                Bạn là? (Nhà đầu tư/Starup/Khác) [TEXT] -> "Bạn là? (Nhà đầu tư/Starup/Khác)"
+              tabler-icon-chevron-right [FRAME]
+                Vector [VECTOR]
+          Frame 2147223330 [FRAME]
+            Đăng ký ngay [TEXT] -> "Đăng ký ngay"
+            Frame 2147223333 [FRAME]
+              tabler-icon-arrow-left [FRAME]
+                Vector [VECTOR]
+          Hạn đăng ký: 11/04/2026 [TEXT] -> "Hạn đăng ký: 11/04/2026"
+    Frame 2147223461 [FRAME]
+      Frame 2147223466 [FRAME]
+        Lịch trình sự kiện [TEXT] -> "Lịch trình sự kiện"
+        Frame 2147223465 [FRAME]
+          Frame 2147223469 [FRAME]
+            08:00 - 08:30 [TEXT] -> "08:00 - 08:30"
+            Line 6 [LINE]
+            Đón khách - Check in [TEXT] -> "Đón khách - Check in"
+          Frame 2147223470 [FRAME]
+            08:00 - 08:05 [TEXT] -> "08:00 - 08:05"
+            Line 6 [LINE]
+            Tuyên bố lý do, giới thiệu đại biểu [TEXT] -> "Tuyên bố lý do, giới thiệu đại biểu"
+          Frame 2147223471 [FRAME]
+            08:05 - 08:15 [TEXT] -> "08:05 - 08:15"
+            Line 6 [LINE]
+            Trình chiếu Video giới thiệu đơn vị chủ trì cDXA [TEXT] -> "Trình chiếu Video giới thiệu đơn vị chủ trì cDXA"
+          Frame 2147223472 [FRAME]
+            08:15 - 08:20 [TEXT] -> "08:15 - 08:20"
+            Line 6 [LINE]
+            Phát biểu Khai mạc [TEXT] -> "Phát biểu Khai mạc"
+          Frame 2147223473 [FRAME]
+            08:20 - 08:35 [TEXT] -> "08:20 - 08:35"
+            Line 6 [LINE]
+            Chia sẻ thực tế chuyển đổi số trong doanh nghiệp và kết quả thực tiễn [TEXT] -> "Chia sẻ thực tế chuyển đổi số trong doanh nghiệp và kết quả thực tiễn"
+          Frame 2147223474 [FRAME]
+            08:35 - 08:50 [TEXT] -> "08:35 - 08:50"
+            Line 6 [LINE]
+            Xu hướng AI và lộ trình chuyển đổi số cho doanh nghiệp [TEXT] -> "Xu hướng AI và lộ trình chuyển đổi số cho doanh nghiệp"
+          Frame 2147223538 [FRAME]
+            More [TEXT] -> "More"
+            tabler-icon-chevron-right [FRAME]
+              Vector [VECTOR]
+          Frame 2147223475 [FRAME]
+            08:50 - 09:05 [TEXT] -> "08:50 - 09:05"
+            Line 6 [LINE]
+            Khai phóng vận hành bằng chuyển đổi số tích hợp AI - Giải pháp quản trị doanh nghiệp toàn diện [TEXT] -> "Khai phóng vận hành bằng chuyển đổi số tích hợp AI - Giải pháp quản trị doanh nghiệp toàn diện"
+          Frame 2147223476 [FRAME]
+            09:05 - 09:20 [TEXT] -> "09:05 - 09:20"
+            Line 6 [LINE]
+            Giải pháp hợp đồng điện tử cho doanh nghiệp [TEXT] -> "Giải pháp hợp đồng điện tử cho doanh nghiệp"
+          Frame 2147223477 [FRAME]
+            09:20 - 09:45 [TEXT] -> "09:20 - 09:45"
+            Line 6 [LINE]
+            Nghỉ giữa giờ - tham quan khu trải nghiệm [TEXT] -> "Nghỉ giữa giờ - tham quan khu trải nghiệm"
+          Frame 2147223478 [FRAME]
+            09:45 - 10:25 [TEXT] -> "09:45 - 10:25"
+            Line 6 [LINE]
+            Giới thiệu Chương trinh hỗ trợ doanh nghiệp chuyển đổi số [TEXT] -> "Giới thiệu Chương trinh hỗ trợ doanh nghiệp chuyển đổi số"
+          Frame 2147223479 [FRAME]
+            10:25 - 10:45 [TEXT] -> "10:25 - 10:45"
+            Line 6 [LINE]
+            Giới thiệu và nền tảng Hỗ trợ Chuyển đổi số trong doanh nghiệp (SME) tính Cà Mau và phát động CaMauConnect - kết nối hệ sinh thái chuyển đổi số hỗ trợ doanh nghiệp [TEXT] -> "Giới thiệu và nền tảng Hỗ trợ Chuyển đổi số trong doanh nghiệp (SME) tính Cà Mau và phát động CaMauConnect - kết nối hệ sinh thái chuyển đổi số hỗ trợ doanh nghiệp"
+          Frame 2147223480 [FRAME]
+            10:45 - 10:55 [TEXT] -> "10:45 - 10:55"
+            Line 6 [LINE]
+            Phát biểu chỉ đạo [TEXT] -> "Phát biểu chỉ đạo"
+          Frame 2147223481 [FRAME]
+            10:55 - 11:00 [TEXT] -> "10:55 - 11:00"
+            Line 6 [LINE]
+            Chụp ảnh lưu niệm [TEXT] -> "Chụp ảnh lưu niệm"
+          Frame 2147223482 [FRAME]
+            Frame 2147223330 [FRAME]
+              Tải agenda chi tiết [TEXT] -> "Tải agenda chi tiết"
+              Frame 2147223333 [FRAME]
+                tabler-icon-arrow-left [FRAME]
+                  Vector [VECTOR]
+      Frame 2147223467 [FRAME]
+        Frame 2147223468 [FRAME]
+          Diễn giả & Ban giám khảo [TEXT] -> "Diễn giả & Ban giám khảo"
+          Frame 2147223353 [FRAME]
+            Xem tất cả [TEXT] -> "Xem tất cả"
+            tabler-icon-chevron-right [FRAME]
+              Vector [VECTOR]
+        Frame 2147223465 [FRAME]
+          Frame 2147223435 [FRAME]
+            Frame 2147223441 [FRAME]
+              Frame 2147223439 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Nguyễn Văn A [TEXT] -> "Nguyễn Văn A"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223442 [FRAME]
+              Frame 2147223440 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 23 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Trần Trung C [TEXT] -> "Trần Trung C"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+          Frame 2147223436 [FRAME]
+            Frame 2147223443 [FRAME]
+              Frame 2147223434 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Phạm Thùy B [TEXT] -> "Phạm Thùy B"
+                Phó Giám Đốc [TEXT] -> "Phó Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223442 [FRAME]
+              Frame 2147223440 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 23 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Trần Trung C [TEXT] -> "Trần Trung C"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+          Frame 2147223537 [FRAME]
+            Frame 2147223443 [FRAME]
+              Frame 2147223434 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Phạm Thùy B [TEXT] -> "Phạm Thùy B"
+                Phó Giám Đốc [TEXT] -> "Phó Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+            Frame 2147223441 [FRAME]
+              Frame 2147223439 [FRAME]
+                Frame 2147223437 [FRAME]
+                image 21 [RECTANGLE]
+              Frame 2147223442 [FRAME]
+                Nguyễn Văn A [TEXT] -> "Nguyễn Văn A"
+                Giám Đốc [TEXT] -> "Giám Đốc"
+                Trung Tâm CiNEC [TEXT] -> "Trung Tâm CiNEC"
+              Frame 2147223390 [FRAME]
+                tabler-icon-brand-linkedin [FRAME]
+                  Vector [VECTOR]
+    Frame 2147223483 [FRAME]
+      Frame 2147223484 [FRAME]
+        Tham gia để nhận được gì? [TEXT] -> "Tham gia để nhận được gì?"
+        Frame 2147223423 [FRAME]
+          Frame 2147223486 [FRAME]
+            Frame 2147223424 [FRAME]
+              Kết nối chuyên gia [TEXT] -> "Kết nối chuyên gia"
+              Gặp gỡ các chuyên gia AI & chuyển đổi số hàng đầu [TEXT] -> "Gặp gỡ các chuyên gia AI & chuyển đổi số hàng đầu"
+            Frame 2147223425 [FRAME]
+              Tối ưu vận hành [TEXT] -> "Tối ưu vận hành"
+              Khám phá cách số hóa quy trình và nâng cao hiệu suất doanh nghiệp [TEXT] -> "Khám phá cách số hóa quy trình và nâng cao hiệu suất doanh nghiệp"
+          Frame 2147223487 [FRAME]
+            Frame 2147223426 [FRAME]
+              Cập nhật xu hướng AI [TEXT] -> "Cập nhật xu hướng AI"
+              Nắm bắt xu hướng AI mới nhất dành cho doanh nghiệp địa phương [TEXT] -> "Nắm bắt xu hướng AI mới nhất dành cho doanh nghiệp địa phương"
+            Frame 2147223427 [FRAME]
+              Hỗ trợ chuyển đổi số [TEXT] -> "Hỗ trợ chuyển đổi số"
+              Tiếp cận chương trình hỗ trợ và nền tảng dành cho doanh nghiệp Cà Mau [TEXT] -> "Tiếp cận chương trình hỗ trợ và nền tảng dành cho doanh nghiệp Cà Mau"
+      Frame 2147223485 [FRAME]
+        Đối tượng tham gia [TEXT] -> "Đối tượng tham gia"
+        Frame 2147223423 [FRAME]
+          • Doanh nghiệp vừa và nhỏ [TEXT] -> "• Doanh nghiệp vừa và nhỏ"
+          • Hộ kinh doanh, startup [TEXT] -> "• Hộ kinh doanh, startup"
+          • Lãnh đạo, quản lý quan tâm ứng dụng AI & chuyển đổi số [TEXT] -> "• Lãnh đạo, quản lý quan tâm ứng dụng AI & chuyển đổi số"
+    Frame 2147223549 [FRAME]
+      Frame 2147223399 [FRAME]
+        Frame 2147223387 [FRAME]
+          Frame 2147223311 [FRAME]
+            Frame 2147223302 [FRAME]
+              g10 [GROUP]
+                Clip path group [GROUP]
+                  g16 [GROUP]
+                    g22 [GROUP]
+                    g26 [GROUP]
+                    g30 [GROUP]
+                    g34 [GROUP]
+                    g38 [GROUP]
+          kết nối - Ươm tạo - Tăng tốc - Đổi mới để kiến tạo tương lai cho Cà Mau và cộng đồng. [TEXT] -> "kết nối - Ươm tạo - Tăng tốc - Đổi mới để kiến tạo tương lai cho Cà Mau và cộng đồng."
+          Frame 2147223389 [FRAME]
+            Frame 2147223388 [FRAME]
+              tabler-icon-brand-facebook [FRAME]
+                Vector [VECTOR]
+            Frame 2147223390 [FRAME]
+              tabler-icon-brand-linkedin [FRAME]
+                Vector [VECTOR]
+            Frame 2147223391 [FRAME]
+              tabler-icon-brand-youtube [FRAME]
+                Vector [VECTOR]
+        Frame 2147223392 [FRAME]
+          VỀ CINEC [TEXT] -> "VỀ CINEC"
+          Giới thiệu [TEXT] -> "Giới thiệu"
+          Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Đội ngũ [TEXT] -> "Đội ngũ"
+          Cơ sở vật chất [TEXT] -> "Cơ sở vật chất"
+        Frame 2147223393 [FRAME]
+          CHƯƠNG TRÌNH [TEXT] -> "CHƯƠNG TRÌNH"
+          CINEC INNO [TEXT] -> "CINEC INNO"
+          CINEC START [TEXT] -> "CINEC START"
+          CINEC HUB [TEXT] -> "CINEC HUB"
+          CINEC LAUNCH [TEXT] -> "CINEC LAUNCH"
+          CINEC TALENT [TEXT] -> "CINEC TALENT"
+        Frame 2147223394 [FRAME]
+          HỖ TRỢ [TEXT] -> "HỖ TRỢ"
+          Dịch vụ [TEXT] -> "Dịch vụ"
+          Quỷ đầu tư [TEXT] -> "Quỷ đầu tư"
+          Mentors [TEXT] -> "Mentors"
+          Dự án khởi nghiệp [TEXT] -> "Dự án khởi nghiệp"
+          Liên hệ [TEXT] -> "Liên hệ"
+        Frame 2147223395 [FRAME]
+          LIÊN HỆ [TEXT] -> "LIÊN HỆ"
+          Frame 2147223396 [FRAME]
+            tabler-icon-map-pin [FRAME]
+              Vector [VECTOR]
+            Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam [TEXT] -> "Toà nhà CiNEC, số 16 - 18 Cù Chính Lan, phường Bạc Liêu, Cà Mau, Vietnam"
+          Frame 2147223397 [FRAME]
+            tabler-icon-phone [FRAME]
+              Vector [VECTOR]
+            Tầm nhìn - Sứ mệnh [TEXT] -> "Tầm nhìn - Sứ mệnh"
+          Frame 2147223398 [FRAME]
+            tabler-icon-world [FRAME]
+              Vector [VECTOR]
+            cinec.com.vn [TEXT] -> "cinec.com.vn"
+      Frame 2147223400 [FRAME]
+        @2025 CINEC. All rights reserved. [TEXT] -> "@2025 CINEC. All rights reserved."
+        Frame 2147223401 [FRAME]
+          Chính sách bảo mật [TEXT] -> "Chính sách bảo mật"
+          Điều khoản sử dụng [TEXT] -> "Điều khoản sử dụng"

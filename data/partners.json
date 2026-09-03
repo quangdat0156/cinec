@@ -1,0 +1,72 @@
+[
+    {
+        "name": "BCA Group",
+        "logo": "assets\/img\/partner_bca.png",
+        "category": "enterprise",
+        "category_name": "Doanh nghiệp \/ Tập đoàn",
+        "url": "#"
+    },
+    {
+        "name": "KVIP Hub Bạc Liêu",
+        "logo": "assets\/img\/partner_kvip.png",
+        "category": "association",
+        "category_name": "Hiệp hội \/ Tổ chức",
+        "url": "#"
+    },
+    {
+        "name": "NIIC - Trung tâm Đổi mới Sáng tạo",
+        "logo": "assets\/img\/partner_niic.png",
+        "category": "education",
+        "category_name": "Đại học \/ Viện nghiên cứu",
+        "url": "#"
+    },
+    {
+        "name": "DX Cà Mau",
+        "logo": "assets\/img\/partner_dxcamau.png",
+        "category": "government",
+        "category_name": "Cơ quan Nhà nước",
+        "url": "#"
+    },
+    {
+        "name": "Sở KH&CN Cà Mau",
+        "logo": "assets\/img\/partner_skhcn.png",
+        "category": "government",
+        "category_name": "Cơ quan Nhà nước",
+        "url": "#"
+    },
+    {
+        "name": "VinaCapital",
+        "logo": "assets\/img\/partner_vinacapital.png",
+        "category": "fund",
+        "category_name": "Quỹ đầu tư",
+        "url": "#"
+    },
+    {
+        "name": "Bạc Liêu Startup Network",
+        "logo": "assets\/img\/partner_bln.png",
+        "category": "association",
+        "category_name": "Hiệp hội \/ Tổ chức",
+        "url": "#"
+    },
+    {
+        "name": "Đại học Cần Thơ",
+        "logo": "assets\/img\/partner_ctu.png",
+        "category": "education",
+        "category_name": "Đại học \/ Viện nghiên cứu",
+        "url": "#"
+    },
+    {
+        "name": "Tập đoàn Lộc Trời",
+        "logo": "assets\/img\/partner_loctroi.png",
+        "category": "enterprise",
+        "category_name": "Doanh nghiệp \/ Tập đoàn",
+        "url": "#"
+    },
+    {
+        "name": "VCCI Cần Thơ",
+        "logo": "assets\/img\/partner_vcci.png",
+        "category": "association",
+        "category_name": "Hiệp hội \/ Tổ chức",
+        "url": "#"
+    }
+]

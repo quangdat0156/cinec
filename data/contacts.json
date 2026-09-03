@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "fullname": "Nguyễn Minh Trí",
+        "email": "tri.nguyen@example.com",
+        "phone": "0912 345 678",
+        "organization": "HTX Nuôi Tôm Công Nghệ Cao Cà Mau",
+        "program_interest": "Doanh nghiệp số (Voucher CĐS)",
+        "message": "Chúng tôi có nhu cầu ứng dụng IoT giám sát môi trường nước và chuyển đổi số quy trình xuất khẩu tôm.",
+        "status": "new",
+        "created_at": "2026-08-17 05:13:53"
+    },
+    {
+        "id": 2,
+        "fullname": "Lê Thanh Mai",
+        "email": "mai.le@startup.vn",
+        "phone": "0988 765 432",
+        "organization": "Dự án EcoStraw",
+        "program_interest": "Hành trình Khởi nghiệp (Ươm tạo & Vốn)",
+        "message": "Startup của tôi đã phát triển xong mẫu ống hút sinh học từ bồn bồn, muốn tham gia ươm tạo và kết nối quỹ đầu tư.",
+        "status": "processing",
+        "created_at": "2026-08-16 05:13:53"
+    }
+]
