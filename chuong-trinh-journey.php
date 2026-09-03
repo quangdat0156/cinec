@@ -1,226 +1,288 @@
 <?php
-$page_title = "Hành trình Khởi nghiệp Cà Mau (Ca Mau Startup Journey)";
 require_once 'config/db.php';
+require_once 'config/lang.php';
+$lang = current_lang();
+$is_en = ($lang === 'en');
+$page_title = $is_en ? "Ca Mau Startup Journey (Incubation & Acceleration) - CiNEC" : "Hành trình Khởi nghiệp Cà Mau (Ca Mau Startup Journey) - CiNEC";
 require_once 'includes/header.php';
 
 $program = $mockPrograms['JOURNEY'];
+$current_prog = 'JOURNEY';
 ?>
 
-<div class="bg-[#FAFCFF] min-h-screen pt-28 pb-16">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-12 2xl:px-20 space-y-12">
+<!-- TRANG CHƯƠNG TRÌNH 02: HÀNH TRÌNH KHỞI NGHIỆP BILINGUAL -->
+<div class="bg-[#F7FAFD] min-h-screen pt-28 pb-20 font-sans">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-12 2xl:px-20 space-y-10">
 
-        <!-- BREADCRUMB -->
-        <nav class="flex items-center gap-2 text-body-xs font-semibold text-slate-500">
-            <a href="index.php" class="hover:text-cinecPrimary transition-colors">Trang chủ</a>
-            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
-            <a href="chuong-trinh.php" class="hover:text-cinecPrimary transition-colors">Chương trình</a>
-            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
-            <span class="text-amber-600 font-bold"><?php echo $program['title']; ?></span>
-        </nav>
+        <!-- THANH CHUYỂN ĐỔI 4 CHƯƠNG TRÌNH THÀNH PHẦN (Pill Switcher) -->
+        <div class="bg-white rounded-2xl lg:rounded-full p-2 border border-slate-200/80 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.06)] grid grid-cols-2 lg:grid-cols-4 gap-2">
+            <a href="chuong-trinh-platform.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all text-slate-600 hover:text-[#062AAD] hover:bg-blue-50/50">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span><?php echo __('prog_platform_title'); ?></span>
+            </a>
+            <a href="chuong-trinh-journey.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all bg-[#D97706] text-white shadow-md">
+                <i data-lucide="rocket" class="w-4 h-4 text-amber-200"></i>
+                <span><?php echo __('prog_journey_title'); ?></span>
+            </a>
+            <a href="chuong-trinh-sme.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all text-slate-600 hover:text-[#059669] hover:bg-emerald-50/50">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                <span><?php echo __('prog_sme_title'); ?></span>
+            </a>
+            <a href="chuong-trinh-talent.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all text-slate-600 hover:text-[#7C3AED] hover:bg-purple-50/50">
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                <span><?php echo __('prog_talent_title'); ?></span>
+            </a>
+        </div>
 
-        <!-- HERO SECTION BANNER -->
-        <div class="bg-gradient-to-br from-amber-900 via-orange-900 to-[#02185D] rounded-[32px] p-8 md:p-14 text-white shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-20 -top-20 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute right-40 -bottom-20 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- HERO BANNER KÍNH MỜ CAO CẤP (Figma Dark Navy với quầng sáng Amber/Gold) -->
+        <div class="relative rounded-[28px] lg:rounded-[36px] bg-gradient-to-br from-[#02155B] via-[#091b5a] to-[#2c1a06] text-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xl border border-amber-500/30">
+            <!-- Quầng sáng hiệu ứng nền -->
+            <div class="absolute -right-24 -top-24 w-96 h-96 bg-[#D97706]/25 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute right-1/4 -bottom-24 w-80 h-80 bg-amber-400/15 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="relative z-10 max-w-4xl space-y-6">
+            <div class="relative z-10 max-w-4xl space-y-6 text-left">
+                <!-- Badges -->
                 <div class="flex flex-wrap items-center gap-3">
-                    <span class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/30 text-amber-200 px-4 py-1.5 rounded-full text-body-xs font-extrabold uppercase tracking-wider backdrop-blur-md">
-                        <i data-lucide="rocket" class="w-4 h-4 text-amber-300"></i>
-                        <?php echo $program['badge']; ?>
+                    <span class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/40 text-amber-200 px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        <?php echo $is_en ? 'COMPONENT PROGRAM 02' : 'CHƯƠNG TRÌNH THÀNH PHẦN 02'; ?>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 bg-white/10 text-white/90 px-3 py-1 rounded-full text-[11px] font-medium border border-white/20">
+                        <i data-lucide="repeat" class="w-3.5 h-3.5 text-amber-300"></i>
+                        <?php echo $is_en ? '4-Step Incubation Pipeline' : 'Quy trình liên thông 4 bước'; ?>
                     </span>
                 </div>
 
-                <h1 class="text-h3 md:text-h1 font-extrabold tracking-tight leading-tight">
-                    <?php echo $program['title']; ?>
-                </h1>
-                <p class="text-body-xs font-bold text-amber-300 tracking-wider uppercase">
-                    <?php echo $program['sub_title']; ?>
-                </p>
-
-                <p class="text-body-xs md:text-body-sm text-amber-100/90 font-light leading-relaxed max-w-3xl">
-                    <?php echo $program['desc']; ?>
-                </p>
-
-                <!-- Key Metrics Grid -->
-                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-amber-700/50 max-w-2xl">
-                    <?php foreach ($program['key_metrics'] as $metric): ?>
-                        <div>
-                            <div class="text-h4 md:text-h3 font-black text-amber-300"><?php echo $metric['number']; ?></div>
-                            <div class="text-[11px] md:text-body-xs text-amber-200/80 font-medium"><?php echo $metric['label']; ?></div>
-                        </div>
-                    <?php endforeach; ?>
+                <!-- Tiêu đề lớn -->
+                <div class="space-y-2">
+                    <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-bold tracking-tight leading-tight text-white">
+                        <?php echo $is_en ? 'Ca Mau Startup Journey' : 'Hành Trình Khởi Nghiệp Cà Mau'; ?>
+                    </h1>
+                    <p class="text-[13px] font-bold uppercase tracking-widest text-[#C1FF72]">
+                        <?php echo $is_en ? 'Ca Mau Startup Journey (Sourcing • Incubation • Acceleration • Scaling)' : 'Ca Mau Startup Journey (Săn nguồn • Ươm tạo • Tăng tốc • Mở rộng)'; ?>
+                    </p>
                 </div>
 
+                <!-- Đoạn mô tả -->
+                <p class="text-[15px] sm:text-[16px] text-amber-100/90 font-normal leading-relaxed max-w-3xl">
+                    <?php echo $is_en 
+                        ? 'A comprehensive 04-step incubation pipeline: sourcing projects via annual competitions, 6-12 month incubation with shared technical laboratories, 3-6 month acceleration with 1:1 co-funding, through market scaling and venture capital access.'
+                        : 'Quy trình hỗ trợ liên thông 04 bước khép kín từ săn tìm ý tưởng cuộc thi, ươm tạo 6-12 tháng tại Lab dùng chung, tăng tốc doanh thu có cơ chế đồng tài trợ 1:1 từ ngân sách, đến mở rộng quy mô thị trường và gọi vốn đầu tư mạo hiểm.'; ?>
+                </p>
+
+                <!-- 3 Thẻ chỉ số Glassmorphism -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 max-w-2xl">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-left">
+                        <div class="text-[26px] lg:text-[30px] font-bold text-amber-300 leading-tight"><?php echo $is_en ? '4 Steps' : '4 Bước'; ?></div>
+                        <div class="text-[12px] text-amber-200/80 font-medium"><?php echo $is_en ? 'Continuous incubation pipeline' : 'Quy trình liên thông khép kín'; ?></div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-left">
+                        <div class="text-[26px] lg:text-[30px] font-bold text-amber-300 leading-tight">6 - 12M</div>
+                        <div class="text-[12px] text-amber-200/80 font-medium"><?php echo $is_en ? 'Shared Lab incubation' : 'Ươm tạo tại Lab dùng chung'; ?></div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-left">
+                        <div class="text-[26px] lg:text-[30px] font-bold text-amber-300 leading-tight">1 : 1</div>
+                        <div class="text-[12px] text-amber-200/80 font-medium"><?php echo $is_en ? 'Matching co-funding' : 'Đồng tài trợ vốn đối ứng'; ?></div>
+                    </div>
+                </div>
+
+                <!-- Nút CTA -->
                 <div class="pt-4 flex flex-wrap items-center gap-4">
-                    <a href="#register-section" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-body-sm px-6 py-3.5 rounded-full transition-all shadow-lg hover:shadow-amber-500/30">
-                        <span>Đăng ký tham gia 4 bước liên thông</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#dang-ky" class="bg-[#D97706] hover:bg-amber-500 text-white font-semibold text-[14px] rounded-full pl-6 pr-2 py-2 transition-all duration-300 shadow-lg hover:shadow-amber-500/30 inline-flex items-center gap-3 group">
+                        <span><?php echo $is_en ? 'Submit Startup Proposal' : 'Nộp hồ sơ dự án khởi nghiệp'; ?></span>
+                        <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
                     </a>
-                    <a href="lien-he.php" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-body-sm px-6 py-3.5 rounded-full transition-all border border-white/20">
-                        <span>Tìm hiểu cơ chế Đồng tài trợ 1:1</span>
+                    <a href="doi-tac.php?tab=mentors" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-[14px] rounded-full px-6 py-3 transition-all duration-300">
+                        <span><?php echo $is_en ? 'Find Startup Mentors' : 'Tìm chuyên gia Mentors'; ?></span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- 4-STEP PROCESS ROADMAP VISUAL -->
-        <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-sm space-y-6">
-            <div class="text-center space-y-2">
-                <span class="text-body-xs font-black uppercase tracking-wider text-amber-600">QUY TRÌNH HỖ TRỢ LIÊN THÔNG 04 BƯỚC</span>
-                <h2 class="text-h3 font-extrabold text-[#02185D]">Hành Trình Khởi Nghiệp Chuẩn Hóa Cà Mau</h2>
+        <!-- SƠ ĐỒ ROADMAP QUY TRÌNH LIÊN THÔNG 4 BƯỚC -->
+        <div class="space-y-6 text-left">
+            <div class="space-y-1">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#D97706]">
+                    <?php echo $is_en ? 'EXECUTION ROADMAP' : 'TIẾN TRÌNH THỰC THI'; ?>
+                </span>
+                <h2 class="text-[24px] sm:text-[28px] font-bold text-[#062AAD]">
+                    <?php echo $is_en ? '04-Step Continuous Startup Pipeline' : 'Quy Trình Liên Thông 04 Bước Hỗ Trợ Khởi Nghiệp'; ?>
+                </h2>
+                <p class="text-[14px] text-[#5B5B5B] max-w-3xl">
+                    <?php echo $is_en 
+                        ? 'An unbroken support model accompanying founders from raw concepts to market scaling and investment readiness.'
+                        : 'Mô hình hỗ trợ liên tục không đứt gãy, đồng hành cùng nhà sáng lập từ giai đoạn ý tưởng sơ khai đến khi doanh nghiệp sẵn sàng tăng trưởng và gọi vốn.'; ?>
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <!-- Step 1 -->
-                <div class="bg-amber-50/50 rounded-2xl p-5 border border-amber-200/80 space-y-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center">1</div>
-                    <h3 class="text-body-xs font-extrabold text-amber-900">Tìm nguồn & Tiền ươm tạo</h3>
-                    <p class="text-[11px] text-slate-600 leading-relaxed">Săn nguồn ý tưởng từ các cuộc thi khởi nghiệp cấp tỉnh & vùng, cấp vốn mồi tiền ươm tạo.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="bg-amber-50/50 rounded-2xl p-5 border border-amber-200/80 space-y-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center">2</div>
-                    <h3 class="text-body-xs font-extrabold text-amber-900">Ươm tạo 6-12 tháng</h3>
-                    <p class="text-[11px] text-slate-600 leading-relaxed">Ươm tạo tại Lab dùng chung, hoàn thiện mẫu sản phẩm MVP và tư vấn mô hình kinh doanh.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="bg-amber-50/50 rounded-2xl p-5 border border-amber-200/80 space-y-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center">3</div>
-                    <h3 class="text-body-xs font-extrabold text-amber-900">Tăng tốc 3-6 tháng (1:1)</h3>
-                    <p class="text-[11px] text-slate-600 leading-relaxed">Tăng tốc tăng trưởng kinh doanh kết hợp chính sách ngân sách đồng tài trợ đối ứng 1:1.</p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="bg-amber-50/50 rounded-2xl p-5 border border-amber-200/80 space-y-3">
-                    <div class="w-8 h-8 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center">4</div>
-                    <h3 class="text-body-xs font-extrabold text-amber-900">Mở rộng quy mô & Vốn</h3>
-                    <p class="text-[11px] text-slate-600 leading-relaxed">Kết nối các Quỹ đầu tư mạo hiểm, mở rộng kênh phân phối thị trường vùng & quốc tế.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- MAIN FUNCTION & TARGET AUDIENCE SECTION -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-sm space-y-4 flex items-start gap-5">
-                <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-200 shadow-2xs mt-1">
-                    <i data-lucide="shield-check" class="w-7 h-7"></i>
-                </div>
-                <div class="space-y-2">
-                    <span class="text-[10px] font-black uppercase tracking-wider text-amber-600">ĐỊNH VỊ CHỨC NĂNG</span>
-                    <h2 class="text-h4 font-extrabold text-[#02185D]">Chức Năng Chính</h2>
-                    <p class="text-body-xs text-slate-600 leading-relaxed">
-                        <?php echo $program['main_function']; ?>
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-sm space-y-4 flex items-start gap-5">
-                <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 border border-orange-200 shadow-2xs mt-1">
-                    <i data-lucide="target" class="w-7 h-7"></i>
-                </div>
-                <div class="space-y-2">
-                    <span class="text-[10px] font-black uppercase tracking-wider text-orange-600">ĐỐI TƯỢNG HƯỚNG TỚI</span>
-                    <h2 class="text-h4 font-extrabold text-[#02185D]">Đối Tượng Tham Gia</h2>
-                    <p class="text-body-xs text-slate-600 leading-relaxed">
-                        <?php echo $program['target_audience']; ?>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- DELIVERABLES / OUTPUTS SECTION -->
-        <div class="bg-amber-950 text-white rounded-3xl p-8 md:p-12 space-y-8 shadow-xl">
-            <div class="text-center space-y-2 max-w-2xl mx-auto">
-                <span class="text-body-xs font-black uppercase tracking-wider text-amber-300">KẾT QUẢ ĐẦU RA</span>
-                <h2 class="text-h3 font-extrabold text-white">Đầu Ra Đạt Được Của Chương Trình</h2>
-                <p class="text-body-xs text-amber-200/80 font-light">Sự trưởng thành bền vững của các doanh nghiệp startup Cà Mau</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <?php foreach ($program['outputs'] as $out): ?>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 space-y-3 hover:bg-white/15 transition-all">
-                        <div class="w-10 h-10 rounded-xl bg-amber-500/30 text-amber-300 flex items-center justify-center">
-                            <i data-lucide="<?php echo $out['icon']; ?>" class="w-5 h-5"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                <!-- Bước 1 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-amber-200 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 relative group">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[12px] font-bold uppercase px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                            <?php echo $is_en ? 'STEP 1' : 'BƯỚC 1'; ?>
+                        </span>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                            <i data-lucide="search" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-body-md font-extrabold text-white"><?php echo $out['title']; ?></h3>
-                        <p class="text-body-xs text-amber-200/80 font-light leading-relaxed"><?php echo $out['desc']; ?></p>
                     </div>
-                <?php endforeach; ?>
+                    <div class="space-y-2">
+                        <h4 class="text-[17px] font-bold text-[#02185D] group-hover:text-amber-700 transition-colors">
+                            <?php echo $is_en ? 'Sourcing & Pre-Incubation' : 'Săn Nguồn & Tiền Ươm Tạo'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Scouting high-potential ideas through annual startup competitions. Supplying seed funding and early business model refinement.'
+                                : 'Tìm kiếm ý tưởng xuất sắc thông qua các cuộc thi khởi nghiệp Cà Mau hàng năm. Cung cấp gói vốn mồi giai đoạn sơ khai và định hình mô hình kinh doanh ban đầu.'; ?>
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100 flex items-center gap-2 text-[12px] text-amber-700 font-semibold">
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                        <span><?php echo $is_en ? 'Seed Grants & Selection' : 'Vốn mồi & Tuyển chọn'; ?></span>
+                    </div>
+                </div>
+
+                <!-- Bước 2 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-amber-300 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 relative group">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[12px] font-bold uppercase px-3 py-1 rounded-full bg-amber-100/70 text-amber-800 border border-amber-300">
+                            <?php echo $is_en ? 'STEP 2' : 'BƯỚC 2'; ?>
+                        </span>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                            <i data-lucide="cpu" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[17px] font-bold text-[#02185D] group-hover:text-amber-700 transition-colors">
+                            <?php echo $is_en ? '6 - 12 Month Incubation' : 'Ươm Tạo 6 - 12 Tháng'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Intensive mentoring and access to shared technical labs, prototyping support for Minimum Viable Products (MVP) and IP filing.'
+                                : 'Huấn luyện kỹ năng chuyên sâu kết hợp sử dụng phòng thí nghiệm kỹ thuật (Lab) dùng chung, hỗ trợ hoàn thiện mẫu thử nghiệm (MVP) và đăng ký sở hữu trí tuệ.'; ?>
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100 flex items-center gap-2 text-[12px] text-amber-700 font-semibold">
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                        <span><?php echo $is_en ? 'MVP Product Delivery' : 'Hoàn thiện sản phẩm MVP'; ?></span>
+                    </div>
+                </div>
+
+                <!-- Bước 3 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-amber-400 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 relative group">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[12px] font-bold uppercase px-3 py-1 rounded-full bg-amber-500 text-white font-bold">
+                            <?php echo $is_en ? 'STEP 3' : 'BƯỚC 3'; ?>
+                        </span>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
+                            <i data-lucide="trending-up" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[17px] font-bold text-[#02185D] group-hover:text-amber-700 transition-colors">
+                            <?php echo $is_en ? 'Acceleration (1:1 Co-funding)' : 'Tăng Tốc (Đồng tài trợ 1:1)'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'A 3-6 month growth sprint accelerating sales traction with a transparent 1:1 matching grant mechanism from provincial innovation funds.'
+                                : 'Chương trình tăng tốc 3-6 tháng giúp startup tăng trưởng doanh số với cơ chế đồng tài trợ vốn đối ứng 1:1 từ ngân sách tỉnh Cà Mau một cách minh bạch.'; ?>
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100 flex items-center gap-2 text-[12px] text-amber-700 font-semibold">
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                        <span><?php echo $is_en ? '1:1 Matching Grants' : 'Đồng tài trợ vốn đối ứng 1:1'; ?></span>
+                    </div>
+                </div>
+
+                <!-- Bước 4 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-[#062AAD]/30 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 relative group">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[12px] font-bold uppercase px-3 py-1 rounded-full bg-[#062AAD] text-white font-bold">
+                            <?php echo $is_en ? 'STEP 4' : 'BƯỚC 4'; ?>
+                        </span>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-[#062AAD] flex items-center justify-center">
+                            <i data-lucide="globe-2" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[17px] font-bold text-[#02185D] group-hover:text-[#062AAD] transition-colors">
+                            <?php echo $is_en ? 'Scaling & Capital Raise' : 'Mở Rộng & Gọi Vốn'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Direct connections with venture capital funds (VCs), angel investors, and market distribution expansion nationwide.'
+                                : 'Kết nối trực tiếp mạng lưới các Quỹ đầu tư mạo hiểm (VCs), nhà đầu tư thiên thần (Angels) và hỗ trợ mở rộng kênh phân phối ra thị trường cả nước.'; ?>
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100 flex items-center gap-2 text-[12px] text-[#062AAD] font-semibold">
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                        <span><?php echo $is_en ? 'Investor Demo Day & Expansion' : 'Kết nối Quỹ đầu tư & Mở rộng'; ?></span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- REGISTRATION FORM SECTION -->
-        <div id="register-section" class="bg-white rounded-3xl p-8 md:p-12 border border-slate-200/80 shadow-md max-w-4xl mx-auto space-y-8">
-            <div class="text-center space-y-2">
-                <div class="w-12 h-12 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center mx-auto border border-amber-200">
-                    <i data-lucide="rocket" class="w-6 h-6"></i>
+        <!-- FORM NỘP HỒ SƠ DỰ ÁN KHỞI NGHIỆP -->
+        <div id="dang-ky" class="bg-white rounded-[28px] lg:rounded-[36px] p-8 sm:p-12 border border-slate-200/80 shadow-md">
+            <div class="max-w-2xl mx-auto space-y-6 text-center">
+                <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 px-4 py-1 rounded-full text-[12px] font-bold uppercase tracking-wider">
+                    <i data-lucide="rocket" class="w-3.5 h-3.5"></i>
+                    <?php echo $is_en ? 'STARTUP APPLICATION' : 'NỘP HỒ SƠ KHỞI NGHIỆP'; ?>
                 </div>
-                <h2 class="text-h3 font-extrabold text-[#02185D]">Đăng Ký Khởi Nghiệp Cùng Ca Mau Startup Journey</h2>
-                <p class="text-body-xs text-slate-500">Dành cho cá nhân, nhóm sáng lập và doanh nghiệp khởi nghiệp Đổi mới sáng tạo trên địa bàn tỉnh Cà Mau.</p>
-            </div>
-
-            <form action="lien-he.php" method="GET" class="space-y-6">
-                <input type="hidden" name="program" value="JOURNEY">
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Họ và tên người đại diện *</label>
-                        <input type="text" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-500 text-body-xs">
-                    </div>
-
-                    <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Tên Dự án / Startup</label>
-                        <input type="text" placeholder="Dự án Cà Mau Startup..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-500 text-body-xs">
-                    </div>
+                <div class="space-y-2">
+                    <h3 class="text-[24px] sm:text-[30px] font-bold text-[#062AAD]">
+                        <?php echo $is_en ? 'Apply for Ca Mau Startup Journey' : 'Đăng Ký Tham Gia Hành Trình Khởi Nghiệp'; ?>
+                    </h3>
+                    <p class="text-[14px] text-[#5B5B5B]">
+                        <?php echo $is_en 
+                            ? 'Submit your startup pitch to receive evaluation from the CiNEC Advisory Board and qualify for incubation services and 1:1 matching grants.'
+                            : 'Gửi hồ sơ dự án của bạn để nhận đánh giá từ Hội đồng chuyên gia CiNEC và cơ hội tiếp cận gói ươm tạo cũng như cơ chế đồng tài trợ vốn 1:1.'; ?>
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Email *</label>
-                        <input type="email" required placeholder="example@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-500 text-body-xs">
+                <form class="space-y-4 text-left pt-2" onsubmit="event.preventDefault(); alert('<?php echo $is_en ? 'Thank you! Your startup proposal has been received.' : 'Cảm ơn bạn! Hồ sơ dự án khởi nghiệp đã được tiếp nhận.'; ?>'); this.reset();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Founder / Representative Name *' : 'Người đại diện / Sáng lập viên *'; ?></label>
+                            <input type="text" required placeholder="<?php echo $is_en ? 'John Doe' : 'Nguyễn Văn A'; ?>" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Startup / Project Name *' : 'Tên dự án / Startup *'; ?></label>
+                            <input type="text" required placeholder="<?php echo $is_en ? 'Project name...' : 'Tên dự án khởi nghiệp...'; ?>" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-amber-500">
+                        </div>
                     </div>
-
-                    <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Giai đoạn đăng ký hỗ trợ</label>
-                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-500 text-body-xs text-slate-700">
-                            <option>Bước 1: Tham gia cuộc thi & Vốn mồi tiền ươm tạo</option>
-                            <option>Bước 2: Ươm tạo 6-12 tháng tại Lab dùng chung</option>
-                            <option>Bước 3: Tăng tốc 3-6 tháng & Đồng tài trợ 1:1</option>
-                            <option>Bước 4: Mở rộng quy mô & Gọi vốn đầu tư</option>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Contact Email *' : 'Email liên hệ *'; ?></label>
+                            <input type="email" required placeholder="founder@startup.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Phone Number *' : 'Số điện thoại *'; ?></label>
+                            <input type="tel" required placeholder="0901234567" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Current Stage of Project *' : 'Giai đoạn hiện tại của dự án *'; ?></label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-amber-500 bg-white">
+                            <option><?php echo $is_en ? 'Stage 1: Idea / Seeking Seed Grant' : 'Giai đoạn 1: Ý tưởng sơ khai / Tìm vốn mồi'; ?></option>
+                            <option><?php echo $is_en ? 'Stage 2: MVP Ready / Needs Lab Incubation' : 'Giai đoạn 2: Đã có mẫu thử nghiệm (MVP) / Cần ươm tạo'; ?></option>
+                            <option><?php echo $is_en ? 'Stage 3: Early Traction / Needs 1:1 Acceleration' : 'Giai đoạn 3: Đã có doanh thu ban đầu / Cần tăng tốc 1:1'; ?></option>
+                            <option><?php echo $is_en ? 'Stage 4: Market Scaling / Seeking VC Investment' : 'Giai đoạn 4: Mở rộng thị trường / Cần gọi vốn Quỹ đầu tư'; ?></option>
                         </select>
                     </div>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-body-xs font-bold text-slate-700">Mô tả ngắn gọn về ý tưởng / sản phẩm & nhu cầu tài trợ đối ứng</label>
-                    <textarea rows="4" placeholder="Nêu rõ sản phẩm, thị trường mục tiêu và số vốn đối ứng cần đồng tài trợ..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-amber-500 text-body-xs"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-body-sm rounded-xl shadow-lg transition-all">
-                    Nộp Hồ Sơ Khởi Nghiệp
-                </button>
-            </form>
-        </div>
-
-        <!-- OTHER PROGRAMS NAV BAR -->
-        <div class="pt-8 border-t border-slate-200">
-            <h3 class="text-body-xs font-extrabold text-slate-400 uppercase tracking-wider mb-4 text-center">Các chương trình thành phần khác</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <a href="chuong-trinh-platform.php" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 text-center space-y-1 transition-all group">
-                    <span class="text-body-xs font-bold text-[#02185D] group-hover:text-blue-600 block">1. Nền tảng Đổi mới sáng tạo</span>
-                    <span class="text-[10px] text-slate-400">Sandbox, Dữ liệu Đổi mới sáng tạo, Chỉ số PII</span>
-                </a>
-                <a href="chuong-trinh-sme.php" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 text-center space-y-1 transition-all group">
-                    <span class="text-body-xs font-bold text-[#02185D] group-hover:text-emerald-600 block">3. Doanh nghiệp số</span>
-                    <span class="text-[10px] text-slate-400">Voucher CĐS, Mentor KPI 90 ngày & OCOP</span>
-                </a>
-                <a href="chuong-trinh-talent.php" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-purple-500 text-center space-y-1 transition-all group">
-                    <span class="text-body-xs font-bold text-[#02185D] group-hover:text-purple-600 block">4. Nhân tài số</span>
-                    <span class="text-[10px] text-slate-400">Học bổng tài năng số & Mô hình ĐH Khởi nghiệp</span>
-                </a>
+                    <div class="space-y-1">
+                        <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Brief Problem & Solution Description' : 'Mô tả tóm tắt giải pháp & sản phẩm'; ?></label>
+                        <textarea rows="3" placeholder="<?php echo $is_en ? 'Describe your problem, solution, product, and market target...' : 'Giới thiệu vấn đề bạn đang giải quyết, sản phẩm là gì và tiềm năng thị trường...'; ?>" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+                    <div class="text-center pt-2">
+                        <button type="submit" class="bg-[#D97706] hover:bg-amber-600 text-white font-semibold text-[14px] rounded-full px-8 py-3.5 transition-all shadow-md hover:shadow-lg inline-flex items-center gap-2">
+                            <span><?php echo $is_en ? 'Submit Application' : 'Nộp Hồ Sơ Đăng Ký'; ?></span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
 

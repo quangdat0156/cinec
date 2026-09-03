@@ -1,11 +1,12 @@
 <?php
-$page_title = "Giới Thiệu - CINEC Cà Mau";
 require_once 'config/db.php';
+require_once 'config/lang.php';
+$page_title = current_lang() === 'en' ? "About Us - CINEC Ca Mau" : "Giới Thiệu - CINEC Cà Mau";
 require_once 'includes/header.php';
 ?>
 
-<!-- TOÀN BỘ GIAO DIỆN GIỚI THIỆU: CHUẨN XÁC THEO FIGMA (NODE 115:2355) -->
-<div class="bg-[#F7FAFD] min-h-screen pt-28 pb-20 overflow-hidden relative">
+<!-- TOÀN BỘ GIAO DIỆN GIỚI THIỆU: CHUẨN XÁC THEO FIGMA HỖ TRỢ SONG NGỮ (VI / EN) -->
+<div class="bg-[#F7FAFD] min-h-screen pt-28 pb-20 overflow-hidden relative font-sans">
 
     <!-- Ảnh nền mờ phía trên (Hero Background Fade) -->
     <div class="absolute top-0 left-0 right-0 h-[620px] pointer-events-none opacity-40 mix-blend-multiply overflow-hidden z-0">
@@ -28,10 +29,10 @@ require_once 'includes/header.php';
             <!-- Tiêu đề & Lời giới thiệu trung tâm chuẩn Figma -->
             <div class="max-w-4xl mx-auto text-center space-y-3 pt-2">
                 <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-[28px] font-bold text-[#062AAD] tracking-tight">
-                    [Trung tâm Khởi nghiệp và Đổi mới sáng tạo]
+                    <?php echo __('about_center_title'); ?>
                 </h1>
                 <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed font-normal">
-                    Trung tâm Khởi nghiệp và Đổi mới sáng tạo tỉnh Cà Mau thực hiện chức năng nghiên cứu, hoạt động sự nghiệp và cung cấp dịch vụ liên quan đến hỗ trợ và phát triển doanh nghiệp khởi nghiệp, hệ sinh thái khởi nghiệp, khởi nghiệp sáng tạo, thúc đẩy đổi mới sáng tạo của tỉnh Cà Mau, góp phần đổi mới mô hình tăng trưởng dựa trên nền tảng khoa học và công nghệ.
+                    <?php echo __('about_center_desc'); ?>
                 </p>
             </div>
         </section>
@@ -46,10 +47,10 @@ require_once 'includes/header.php';
                     <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] text-[#05A6F5] flex items-center justify-center shrink-0">
                         <i data-lucide="eye" class="w-6 h-6"></i>
                     </div>
-                    <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">Tầm Nhìn</h2>
+                    <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]"><?php echo __('about_vision_title'); ?></h2>
                 </div>
-                <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed">
-                    Đến 2030, CiNEC là đầu mối đổi mới sáng tạo dẫn dắt Đồng bằng sông Cửu Long, kết nối quốc gia và quốc tế.
+                <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed font-normal">
+                    <?php echo __('about_vision_desc'); ?>
                 </p>
             </div>
 
@@ -59,10 +60,10 @@ require_once 'includes/header.php';
                     <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] text-[#05A6F5] flex items-center justify-center shrink-0">
                         <i data-lucide="target" class="w-6 h-6"></i>
                     </div>
-                    <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">Sứ Mệnh</h2>
+                    <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]"><?php echo __('about_mission_title'); ?></h2>
                 </div>
-                <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed">
-                    Ươm tạo doanh nghiệp đổi mới, thúc đẩy ứng dụng khoa học, công nghệ và chuyển đổi số, góp phần chuyển đổi mô hình tăng trưởng bền vững cho tỉnh Cà Mau.
+                <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed font-normal">
+                    <?php echo __('about_mission_desc'); ?>
                 </p>
             </div>
         </section>
@@ -76,48 +77,50 @@ require_once 'includes/header.php';
                 <div class="w-12 h-12 rounded-full bg-[rgba(5,166,245,0.1)] text-[#05A6F5] flex items-center justify-center shrink-0">
                     <i data-lucide="shield-check" class="w-6 h-6"></i>
                 </div>
-                <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">Giá Trị Cốt Lõi</h2>
+                <h2 class="text-xl md:text-2xl font-bold text-[#062AAD]">
+                    <?php echo current_lang() === 'en' ? 'Core Values' : 'Giá Trị Cốt Lõi'; ?>
+                </h2>
             </div>
 
             <!-- 5 Cột giá trị với vạch ngăn mờ đứng (Figma Dividers) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-[rgba(5,166,245,0.15)]">
                 <!-- 1. Con Người -->
                 <div class="pt-4 md:pt-0 md:px-3 space-y-2">
-                    <h3 class="text-base font-semibold text-[#062AAD]">Con Người</h3>
+                    <h3 class="text-base font-semibold text-[#062AAD]"><?php echo current_lang() === 'en' ? 'People' : 'Con Người'; ?></h3>
                     <p class="text-[13px] text-[#5B5B5B] leading-relaxed font-normal">
-                        Lấy con người làm trọng tâm phát triển.
+                        <?php echo current_lang() === 'en' ? 'People at the center of innovation.' : 'Lấy con người làm trọng tâm phát triển.'; ?>
                     </p>
                 </div>
 
                 <!-- 2. Đổi Mới -->
                 <div class="pt-4 md:pt-0 md:px-3 space-y-2">
-                    <h3 class="text-base font-semibold text-[#062AAD]">Đổi Mới</h3>
+                    <h3 class="text-base font-semibold text-[#062AAD]"><?php echo current_lang() === 'en' ? 'Innovation' : 'Đổi Mới'; ?></h3>
                     <p class="text-[13px] text-[#5B5B5B] leading-relaxed font-normal">
-                        Đổi mới không ngừng nghỉ.
+                        <?php echo current_lang() === 'en' ? 'Relentless and pioneering innovation.' : 'Đổi mới không ngừng nghỉ.'; ?>
                     </p>
                 </div>
 
                 <!-- 3. Tôn Trọng -->
                 <div class="pt-4 md:pt-0 md:px-3 space-y-2">
-                    <h3 class="text-base font-semibold text-[#062AAD]">Tôn Trọng</h3>
+                    <h3 class="text-base font-semibold text-[#062AAD]"><?php echo current_lang() === 'en' ? 'Respect' : 'Tôn Trọng'; ?></h3>
                     <p class="text-[13px] text-[#5B5B5B] leading-relaxed font-normal">
-                        Tôn trọng trong mọi hợp tác.
+                        <?php echo current_lang() === 'en' ? 'Mutual respect in every partnership.' : 'Tôn trọng trong mọi hợp tác.'; ?>
                     </p>
                 </div>
 
                 <!-- 4. Trách Nhiệm -->
                 <div class="pt-4 md:pt-0 md:px-3 space-y-2">
-                    <h3 class="text-base font-semibold text-[#062AAD]">Trách Nhiệm</h3>
+                    <h3 class="text-base font-semibold text-[#062AAD]"><?php echo current_lang() === 'en' ? 'Responsibility' : 'Trách Nhiệm'; ?></h3>
                     <p class="text-[13px] text-[#5B5B5B] leading-relaxed font-normal">
-                        Trách nhiệm với cộng đồng và tương lai.
+                        <?php echo current_lang() === 'en' ? 'Committed to community and future generations.' : 'Trách nhiệm với cộng đồng và tương lai.'; ?>
                     </p>
                 </div>
 
                 <!-- 5. Hài Lòng -->
                 <div class="pt-4 md:pt-0 md:px-3 space-y-2">
-                    <h3 class="text-base font-semibold text-[#062AAD]">Hài Lòng</h3>
+                    <h3 class="text-base font-semibold text-[#062AAD]"><?php echo current_lang() === 'en' ? 'Satisfaction' : 'Hài Lòng'; ?></h3>
                     <p class="text-[13px] text-[#5B5B5B] leading-relaxed font-normal">
-                        Lấy sự hài lòng của người dân và doanh nghiệp làm thước đo hiệu quả.
+                        <?php echo current_lang() === 'en' ? 'Customer and citizen satisfaction as key success metric.' : 'Lấy sự hài lòng của người dân và doanh nghiệp làm thước đo hiệu quả.'; ?>
                     </p>
                 </div>
             </div>
@@ -129,9 +132,11 @@ require_once 'includes/header.php';
         <section class="bg-white rounded-[32px] p-6 md:p-10 border border-slate-100 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <!-- Cột trái: Văn bản chức năng -->
             <div class="lg:col-span-6 space-y-4">
-                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#062AAD]">Chức Năng</h2>
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#062AAD]">
+                    <?php echo current_lang() === 'en' ? 'Functions & Mandates' : 'Chức Năng'; ?>
+                </h2>
                 <p class="text-sm md:text-base text-[#5B5B5B] leading-relaxed font-normal">
-                    Trung tâm Khởi nghiệp và Đổi mới sáng tạo tỉnh Cà Mau thực hiện chức năng nghiên cứu, hoạt động sự nghiệp và cung cấp dịch vụ liên quan đến hỗ trợ và phát triển doanh nghiệp khởi nghiệp, hệ sinh thái khởi nghiệp, khởi nghiệp sáng tạo, thúc đẩy đổi mới sáng tạo của tỉnh Cà Mau, góp phần đổi mới mô hình tăng trưởng dựa trên nền tảng khoa học và công nghệ.
+                    <?php echo __('about_center_desc'); ?>
                 </p>
             </div>
 
@@ -152,9 +157,11 @@ require_once 'includes/header.php';
 
             <!-- Tiêu đề Ban Lãnh Đạo -->
             <div class="text-center space-y-2">
-                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#062AAD]">Ban Lãnh Đạo</h2>
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-[#062AAD]">
+                    <?php echo __('about_leadership_title'); ?>
+                </h2>
                 <p class="text-sm md:text-base text-[#5B5B5B]">
-                    Đội ngũ lãnh đạo tâm huyết, giàu kinh nghiệm trong lĩnh vực đổi mới sáng tạo
+                    <?php echo current_lang() === 'en' ? 'Dedicated leadership team with deep expertise in regional innovation.' : 'Đội ngũ lãnh đạo tâm huyết, giàu kinh nghiệm trong lĩnh vực đổi mới sáng tạo'; ?>
                 </p>
             </div>
 
@@ -171,13 +178,21 @@ require_once 'includes/header.php';
                     
                     <div class="space-y-1">
                         <h3 class="text-base font-semibold text-[#062AAD]">Phạm Thùy B</h3>
-                        <p class="text-xs text-slate-800 font-medium">Phó Giám Đốc</p>
-                        <p class="text-[11px] text-slate-500 font-medium">Trung Tâm CiNEC</p>
+                        <p class="text-xs text-slate-800 font-medium"><?php echo current_lang() === 'en' ? 'Vice Director' : 'Phó Giám Đốc'; ?></p>
+                        <p class="text-[11px] text-slate-500 font-medium"><?php echo current_lang() === 'en' ? 'CiNEC Center' : 'Trung Tâm CiNEC'; ?></p>
                     </div>
 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded border-2 border-[#062AAD] text-[#062AAD] flex items-center justify-center hover:bg-[#062AAD] hover:text-white transition-colors" aria-label="LinkedIn Profile">
-                        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
-                    </a>
+                    <!-- Icon mạng xã hội / Liên hệ lãnh đạo -->
+                    <div class="flex items-center gap-2">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-[#062AAD]/30 text-[#062AAD] hover:bg-[#062AAD] hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs group/icon" aria-label="LinkedIn Profile">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:contact@cinec.com.vn" class="w-8 h-8 rounded-lg border border-slate-200 text-slate-500 hover:border-[#062AAD] hover:text-[#062AAD] hover:bg-blue-50/50 flex items-center justify-center transition-all duration-300 shadow-2xs" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 2. Nguyễn Văn A (Giám Đốc) -->
@@ -190,13 +205,21 @@ require_once 'includes/header.php';
                     
                     <div class="space-y-1">
                         <h3 class="text-base font-semibold text-[#062AAD]">Nguyễn Văn A</h3>
-                        <p class="text-xs text-slate-800 font-medium">Giám Đốc</p>
-                        <p class="text-[11px] text-slate-500 font-medium">Trung Tâm CiNEC</p>
+                        <p class="text-xs text-slate-800 font-medium"><?php echo current_lang() === 'en' ? 'Director' : 'Giám Đốc'; ?></p>
+                        <p class="text-[11px] text-slate-500 font-medium"><?php echo current_lang() === 'en' ? 'CiNEC Center' : 'Trung Tâm CiNEC'; ?></p>
                     </div>
 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded border-2 border-[#062AAD] text-[#062AAD] flex items-center justify-center hover:bg-[#062AAD] hover:text-white transition-colors" aria-label="LinkedIn Profile">
-                        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
-                    </a>
+                    <!-- Icon mạng xã hội / Liên hệ lãnh đạo -->
+                    <div class="flex items-center gap-2">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-[#062AAD]/30 text-[#062AAD] hover:bg-[#062AAD] hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs group/icon" aria-label="LinkedIn Profile">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:contact@cinec.com.vn" class="w-8 h-8 rounded-lg border border-slate-200 text-slate-500 hover:border-[#062AAD] hover:text-[#062AAD] hover:bg-blue-50/50 flex items-center justify-center transition-all duration-300 shadow-2xs" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- 3. Trần Trung C -->
@@ -209,13 +232,21 @@ require_once 'includes/header.php';
                     
                     <div class="space-y-1">
                         <h3 class="text-base font-semibold text-[#062AAD]">Trần Trung C</h3>
-                        <p class="text-xs text-slate-800 font-medium">Phó Giám Đốc</p>
-                        <p class="text-[11px] text-slate-500 font-medium">Trung Tâm CiNEC</p>
+                        <p class="text-xs text-slate-800 font-medium"><?php echo current_lang() === 'en' ? 'Vice Director' : 'Phó Giám Đốc'; ?></p>
+                        <p class="text-[11px] text-slate-500 font-medium"><?php echo current_lang() === 'en' ? 'CiNEC Center' : 'Trung Tâm CiNEC'; ?></p>
                     </div>
 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded border-2 border-[#062AAD] text-[#062AAD] flex items-center justify-center hover:bg-[#062AAD] hover:text-white transition-colors" aria-label="LinkedIn Profile">
-                        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
-                    </a>
+                    <!-- Icon mạng xã hội / Liên hệ lãnh đạo -->
+                    <div class="flex items-center gap-2">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-[#062AAD]/30 text-[#062AAD] hover:bg-[#062AAD] hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs group/icon" aria-label="LinkedIn Profile">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:contact@cinec.com.vn" class="w-8 h-8 rounded-lg border border-slate-200 text-slate-500 hover:border-[#062AAD] hover:text-[#062AAD] hover:bg-blue-50/50 flex items-center justify-center transition-all duration-300 shadow-2xs" aria-label="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>

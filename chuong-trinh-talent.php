@@ -1,216 +1,288 @@
 <?php
-$page_title = "Nhân tài số Cà Mau (Ca Mau Talent)";
 require_once 'config/db.php';
+require_once 'config/lang.php';
+$lang = current_lang();
+$is_en = ($lang === 'en');
+$page_title = $is_en ? "Ca Mau Digital Talent & Innovation Academy - CiNEC" : "Nhân tài số Cà Mau (Ca Mau Digital Talent) - CiNEC";
 require_once 'includes/header.php';
 
 $program = $mockPrograms['TALENT'];
+$current_prog = 'TALENT';
 ?>
 
-<div class="bg-[#FAFCFF] min-h-screen pt-28 pb-16">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-12 2xl:px-20 space-y-12">
+<!-- TRANG CHƯƠNG TRÌNH 04: NHÂN TÀI SỐ BILINGUAL -->
+<div class="bg-[#F7FAFD] min-h-screen pt-28 pb-20 font-sans">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-12 2xl:px-20 space-y-10">
 
-        <!-- BREADCRUMB -->
-        <nav class="flex items-center gap-2 text-body-xs font-semibold text-slate-500">
-            <a href="index.php" class="hover:text-cinecPrimary transition-colors">Trang chủ</a>
-            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
-            <a href="chuong-trinh.php" class="hover:text-cinecPrimary transition-colors">Chương trình</a>
-            <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
-            <span class="text-purple-600 font-bold"><?php echo $program['title']; ?></span>
-        </nav>
+        <!-- THANH CHUYỂN ĐỔI 4 CHƯƠNG TRÌNH THÀNH PHẦN (Pill Switcher) -->
+        <div class="bg-white rounded-2xl lg:rounded-full p-2 border border-slate-200/80 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.06)] grid grid-cols-2 lg:grid-cols-4 gap-2">
+            <a href="chuong-trinh-platform.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all text-slate-600 hover:text-[#062AAD] hover:bg-blue-50/50">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span><?php echo __('prog_platform_title'); ?></span>
+            </a>
+            <a href="chuong-trinh-journey.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all text-slate-600 hover:text-[#D97706] hover:bg-amber-50/50">
+                <i data-lucide="rocket" class="w-4 h-4"></i>
+                <span><?php echo __('prog_journey_title'); ?></span>
+            </a>
+            <a href="chuong-trinh-sme.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all text-slate-600 hover:text-[#059669] hover:bg-emerald-50/50">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                <span><?php echo __('prog_sme_title'); ?></span>
+            </a>
+            <a href="chuong-trinh-talent.php" class="flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl lg:rounded-full text-[13.5px] font-semibold transition-all bg-[#7C3AED] text-white shadow-md">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-purple-200"></i>
+                <span><?php echo __('prog_talent_title'); ?></span>
+            </a>
+        </div>
 
-        <!-- HERO SECTION BANNER -->
-        <div class="bg-gradient-to-br from-purple-900 via-pink-900 to-[#02185D] rounded-[32px] p-8 md:p-14 text-white shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-20 -top-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute right-40 -bottom-20 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- HERO BANNER KÍNH MỜ CAO CẤP (Figma Dark Navy với quầng sáng Purple/Indigo) -->
+        <div class="relative rounded-[28px] lg:rounded-[36px] bg-gradient-to-br from-[#02155B] via-[#1a1354] to-[#340954] text-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xl border border-purple-500/30">
+            <!-- Quầng sáng hiệu ứng nền -->
+            <div class="absolute -right-24 -top-24 w-96 h-96 bg-[#7C3AED]/25 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute right-1/4 -bottom-24 w-80 h-80 bg-purple-400/15 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="relative z-10 max-w-4xl space-y-6">
+            <div class="relative z-10 max-w-4xl space-y-6 text-left">
+                <!-- Badges -->
                 <div class="flex flex-wrap items-center gap-3">
-                    <span class="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-400/30 text-purple-200 px-4 py-1.5 rounded-full text-body-xs font-extrabold uppercase tracking-wider backdrop-blur-md">
-                        <i data-lucide="graduation-cap" class="w-4 h-4 text-purple-300"></i>
-                        <?php echo $program['badge']; ?>
+                    <span class="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-400/40 text-purple-200 px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                        <?php echo $is_en ? 'COMPONENT PROGRAM 04' : 'CHƯƠNG TRÌNH THÀNH PHẦN 04'; ?>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 bg-white/10 text-white/90 px-3 py-1 rounded-full text-[11px] font-medium border border-white/20">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-300"></i>
+                        <?php echo $is_en ? 'Scholarships & Entrepreneurial Universities' : 'Học bổng & Đại học Khởi nghiệp'; ?>
                     </span>
                 </div>
 
-                <h1 class="text-h3 md:text-h1 font-extrabold tracking-tight leading-tight">
-                    <?php echo $program['title']; ?>
-                </h1>
-                <p class="text-body-xs font-bold text-purple-300 tracking-wider uppercase">
-                    <?php echo $program['sub_title']; ?>
-                </p>
-
-                <p class="text-body-xs md:text-body-sm text-purple-100/90 font-light leading-relaxed max-w-3xl">
-                    <?php echo $program['desc']; ?>
-                </p>
-
-                <!-- Key Metrics Grid -->
-                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-purple-700/50 max-w-2xl">
-                    <?php foreach ($program['key_metrics'] as $metric): ?>
-                        <div>
-                            <div class="text-h4 md:text-h3 font-black text-purple-300"><?php echo $metric['number']; ?></div>
-                            <div class="text-[11px] md:text-body-xs text-purple-200/80 font-medium"><?php echo $metric['label']; ?></div>
-                        </div>
-                    <?php endforeach; ?>
+                <!-- Tiêu đề lớn -->
+                <div class="space-y-2">
+                    <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-bold tracking-tight leading-tight text-white">
+                        <?php echo $is_en ? 'Ca Mau Digital Talent' : 'Nhân Tài Số Cà Mau'; ?>
+                    </h1>
+                    <p class="text-[13px] font-bold uppercase tracking-widest text-[#C1FF72]">
+                        Ca Mau Digital Talent & Innovation Academy
+                    </p>
                 </div>
 
+                <!-- Đoạn mô tả -->
+                <p class="text-[15px] sm:text-[16px] text-purple-100/90 font-normal leading-relaxed max-w-3xl">
+                    <?php echo $is_en 
+                        ? 'Cultivating future digital talent for Ca Mau through advanced scholarships in AI, Data, Emerging Tech, and accelerating Entrepreneurial University models across local colleges and universities.'
+                        : 'Ươm mầm và phát triển thế hệ tài năng số tương lai cho tỉnh Cà Mau thông qua các gói học bổng chuyên sâu về AI, Dữ liệu, Công nghệ mới và chuyển đổi mô hình Đại học Khởi nghiệp trong các trường Cao đẳng, Đại học địa phương.'; ?>
+                </p>
+
+                <!-- 3 Thẻ chỉ số Glassmorphism -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 max-w-2xl">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-left">
+                        <div class="text-[26px] lg:text-[30px] font-bold text-purple-300 leading-tight">500+</div>
+                        <div class="text-[12px] text-purple-200/80 font-medium"><?php echo $is_en ? 'Students & engineers trained' : 'Học sinh, sinh viên được đào tạo'; ?></div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-left">
+                        <div class="text-[26px] lg:text-[30px] font-bold text-purple-300 leading-tight">50+</div>
+                        <div class="text-[12px] text-purple-200/80 font-medium"><?php echo $is_en ? 'Talent scholarships awarded' : 'Suất học bổng tài năng số'; ?></div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-left">
+                        <div class="text-[26px] lg:text-[30px] font-bold text-purple-300 leading-tight">10+</div>
+                        <div class="text-[12px] text-purple-200/80 font-medium"><?php echo $is_en ? 'Partner universities & colleges' : 'Trường Đại học, Cao đẳng liên kết'; ?></div>
+                    </div>
+                </div>
+
+                <!-- Nút CTA -->
                 <div class="pt-4 flex flex-wrap items-center gap-4">
-                    <a href="#register-section" class="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-extrabold text-body-sm px-6 py-3.5 rounded-full transition-all shadow-lg hover:shadow-purple-500/30">
-                        <span>Đăng ký Học bổng Tài năng số</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#dang-ky" class="bg-[#7C3AED] hover:bg-purple-600 text-white font-semibold text-[14px] rounded-full pl-6 pr-2 py-2 transition-all duration-300 shadow-lg hover:shadow-purple-500/30 inline-flex items-center gap-3 group">
+                        <span><?php echo $is_en ? 'Apply for Talent Scholarship' : 'Đăng ký Học bổng Tài năng số'; ?></span>
+                        <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </span>
                     </a>
-                    <a href="lien-he.php" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-body-sm px-6 py-3.5 rounded-full transition-all border border-white/20">
-                        <span>Gia nhập Mạng lưới Chuyên gia Tri thức</span>
+                    <a href="chuong-trinh-journey.php" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-[14px] rounded-full px-6 py-3 transition-all duration-300">
+                        <span><?php echo $is_en ? 'Join Innovation Bootcamp' : 'Tham gia Bootcamp Khởi nghiệp'; ?></span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- MAIN FUNCTION & TARGET AUDIENCE SECTION -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-sm space-y-4 flex items-start gap-5">
-                <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-200 shadow-2xs mt-1">
-                    <i data-lucide="award" class="w-7 h-7"></i>
+        <!-- KHỐI ĐỊNH VỊ CHỨC NĂNG & ĐỐI TƯỢNG HƯỚNG TỚI (2 Cột) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div class="bg-white rounded-[24px] p-6 sm:p-8 border border-slate-200/80 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.06)] space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-[#7C3AED]/10 text-[#7C3AED] flex items-center justify-center border border-[#7C3AED]/20">
+                    <i data-lucide="compass" class="w-6 h-6"></i>
                 </div>
-                <div class="space-y-2">
-                    <span class="text-[10px] font-black uppercase tracking-wider text-purple-600">ĐỊNH VỊ CHỨC NĂNG</span>
-                    <h2 class="text-h4 font-extrabold text-[#02185D]">Chức Năng Chính</h2>
-                    <p class="text-body-xs text-slate-600 leading-relaxed">
-                        <?php echo $program['main_function']; ?>
+                <div class="space-y-1.5">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-[#7C3AED]">
+                        <?php echo $is_en ? 'CORE FUNCTION' : 'ĐỊNH VỊ CHỨC NĂNG'; ?>
+                    </span>
+                    <h3 class="text-[20px] font-bold text-[#062AAD]">
+                        <?php echo $is_en ? 'Main Objectives' : 'Chức Năng Chính'; ?>
+                    </h3>
+                    <p class="text-[14px] text-[#5B5B5B] leading-relaxed">
+                        <?php echo $is_en 
+                            ? 'Discovering, nurturing, and retaining high-caliber human resources in digital tech, equipping innovation mindsets, and commercializing scientific research into real-world applications.'
+                            : 'Phát hiện, bồi dưỡng và giữ chân nguồn nhân lực chất lượng cao trong các lĩnh vực công nghệ số, trang bị tư duy đổi mới sáng tạo và chuyển giao kết quả nghiên cứu khoa học vào đời sống.'; ?>
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-sm space-y-4 flex items-start gap-5">
-                <div class="w-14 h-14 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center shrink-0 border border-pink-200 shadow-2xs mt-1">
-                    <i data-lucide="user-check" class="w-7 h-7"></i>
+            <div class="bg-white rounded-[24px] p-6 sm:p-8 border border-slate-200/80 shadow-[0px_2px_4px_0px_rgba(0,0,0,0.06)] space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-[#062AAD]/10 text-[#062AAD] flex items-center justify-center border border-[#062AAD]/20">
+                    <i data-lucide="users" class="w-6 h-6"></i>
                 </div>
-                <div class="space-y-2">
-                    <span class="text-[10px] font-black uppercase tracking-wider text-pink-600">ĐỐI TƯỢNG HƯỚNG TỚI</span>
-                    <h2 class="text-h4 font-extrabold text-[#02185D]">Đối Tượng Tham Gia</h2>
-                    <p class="text-body-xs text-slate-600 leading-relaxed">
-                        <?php echo $program['target_audience']; ?>
+                <div class="space-y-1.5">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-[#062AAD]">
+                        <?php echo $is_en ? 'TARGET BENEFICIARIES' : 'ĐỐI TƯỢNG HƯỚNG TỚI'; ?>
+                    </span>
+                    <h3 class="text-[20px] font-bold text-[#062AAD]">
+                        <?php echo $is_en ? 'Supported Participants' : 'Đối Tượng Hỗ Trợ'; ?>
+                    </h3>
+                    <p class="text-[14px] text-[#5B5B5B] leading-relaxed">
+                        <?php echo $is_en 
+                            ? 'Talented high school students, college and university students, young intellectuals, lecturers, researchers, and professionals seeking digital upskilling in Ca Mau.'
+                            : 'Học sinh THPT tài năng, sinh viên các trường Đại học, Cao đẳng, thanh niên trí thức, giảng viên, nhà nghiên cứu trẻ và người lao động có nguyện vọng nâng cao kỹ năng số tại Cà Mau.'; ?>
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- CORE ACTIVITIES SECTION -->
-        <div class="space-y-6">
-            <div class="text-center space-y-2 max-w-2xl mx-auto">
-                <span class="text-body-xs font-black uppercase tracking-wider text-purple-600">NỘI DUNG CHỦ YẾU</span>
-                <h2 class="text-h3 font-extrabold text-[#02185D]">Nội Dung Trọng Tâm Chương Trình Nhân Tài Số</h2>
-                <p class="text-body-xs text-slate-500">Trao học bổng tài năng, giáo dục đại học khởi nghiệp & phát triển kinh tế sáng tạo</p>
+        <!-- 4 HỢP PHẦN TRỌNG TÂM CỦA NHÂN TÀI SỐ -->
+        <div class="space-y-6 text-left">
+            <div class="space-y-1">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-[#7C3AED]">
+                    <?php echo $is_en ? 'ACTION PILLARS' : 'CHƯƠNG TRÌNH HÀNH ĐỘNG'; ?>
+                </span>
+                <h2 class="text-[24px] sm:text-[28px] font-bold text-[#062AAD]">
+                    <?php echo $is_en ? '04 Talent Development Pillars' : '4 Hợp Phần Phát Triển Nguồn Nhân Lực'; ?>
+                </h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <?php foreach ($program['core_activities'] as $index => $activity): ?>
-                    <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-premium hover:-translate-y-1 transition-all duration-300 space-y-4 flex flex-col justify-between group">
-                        <div class="space-y-3">
-                            <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center border border-purple-100 group-hover:scale-110 transition-transform">
-                                <i data-lucide="<?php echo $activity['icon']; ?>" class="w-6 h-6"></i>
-                            </div>
-                            <span class="text-[10px] font-extrabold text-slate-400">HOẠT ĐỘNG 0<?php echo $index + 1; ?></span>
-                            <h3 class="text-body-md font-extrabold text-[#02185D] group-hover:text-purple-600 transition-colors">
-                                <?php echo $activity['title']; ?>
-                            </h3>
-                            <p class="text-body-xs text-slate-500 font-light leading-relaxed">
-                                <?php echo $activity['desc']; ?>
-                            </p>
-                        </div>
+                <!-- Hợp phần 1 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-purple-200 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 group">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 text-[#7C3AED] flex items-center justify-center border border-purple-200 group-hover:scale-105 transition-transform">
+                        <i data-lucide="award" class="w-6 h-6"></i>
                     </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
-        <!-- DELIVERABLES / OUTPUTS SECTION -->
-        <div class="bg-purple-950 text-white rounded-3xl p-8 md:p-12 space-y-8 shadow-xl">
-            <div class="text-center space-y-2 max-w-2xl mx-auto">
-                <span class="text-body-xs font-black uppercase tracking-wider text-purple-300">KẾT QUẢ ĐẦU RA</span>
-                <h2 class="text-h3 font-extrabold text-white">Sản Phẩm Đầu Ra Đạt Được</h2>
-                <p class="text-body-xs text-purple-200/80 font-light">Quỹ học bổng đào tạo, mô hình Đại học Khởi nghiệp & Mạng lưới chuyên gia tri thức</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <?php foreach ($program['outputs'] as $out): ?>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-6 space-y-3 hover:bg-white/15 transition-all">
-                        <div class="w-10 h-10 rounded-xl bg-purple-500/30 text-purple-300 flex items-center justify-center">
-                            <i data-lucide="<?php echo $out['icon']; ?>" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="text-body-md font-extrabold text-white"><?php echo $out['title']; ?></h3>
-                        <p class="text-body-xs text-purple-200/80 font-light leading-relaxed"><?php echo $out['desc']; ?></p>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-
-        <!-- REGISTRATION FORM SECTION -->
-        <div id="register-section" class="bg-white rounded-3xl p-8 md:p-12 border border-slate-200/80 shadow-md max-w-4xl mx-auto space-y-8">
-            <div class="text-center space-y-2">
-                <div class="w-12 h-12 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mx-auto border border-purple-200">
-                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
-                </div>
-                <h2 class="text-h3 font-extrabold text-[#02185D]">Đăng Ký Học Bổng / Gia Nhập Mạng Lưới Nhân Tài Số</h2>
-                <p class="text-body-xs text-slate-500">Dành cho thanh niên, sinh viên, kỹ sư, nhà nghiên cứu, freelancer và chuyên gia số.</p>
-            </div>
-
-            <form action="lien-he.php" method="GET" class="space-y-6">
-                <input type="hidden" name="program" value="TALENT">
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Họ và tên cá nhân *</label>
-                        <input type="text" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 text-body-xs">
-                    </div>
-
-                    <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Trường / Đơn vị công tác</label>
-                        <input type="text" placeholder="Đại học / Viện / Chuyên gia tự do..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 text-body-xs">
+                        <h4 class="text-[16px] font-bold text-[#02185D] group-hover:text-[#7C3AED] transition-colors">
+                            <?php echo $is_en ? 'Digital Talent Scholarships' : 'Học Bổng Tài Năng Số'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Full and partial tuition funding for international certification courses in Artificial Intelligence (AI), Data Analytics, and Full-stack Development.'
+                                : 'Tài trợ toàn phần hoặc bán phần học phí các khóa đào tạo chứng chỉ quốc tế về Trí tuệ nhân tạo (AI), Phân tích dữ liệu và Lập trình ứng dụng.'; ?>
+                        </p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Email *</label>
-                        <input type="email" required placeholder="example@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 text-body-xs">
+                <!-- Hợp phần 2 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-purple-300 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 group">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-[#7C3AED] flex items-center justify-center border border-purple-300 group-hover:scale-105 transition-transform">
+                        <i data-lucide="landmark" class="w-6 h-6"></i>
                     </div>
-
                     <div class="space-y-2">
-                        <label class="text-body-xs font-bold text-slate-700">Hạng mục ứng tuyển</label>
-                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 text-body-xs text-slate-700">
-                            <option>Đăng ký Học bổng Tài năng số (AI, Lập trình, Đổi mới sáng tạo)</option>
-                            <option>Tham gia Đào tạo Giáo dục Khởi nghiệp</option>
-                            <option>Đăng ký Mạng lưới Chuyên gia Tri thức Cà Mau</option>
-                            <option>Đề xuất dự án Kinh tế sáng tạo</option>
+                        <h4 class="text-[16px] font-bold text-[#02185D] group-hover:text-[#7C3AED] transition-colors">
+                            <?php echo $is_en ? 'Entrepreneurial Universities' : 'Đại Học Khởi Nghiệp'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Partnering with Binh Duong University (Ca Mau Campus) and Community College to establish Fablabs and student startup clubs.'
+                                : 'Liên kết với Đại học Bình Dương (Phân hiệu Cà Mau), CĐ Cộng đồng thành lập không gian Fablab và Câu lạc bộ khởi nghiệp sinh viên.'; ?>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hợp phần 3 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-purple-400 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 group">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[16px] font-bold text-[#02185D] group-hover:text-[#7C3AED] transition-colors">
+                            <?php echo $is_en ? 'Hands-on Innovation Bootcamps' : 'Bootcamp ĐMST Thực Chiến'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Intensive 3-7 day training sprints solving real-world challenges for local enterprises using Design Thinking methodologies.'
+                                : 'Các kỳ huấn luyện tập trung từ 3 - 7 ngày giải quyết các bài toán thực tiễn của doanh nghiệp địa phương theo phương pháp Design Thinking.'; ?>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hợp phần 4 -->
+                <div class="bg-white rounded-[24px] p-6 border-2 border-[#062AAD]/30 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 space-y-4 group">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#062AAD] flex items-center justify-center border border-blue-200 group-hover:scale-105 transition-transform">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[16px] font-bold text-[#02185D] group-hover:text-[#062AAD] transition-colors">
+                            <?php echo $is_en ? 'Career & Placement Bridge' : 'Cầu Nối Tuyển Dụng & Việc Làm'; ?>
+                        </h4>
+                        <p class="text-[13px] text-[#5B5B5B] leading-relaxed">
+                            <?php echo $is_en 
+                                ? 'Directly matching graduates into startups at CiNEC incubator and our network of digital enterprises across Ca Mau.'
+                                : 'Kết nối học viên tốt nghiệp trực tiếp với các dự án khởi nghiệp trong vườn ươm CiNEC và mạng lưới doanh nghiệp số tại Cà Mau.'; ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM ĐĂNG KÝ HỌC BỔNG / KHÓA ĐÀO TẠO -->
+        <div id="dang-ky" class="bg-white rounded-[28px] lg:rounded-[36px] p-8 sm:p-12 border border-slate-200/80 shadow-md">
+            <div class="max-w-2xl mx-auto space-y-6 text-center">
+                <div class="inline-flex items-center gap-2 bg-purple-50 border border-purple-200 text-purple-700 px-4 py-1 rounded-full text-[12px] font-bold uppercase tracking-wider">
+                    <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+                    <?php echo $is_en ? 'TALENT SCHOLARSHIP REGISTRATION' : 'ĐĂNG KÝ HỌC BỔNG SỐ'; ?>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-[24px] sm:text-[30px] font-bold text-[#062AAD]">
+                        <?php echo $is_en ? 'Apply for Digital Talent Scholarship' : 'Đăng Ký Xét Tuyển Học Bổng Nhân Tài Số'; ?>
+                    </h3>
+                    <p class="text-[14px] text-[#5B5B5B]">
+                        <?php echo $is_en 
+                            ? 'Students and young professionals submit your profiles for review by the scholarship council and interview scheduling.'
+                            : 'Học sinh, sinh viên hoặc người đi làm gửi thông tin để được hội đồng xét duyệt học bổng và xếp lịch phỏng vấn tham gia khóa đào tạo.'; ?>
+                    </p>
+                </div>
+
+                <form class="space-y-4 text-left pt-2" onsubmit="event.preventDefault(); alert('<?php echo $is_en ? 'Thank you! Your scholarship application has been submitted.' : 'Cảm ơn bạn! Hồ sơ xin xét duyệt học bổng đã được gửi đi.'; ?>'); this.reset();">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Applicant Full Name *' : 'Họ và tên học viên *'; ?></label>
+                            <input type="text" required placeholder="<?php echo $is_en ? 'John Doe' : 'Nguyễn Văn A'; ?>" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-purple-500">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'School / Organization' : 'Trường / Đơn vị công tác'; ?></label>
+                            <input type="text" placeholder="<?php echo $is_en ? 'University / High School / Company...' : 'Đại học / THPT / Công ty...'; ?>" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-purple-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Personal Email *' : 'Email cá nhân *'; ?></label>
+                            <input type="email" required placeholder="student@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-purple-500">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Phone Number *' : 'Số điện thoại *'; ?></label>
+                            <input type="tel" required placeholder="0901234567" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-purple-500">
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Desired Training Track *' : 'Chương trình muốn ứng tuyển *'; ?></label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-purple-500 bg-white">
+                            <option><?php echo $is_en ? 'Artificial Intelligence & Data Talent Scholarship' : 'Học bổng Tài năng Trí tuệ nhân tạo (AI & Data)'; ?></option>
+                            <option><?php echo $is_en ? 'Web & Mobile App Development Scholarship' : 'Học bổng Lập trình Web & Ứng dụng Di động'; ?></option>
+                            <option><?php echo $is_en ? 'Student Innovation & Entrepreneurship Bootcamp' : 'Bootcamp Đổi mới sáng tạo & Khởi nghiệp sinh viên'; ?></option>
+                            <option><?php echo $is_en ? 'Join Student Startup Club' : 'Đăng ký tham gia Câu lạc bộ Khởi nghiệp'; ?></option>
                         </select>
                     </div>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-body-xs font-bold text-slate-700">Giới thiệu về năng lực / đề án mong muốn học bổng hỗ trợ</label>
-                    <textarea rows="4" placeholder="Mô tả kỹ năng, thành tích hoặc đề án chuyên môn của bạn..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-500 text-body-xs"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-extrabold text-body-sm rounded-xl shadow-lg transition-all">
-                    Nộp Hồ Sơ Đăng Ký Học Bổng
-                </button>
-            </form>
-        </div>
-
-        <!-- OTHER PROGRAMS NAV BAR -->
-        <div class="pt-8 border-t border-slate-200">
-            <h3 class="text-body-xs font-extrabold text-slate-400 uppercase tracking-wider mb-4 text-center">Các chương trình thành phần khác</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <a href="chuong-trinh-platform.php" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 text-center space-y-1 transition-all group">
-                    <span class="text-body-xs font-bold text-[#02185D] group-hover:text-blue-600 block">1. Nền tảng Đổi mới sáng tạo</span>
-                    <span class="text-[10px] text-slate-400">Sandbox, Dữ liệu Đổi mới sáng tạo, Chỉ số PII</span>
-                </a>
-                <a href="chuong-trinh-journey.php" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-amber-500 text-center space-y-1 transition-all group">
-                    <span class="text-body-xs font-bold text-[#02185D] group-hover:text-amber-600 block">2. Hành trình Khởi nghiệp</span>
-                    <span class="text-[10px] text-slate-400">4 bước liên thông & Đồng tài trợ 1:1</span>
-                </a>
-                <a href="chuong-trinh-sme.php" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 text-center space-y-1 transition-all group">
-                    <span class="text-body-xs font-bold text-[#02185D] group-hover:text-emerald-600 block">3. Doanh nghiệp số</span>
-                    <span class="text-[10px] text-slate-400">Voucher CĐS, Mentor KPI 90 ngày & OCOP</span>
-                </a>
+                    <div class="space-y-1">
+                        <label class="text-[13px] font-semibold text-slate-700"><?php echo $is_en ? 'Motivation & Key Achievements (if any)' : 'Lý do ứng tuyển & Thành tích nổi bật (nếu có)'; ?></label>
+                        <textarea rows="3" placeholder="<?php echo $is_en ? 'Share your tech passion or projects you participated in...' : 'Chia sẻ đam mê công nghệ hoặc dự án bạn từng tham gia...'; ?>" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-[14px] focus:outline-none focus:border-purple-500"></textarea>
+                    </div>
+                    <div class="text-center pt-2">
+                        <button type="submit" class="bg-[#7C3AED] hover:bg-purple-700 text-white font-semibold text-[14px] rounded-full px-8 py-3.5 transition-all shadow-md hover:shadow-lg inline-flex items-center gap-2">
+                            <span><?php echo $is_en ? 'Submit Application' : 'Gửi Hồ Sơ Ứng Tuyển'; ?></span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
 

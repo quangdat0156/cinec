@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 $about = get_about_info();
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $linkedin = trim($_POST['member_linkedin'] ?? '#');
 
         // Tải avatar trực tiếp từ máy tính & tối ưu hóa WebP
-        $avatar = trim($_POST['member_avatar_url'] ?? 'assets/img/avatar_director.jpg');
+        $avatar = trim($_POST['member_avatar_url'] ?? '../assets/img/avatar_director.jpg');
         if (!empty($_FILES['avatar_file']['tmp_name'])) {
             $uploadedPath = upload_and_optimize_image($_FILES['avatar_file'], 'team', 500, 85);
             if ($uploadedPath) {
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    header("Location: admin-about.php");
+    header("Location: about.php");
     exit;
 }
 
@@ -83,7 +83,7 @@ admin_header("Quản Lý Giới Thiệu", "about");
 <div class="space-y-8">
 
     <!-- 1. TỔNG QUAN, TẦM NHÌN & SỨ MỆNH -->
-    <form action="admin-about.php" method="POST" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
+    <form action="about.php" method="POST" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
         <input type="hidden" name="action" value="save_general">
 
         <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
@@ -159,7 +159,7 @@ admin_header("Quản Lý Giới Thiệu", "about");
                     <div class="space-y-3">
                         <div class="flex items-center gap-3.5">
                             <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
-                                <img src="<?php echo htmlspecialchars($m['avatar'] ?? 'assets/img/avatar_director.jpg'); ?>" alt="Avatar" class="w-full h-full object-cover">
+                                <img src="<?php echo htmlspecialchars($m['avatar'] ?? '../assets/img/avatar_director.jpg'); ?>" alt="Avatar" class="w-full h-full object-cover">
                             </div>
                             <div class="min-w-0">
                                 <h4 class="text-xs font-black text-[#02185D] truncate"><?php echo htmlspecialchars($m['name']); ?></h4>
@@ -207,7 +207,7 @@ admin_header("Quản Lý Giới Thiệu", "about");
             </button>
         </div>
 
-        <form action="admin-about.php" method="POST" enctype="multipart/form-data" class="space-y-4 text-xs">
+        <form action="about.php" method="POST" enctype="multipart/form-data" class="space-y-4 text-xs">
             <input type="hidden" name="action" value="save_team_member">
             <input type="hidden" name="member_id" id="memberId" value="">
             <input type="hidden" name="member_avatar_url" id="memberAvatarUrl" value="">
@@ -243,7 +243,7 @@ admin_header("Quản Lý Giới Thiệu", "about");
 
                     <div class="sm:col-span-4 flex items-center gap-2 bg-slate-50 p-2 rounded-2xl border border-slate-200">
                         <div class="w-14 h-14 rounded-2xl overflow-hidden bg-slate-200 border border-slate-300 shrink-0">
-                            <img id="avatarPreview" src="assets/img/avatar_director.jpg" alt="Avatar" class="w-full h-full object-cover">
+                            <img id="avatarPreview" src="../assets/img/avatar_director.jpg" alt="Avatar" class="w-full h-full object-cover">
                         </div>
                         <div class="min-w-0">
                             <span id="avatarFileName" class="text-[10px] font-bold text-slate-700 truncate block">Ảnh hiện tại</span>
@@ -268,7 +268,7 @@ admin_header("Quản Lý Giới Thiệu", "about");
 </div>
 
 <!-- FORM XÓA NHÂN SỰ ẨN -->
-<form id="deleteMemberForm" action="admin-about.php" method="POST" class="hidden">
+<form id="deleteMemberForm" action="about.php" method="POST" class="hidden">
     <input type="hidden" name="action" value="delete_team_member">
     <input type="hidden" name="member_id" id="deleteMemberId" value="">
 </form>
@@ -294,7 +294,7 @@ admin_header("Quản Lý Giới Thiệu", "about");
 
     function resetAvatar() {
         avatarFileInput.value = "";
-        avatarPreview.src = memberAvatarUrl.value || "assets/img/avatar_director.jpg";
+        avatarPreview.src = memberAvatarUrl.value || "../assets/img/avatar_director.jpg";
         avatarFileName.innerText = memberAvatarUrl.value ? "Ảnh hiện tại" : "Chưa chọn";
     }
 
@@ -304,9 +304,9 @@ admin_header("Quản Lý Giới Thiệu", "about");
         document.getElementById("memberName").value = "";
         document.getElementById("memberRole").value = "Cán bộ chuyên trách";
         document.getElementById("memberOrg").value = "Trung tâm CiNEC";
-        document.getElementById("memberAvatarUrl").value = "assets/img/avatar_deputy1.jpg";
+        document.getElementById("memberAvatarUrl").value = "../assets/img/avatar_deputy1.jpg";
         avatarFileInput.value = "";
-        avatarPreview.src = "assets/img/avatar_deputy1.jpg";
+        avatarPreview.src = "../assets/img/avatar_deputy1.jpg";
         avatarFileName.innerText = "Mặc định";
         document.getElementById("memberBio").value = "";
         memberModal.classList.remove("hidden");
@@ -318,9 +318,9 @@ admin_header("Quản Lý Giới Thiệu", "about");
         document.getElementById("memberName").value = m.name || "";
         document.getElementById("memberRole").value = m.role || "";
         document.getElementById("memberOrg").value = m.org || "Trung tâm CiNEC";
-        document.getElementById("memberAvatarUrl").value = m.avatar || "assets/img/avatar_director.jpg";
+        document.getElementById("memberAvatarUrl").value = m.avatar || "../assets/img/avatar_director.jpg";
         avatarFileInput.value = "";
-        avatarPreview.src = m.avatar || "assets/img/avatar_director.jpg";
+        avatarPreview.src = m.avatar || "../assets/img/avatar_director.jpg";
         avatarFileName.innerText = "Ảnh hiện tại";
         document.getElementById("memberBio").value = m.bio || "";
         memberModal.classList.remove("hidden");

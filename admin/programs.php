@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 // Xử lý cập nhật thông tin chương trình
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['flash_success'] = "Cập nhật thông tin chương trình \"{$existing['title']}\" thành công!";
         }
     }
-    header("Location: admin-programs.php");
+    header("Location: programs.php");
     exit;
 }
 
@@ -130,7 +130,7 @@ admin_header("Quản Lý 04 Chương Trình ĐMST", "programs");
             </button>
         </div>
 
-        <form action="admin-programs.php" method="POST" class="space-y-4 text-xs">
+        <form action="programs.php" method="POST" class="space-y-4 text-xs">
             <input type="hidden" name="id" id="progId" value="">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">

@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 // Xử lý hành động POST (Thêm / Sửa / Xóa)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $content = $_POST['content'] ?? '';
 
         // Xử lý tải ảnh trực tiếp từ máy tính & tối ưu hóa WebP
-        $image = trim($_POST['image_url'] ?? 'assets/img/event_forum.jpg');
+        $image = trim($_POST['image_url'] ?? '../assets/img/event_forum.jpg');
         if (!empty($_FILES['image_file']['tmp_name'])) {
             $uploadedPath = upload_and_optimize_image($_FILES['image_file'], 'events', 1400, 82);
             if ($uploadedPath) {
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    header("Location: admin-events.php");
+    header("Location: events.php");
     exit;
 }
 
@@ -111,10 +111,10 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
 <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-4">
     <div class="flex items-center gap-2 text-xs font-bold text-slate-600">
         <span class="text-slate-400">Trạng thái:</span>
-        <a href="admin-events.php" class="px-3 py-1.5 rounded-xl <?php echo empty($filterStatus) ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Tất cả</a>
-        <a href="admin-events.php?status=upcoming" class="px-3 py-1.5 rounded-xl <?php echo $filterStatus === 'upcoming' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Sắp diễn ra</a>
-        <a href="admin-events.php?status=ongoing" class="px-3 py-1.5 rounded-xl <?php echo $filterStatus === 'ongoing' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Đang diễn ra</a>
-        <a href="admin-events.php?status=completed" class="px-3 py-1.5 rounded-xl <?php echo $filterStatus === 'completed' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Đã kết thúc</a>
+        <a href="events.php" class="px-3 py-1.5 rounded-xl <?php echo empty($filterStatus) ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Tất cả</a>
+        <a href="events.php?status=upcoming" class="px-3 py-1.5 rounded-xl <?php echo $filterStatus === 'upcoming' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Sắp diễn ra</a>
+        <a href="events.php?status=ongoing" class="px-3 py-1.5 rounded-xl <?php echo $filterStatus === 'ongoing' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Đang diễn ra</a>
+        <a href="events.php?status=completed" class="px-3 py-1.5 rounded-xl <?php echo $filterStatus === 'completed' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Đã kết thúc</a>
     </div>
 
     <div class="text-xs text-slate-400">
@@ -214,7 +214,7 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
         </div>
 
         <!-- Modal Body (Form) -->
-        <form id="eventForm" action="admin-events.php" method="POST" enctype="multipart/form-data" onsubmit="handleEventFormSubmit()" class="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-5 text-xs">
+        <form id="eventForm" action="events.php" method="POST" enctype="multipart/form-data" onsubmit="handleEventFormSubmit()" class="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-5 text-xs">
             <input type="hidden" name="action" id="formAction" value="create">
             <input type="hidden" name="id" id="eventId" value="">
             <input type="hidden" name="content" id="hiddenEventContent" value="">
@@ -276,7 +276,7 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
                     <!-- Image Preview Box -->
                     <div class="sm:col-span-4 flex items-center gap-3 bg-slate-50 p-2.5 rounded-2xl border border-slate-200">
                         <div class="w-20 h-16 rounded-xl overflow-hidden bg-slate-200 border border-slate-300 shrink-0">
-                            <img id="eventImagePreview" src="assets/img/event_forum.jpg" alt="Preview" class="w-full h-full object-cover">
+                            <img id="eventImagePreview" src="../assets/img/event_forum.jpg" alt="Preview" class="w-full h-full object-cover">
                         </div>
                         <div class="min-w-0">
                             <span class="text-[10px] text-slate-400 block">Xem trước ảnh bìa</span>
@@ -314,7 +314,7 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
 </div>
 
 <!-- FORM XÓA ẨN -->
-<form id="deleteForm" action="admin-events.php" method="POST" class="hidden">
+<form id="deleteForm" action="events.php" method="POST" class="hidden">
     <input type="hidden" name="action" value="delete">
     <input type="hidden" name="id" id="deleteId" value="">
 </form>
@@ -361,7 +361,7 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
 
     function resetEventImagePreview() {
         eventFileInput.value = "";
-        eventImagePreview.src = eventImageUrl.value || "assets/img/event_forum.jpg";
+        eventImagePreview.src = eventImageUrl.value || "../assets/img/event_forum.jpg";
         eventFileName.innerText = eventImageUrl.value ? "Ảnh hiện tại" : "Chưa chọn tệp";
     }
 
@@ -376,9 +376,9 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
         document.getElementById("eventTime").value = "08:00 - 17:00";
         document.getElementById("eventLocation").value = "Hội trường Lớn, Tòa nhà CiNEC, TP. Cà Mau";
         document.getElementById("eventDesc").value = "";
-        document.getElementById("eventImageUrl").value = "assets/img/event_forum.jpg";
+        document.getElementById("eventImageUrl").value = "../assets/img/event_forum.jpg";
         eventFileInput.value = "";
-        eventImagePreview.src = "assets/img/event_forum.jpg";
+        eventImagePreview.src = "../assets/img/event_forum.jpg";
         eventFileName.innerText = "Ảnh mặc định";
         if (eventQuill) {
             eventQuill.root.innerHTML = "<h3>Chương trình nghị sự</h3><ul><li>08:00 - 08:30: Đón tiếp đại biểu</li><li>08:30 - 10:00: Phiên thảo luận chuyên đề</li><li>10:00 - 11:30: Tọa đàm & Kết nối đầu tư</li></ul>";
@@ -397,9 +397,9 @@ admin_header("Quản Lý Sự Kiện & Hội Thảo", "events");
         document.getElementById("eventTime").value = ev.time || "";
         document.getElementById("eventLocation").value = ev.location || "";
         document.getElementById("eventDesc").value = ev.desc || "";
-        document.getElementById("eventImageUrl").value = ev.image || "assets/img/event_forum.jpg";
+        document.getElementById("eventImageUrl").value = ev.image || "../assets/img/event_forum.jpg";
         eventFileInput.value = "";
-        eventImagePreview.src = ev.image || "assets/img/event_forum.jpg";
+        eventImagePreview.src = ev.image || "../assets/img/event_forum.jpg";
         eventFileName.innerText = "Ảnh hiện tại";
         
         if (eventQuill) {

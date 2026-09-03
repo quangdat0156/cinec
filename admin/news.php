@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 // Xử lý hành động POST (Thêm / Sửa / Xóa)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $featured = isset($_POST['featured']);
 
         // Xử lý upload ảnh trực tiếp từ máy tính & tối ưu hóa WebP
-        $image = trim($_POST['image_url'] ?? 'assets/img/news_launch.jpg');
+        $image = trim($_POST['image_url'] ?? '../assets/img/news_launch.jpg');
         if (!empty($_FILES['image_file']['tmp_name'])) {
             $uploadedPath = upload_and_optimize_image($_FILES['image_file'], 'news', 1400, 82);
             if ($uploadedPath) {
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    header("Location: admin-news.php");
+    header("Location: news.php");
     exit;
 }
 
@@ -115,11 +115,11 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
 <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-4">
     <div class="flex items-center gap-2 text-xs font-bold text-slate-600">
         <span class="text-slate-400">Chuyên mục:</span>
-        <a href="admin-news.php" class="px-3 py-1.5 rounded-xl <?php echo empty($filterCategory) ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Tất cả</a>
-        <a href="admin-news.php?category=startup" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'startup' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Khởi nghiệp</a>
-        <a href="admin-news.php?category=policy" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'policy' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Chính sách</a>
-        <a href="admin-news.php?category=technology" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'technology' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Công nghệ</a>
-        <a href="admin-news.php?category=investment" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'investment' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Đầu tư</a>
+        <a href="news.php" class="px-3 py-1.5 rounded-xl <?php echo empty($filterCategory) ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Tất cả</a>
+        <a href="news.php?category=startup" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'startup' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Khởi nghiệp</a>
+        <a href="news.php?category=policy" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'policy' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Chính sách</a>
+        <a href="news.php?category=technology" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'technology' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Công nghệ</a>
+        <a href="news.php?category=investment" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'investment' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Đầu tư</a>
     </div>
 
     <div class="text-xs text-slate-400">
@@ -152,7 +152,7 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
                             <td class="py-4 px-4 text-center font-bold text-slate-400"><?php echo $n['id']; ?></td>
                             <td class="py-4 px-4">
                                 <div class="w-20 h-14 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0">
-                                    <img src="<?php echo htmlspecialchars($n['image'] ?: 'assets/img/news_launch.jpg'); ?>" alt="Cover" class="w-full h-full object-cover">
+                                    <img src="<?php echo htmlspecialchars($n['image'] ?: '../assets/img/news_launch.jpg'); ?>" alt="Cover" class="w-full h-full object-cover">
                                 </div>
                             </td>
                             <td class="py-4 px-4 space-y-1">
@@ -222,7 +222,7 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
         </div>
 
         <!-- Modal Body (Form) -->
-        <form id="newsForm" action="admin-news.php" method="POST" enctype="multipart/form-data" onsubmit="handleFormSubmit()" class="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-5 text-xs">
+        <form id="newsForm" action="news.php" method="POST" enctype="multipart/form-data" onsubmit="handleFormSubmit()" class="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-5 text-xs">
             <input type="hidden" name="action" id="formAction" value="create">
             <input type="hidden" name="id" id="newsId" value="">
             <input type="hidden" name="content" id="hiddenContent" value="">
@@ -276,7 +276,7 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
                     <!-- Image Preview Box -->
                     <div class="sm:col-span-4 flex items-center gap-3 bg-slate-50 p-2.5 rounded-2xl border border-slate-200">
                         <div class="w-20 h-16 rounded-xl overflow-hidden bg-slate-200 border border-slate-300 shrink-0">
-                            <img id="imagePreview" src="assets/img/news_launch.jpg" alt="Preview" class="w-full h-full object-cover">
+                            <img id="imagePreview" src="../assets/img/news_launch.jpg" alt="Preview" class="w-full h-full object-cover">
                         </div>
                         <div class="min-w-0">
                             <span class="text-[10px] text-slate-400 block">Xem trước ảnh bìa</span>
@@ -321,7 +321,7 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
 </div>
 
 <!-- FORM XÓA ẨN -->
-<form id="deleteForm" action="admin-news.php" method="POST" class="hidden">
+<form id="deleteForm" action="news.php" method="POST" class="hidden">
     <input type="hidden" name="action" value="delete">
     <input type="hidden" name="id" id="deleteId" value="">
 </form>
@@ -368,7 +368,7 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
 
     function resetImagePreview() {
         imageFileInput.value = "";
-        imagePreview.src = newsImageUrl.value || "assets/img/news_launch.jpg";
+        imagePreview.src = newsImageUrl.value || "../assets/img/news_launch.jpg";
         imageFileName.innerText = newsImageUrl.value ? "Ảnh hiện tại" : "Chưa chọn tệp";
     }
 
@@ -381,9 +381,9 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
         document.getElementById("newsDate").value = "<?php echo date('d/m/Y'); ?>";
         document.getElementById("newsAuthor").value = "Ban Biên Tập CINEC";
         document.getElementById("newsSummary").value = "";
-        document.getElementById("newsImageUrl").value = "assets/img/news_launch.jpg";
+        document.getElementById("newsImageUrl").value = "../assets/img/news_launch.jpg";
         imageFileInput.value = "";
-        imagePreview.src = "assets/img/news_launch.jpg";
+        imagePreview.src = "../assets/img/news_launch.jpg";
         imageFileName.innerText = "Ảnh mặc định";
         document.getElementById("newsFeatured").checked = false;
         if (quill) {
@@ -401,9 +401,9 @@ admin_header("Quản Lý Tin Tức & Insight", "news");
         document.getElementById("newsDate").value = n.date || "";
         document.getElementById("newsAuthor").value = n.author || "";
         document.getElementById("newsSummary").value = n.summary || "";
-        document.getElementById("newsImageUrl").value = n.image || "assets/img/news_launch.jpg";
+        document.getElementById("newsImageUrl").value = n.image || "../assets/img/news_launch.jpg";
         imageFileInput.value = "";
-        imagePreview.src = n.image || "assets/img/news_launch.jpg";
+        imagePreview.src = n.image || "../assets/img/news_launch.jpg";
         imageFileName.innerText = "Ảnh hiện tại";
         document.getElementById("newsFeatured").checked = !!n.featured;
         

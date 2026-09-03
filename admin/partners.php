@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 // Xử lý hành động POST (Thêm / Sửa / Xóa)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $url = trim($_POST['url'] ?? '#');
 
         // Tải logo trực tiếp từ máy tính & nén WebP
-        $logo = trim($_POST['logo_url'] ?? 'assets/img/partner_bca.png');
+        $logo = trim($_POST['logo_url'] ?? '../assets/img/partner_bca.png');
         if (!empty($_FILES['logo_file']['tmp_name'])) {
             $uploadedPath = upload_and_optimize_image($_FILES['logo_file'], 'partners', 600, 85);
             if ($uploadedPath) {
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    header("Location: admin-partners.php");
+    header("Location: partners.php");
     exit;
 }
 
@@ -82,11 +82,11 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
 <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-4">
     <div class="flex items-center gap-2 text-xs font-bold text-slate-600">
         <span class="text-slate-400">Phân loại:</span>
-        <a href="admin-partners.php" class="px-3 py-1.5 rounded-xl <?php echo empty($filterCategory) ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Tất cả</a>
-        <a href="admin-partners.php?category=enterprise" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'enterprise' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Doanh nghiệp</a>
-        <a href="admin-partners.php?category=education" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'education' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Viện trường</a>
-        <a href="admin-partners.php?category=government" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'government' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Nhà nước</a>
-        <a href="admin-partners.php?category=fund" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'fund' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Quỹ đầu tư</a>
+        <a href="partners.php" class="px-3 py-1.5 rounded-xl <?php echo empty($filterCategory) ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Tất cả</a>
+        <a href="partners.php?category=enterprise" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'enterprise' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Doanh nghiệp</a>
+        <a href="partners.php?category=education" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'education' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Viện trường</a>
+        <a href="partners.php?category=government" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'government' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Nhà nước</a>
+        <a href="partners.php?category=fund" class="px-3 py-1.5 rounded-xl <?php echo $filterCategory === 'fund' ? 'bg-[#062AAD] text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'; ?>">Quỹ đầu tư</a>
     </div>
 
     <div class="text-xs text-slate-400">
@@ -119,7 +119,7 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
                             <td class="py-4 px-4 text-center font-bold text-slate-400"><?php echo $p['id']; ?></td>
                             <td class="py-4 px-4 text-center">
                                 <div class="w-20 h-10 mx-auto rounded-xl bg-white border border-slate-200 p-1.5 flex items-center justify-center shadow-xs">
-                                    <img src="<?php echo htmlspecialchars($p['logo'] ?: 'assets/img/partner_bca.png'); ?>" alt="Logo" class="max-w-full max-h-full object-contain">
+                                    <img src="<?php echo htmlspecialchars($p['logo'] ?: '../assets/img/partner_bca.png'); ?>" alt="Logo" class="max-w-full max-h-full object-contain">
                                 </div>
                             </td>
                             <td class="py-4 px-4 font-extrabold text-sm text-[#02185D]">
@@ -177,7 +177,7 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
             </button>
         </div>
 
-        <form action="admin-partners.php" method="POST" enctype="multipart/form-data" class="space-y-4 text-xs">
+        <form action="partners.php" method="POST" enctype="multipart/form-data" class="space-y-4 text-xs">
             <input type="hidden" name="action" id="formAction" value="create">
             <input type="hidden" name="id" id="partnerId" value="">
             <input type="hidden" name="logo_url" id="partnerLogoUrl" value="">
@@ -221,7 +221,7 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
 
                     <div class="sm:col-span-4 flex items-center gap-2 bg-slate-50 p-2 rounded-2xl border border-slate-200">
                         <div class="w-16 h-12 rounded-xl bg-white border border-slate-300 p-1 flex items-center justify-center shrink-0">
-                            <img id="partnerLogoPreview" src="assets/img/partner_bca.png" alt="Logo" class="max-w-full max-h-full object-contain">
+                            <img id="partnerLogoPreview" src="../assets/img/partner_bca.png" alt="Logo" class="max-w-full max-h-full object-contain">
                         </div>
                         <div class="min-w-0">
                             <span id="partnerLogoName" class="text-[10px] font-bold text-slate-700 truncate block">Logo hiện tại</span>
@@ -241,7 +241,7 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
 </div>
 
 <!-- FORM XÓA ẨN -->
-<form id="deleteForm" action="admin-partners.php" method="POST" class="hidden">
+<form id="deleteForm" action="partners.php" method="POST" class="hidden">
     <input type="hidden" name="action" value="delete">
     <input type="hidden" name="id" id="deleteId" value="">
 </form>
@@ -267,7 +267,7 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
 
     function resetPartnerLogo() {
         logoFileInput.value = "";
-        partnerLogoPreview.src = partnerLogoUrl.value || "assets/img/partner_bca.png";
+        partnerLogoPreview.src = partnerLogoUrl.value || "../assets/img/partner_bca.png";
         partnerLogoName.innerText = partnerLogoUrl.value ? "Logo hiện tại" : "Chưa chọn";
     }
 
@@ -278,9 +278,9 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
         document.getElementById("partnerName").value = "";
         document.getElementById("partnerCategory").value = "enterprise";
         document.getElementById("partnerUrl").value = "#";
-        document.getElementById("partnerLogoUrl").value = "assets/img/partner_bca.png";
+        document.getElementById("partnerLogoUrl").value = "../assets/img/partner_bca.png";
         logoFileInput.value = "";
-        partnerLogoPreview.src = "assets/img/partner_bca.png";
+        partnerLogoPreview.src = "../assets/img/partner_bca.png";
         partnerLogoName.innerText = "Mặc định";
         modal.classList.remove("hidden");
     }
@@ -292,9 +292,9 @@ admin_header("Quản Lý Mạng Lưới Đối Tác", "partners");
         document.getElementById("partnerName").value = p.name || "";
         document.getElementById("partnerCategory").value = p.category || "enterprise";
         document.getElementById("partnerUrl").value = p.url || "";
-        document.getElementById("partnerLogoUrl").value = p.logo || "assets/img/partner_bca.png";
+        document.getElementById("partnerLogoUrl").value = p.logo || "../assets/img/partner_bca.png";
         logoFileInput.value = "";
-        partnerLogoPreview.src = p.logo || "assets/img/partner_bca.png";
+        partnerLogoPreview.src = p.logo || "../assets/img/partner_bca.png";
         partnerLogoName.innerText = "Logo hiện tại";
         modal.classList.remove("hidden");
     }

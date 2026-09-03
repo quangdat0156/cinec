@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" fill="none">
+  <rect width="36" height="36" y="7" rx="10" fill="#EEF2FF"/>
+  <path d="M12 20C12 16.6863 14.6863 14 18 14H26C29.3137 14 32 16.6863 32 20V26C32 29.3137 29.3137 32 26 32H20L15 36V32H18C14.6863 32 12 29.3137 12 26V20Z" fill="#4F46E5"/>
+  <text x="46" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="800" fill="#02185D" letter-spacing="-0.5">AiSpeak</text>
+</svg>

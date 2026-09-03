@@ -7,11 +7,11 @@ session_start();
 
 // Nếu đã đăng nhập thì chuyển hướng vào Admin Dashboard
 if (isset($_SESSION['cinec_admin_logged']) && $_SESSION['cinec_admin_logged'] === true) {
-    header("Location: admin-dashboard.php");
+    header("Location: dashboard.php");
     exit;
 }
 
-require_once 'config/db.php';
+require_once __DIR__ . '/../config/db.php';
 
 $error = '';
 $success = '';
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 setcookie('cinec_remember_user', $username, time() + (86400 * 30), "/");
             }
 
-            header("Location: admin-dashboard.php");
+            header("Location: dashboard.php");
             exit;
         } else {
             $error = 'Tên đăng nhập hoặc mật khẩu không chính xác.';
@@ -175,7 +175,7 @@ $remembered_user = $_COOKIE['cinec_remember_user'] ?? '';
 
     <!-- Back to Homepage Link -->
     <div class="absolute top-6 left-6 z-20">
-        <a href="index.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white/90 hover:text-white backdrop-blur-md border border-white/15 text-xs font-semibold transition-all duration-300 shadow-sm hover:-translate-x-0.5">
+        <a href="../index.php" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white/90 hover:text-white backdrop-blur-md border border-white/15 text-xs font-semibold transition-all duration-300 shadow-sm hover:-translate-x-0.5">
             <i data-lucide="arrow-left" class="w-4 h-4 text-[#C1FF72]"></i>
             <span>Về trang chủ CiNEC</span>
         </a>
@@ -193,14 +193,14 @@ $remembered_user = $_COOKIE['cinec_remember_user'] ?? '';
         <!-- LEFT COLUMN: CINEC BRAND VISUAL & IDENTITY (5/12 CỘT) -->
         <div class="lg:col-span-5 bg-gradient-to-br from-[#02185D] via-[#062AAD] to-[#02185D] p-8 lg:p-12 text-white relative overflow-hidden flex flex-col justify-between hidden sm:flex">
             <!-- Overlay background texture -->
-            <div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" style="background-image: url('assets/img/hero-bg.jpg');"></div>
+            <div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" style="background-image: url('../assets/img/hero-bg.jpg');"></div>
             <div class="absolute -bottom-16 -right-16 w-56 h-56 bg-[#05A6F5]/25 rounded-full blur-2xl pointer-events-none"></div>
             <div class="absolute -top-16 -left-16 w-56 h-56 bg-[#C1FF72]/20 rounded-full blur-2xl pointer-events-none"></div>
             
             <!-- Top brand header -->
             <div class="relative z-10 space-y-6">
                 <!-- CiNEC Logo Mầm Cây chuẩn Figma -->
-                <a href="index.php" class="inline-block focus:outline-none">
+                <a href="../index.php" class="inline-block focus:outline-none">
                     <svg class="h-9 w-auto" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 9C19.5 6.5 15.5 6.5 13 9C10.5 11.5 10.5 15.5 13 18C15.5 20.5 19.5 20.5 22 18" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
                         <line x1="30" y1="9" x2="30" y2="21" stroke="#05A6F5" stroke-width="3.5" stroke-linecap="round"/>
@@ -303,7 +303,7 @@ $remembered_user = $_COOKIE['cinec_remember_user'] ?? '';
                 <?php endif; ?>
 
                 <!-- LOGIN FORM -->
-                <form action="admin-login.php" method="POST" class="space-y-5">
+                <form action="login.php" method="POST" class="space-y-5">
                     <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
 
                     <!-- Field: Username / Email -->
@@ -402,7 +402,7 @@ $remembered_user = $_COOKIE['cinec_remember_user'] ?? '';
             <!-- Footer note -->
             <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
                 <span>Hệ thống ĐMST & Khởi nghiệp Cà Mau</span>
-                <a href="index.php" class="font-bold text-[#062AAD] hover:underline flex items-center gap-1">
+                <a href="../index.php" class="font-bold text-[#062AAD] hover:underline flex items-center gap-1">
                     Trang chủ <i data-lucide="chevron-right" class="w-3 h-3"></i>
                 </a>
             </div>

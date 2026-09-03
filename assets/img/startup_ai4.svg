@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <circle cx="22" cy="25" r="18" fill="#FCE7F3"/>
+  <path d="M16 25C16 20 22 17 28 22C28 27 22 30 16 25Z" fill="#DB2777"/>
+  <circle cx="25" cy="22" r="3" fill="#F472B6"/>
+  <text x="48" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#02185D" letter-spacing="-0.5">AI4Cosmetics</text>
+</svg>

@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 // Xử lý đổi trạng thái hoặc xóa đơn
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['flash_success'] = 'Đã xóa đơn đăng ký thành công!';
     }
 
-    header("Location: admin-contacts.php");
+    header("Location: contacts.php");
     exit;
 }
 
@@ -88,7 +88,7 @@ admin_header("Hộp Thư Đăng Ký & Tư Vấn", "contacts");
                                 <p class="text-[11px] text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-200/70 leading-relaxed whitespace-pre-line font-medium"><?php echo htmlspecialchars($c['message']); ?></p>
                             </td>
                             <td class="py-4 px-4 text-center">
-                                <form action="admin-contacts.php" method="POST">
+                                <form action="contacts.php" method="POST">
                                     <input type="hidden" name="action" value="update_status">
                                     <input type="hidden" name="id" value="<?php echo $c['id']; ?>">
                                     <select name="status" onchange="this.form.submit()" class="px-2.5 py-1 rounded-xl text-[11px] font-bold border outline-none cursor-pointer transition-colors <?php 
@@ -119,7 +119,7 @@ admin_header("Hộp Thư Đăng Ký & Tư Vấn", "contacts");
 </div>
 
 <!-- FORM XÓA ẨN -->
-<form id="deleteContactForm" action="admin-contacts.php" method="POST" class="hidden">
+<form id="deleteContactForm" action="contacts.php" method="POST" class="hidden">
     <input type="hidden" name="action" value="delete">
     <input type="hidden" name="id" id="deleteContactId" value="">
 </form>

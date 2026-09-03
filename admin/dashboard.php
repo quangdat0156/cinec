@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 $programs = get_programs();
 $events = get_events(4);
@@ -42,15 +42,15 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
         </div>
 
         <div class="relative z-10 flex flex-wrap items-center gap-3 shrink-0">
-            <a href="admin-contacts.php" class="px-4 py-2.5 rounded-2xl bg-white text-[#062AAD] text-xs font-bold hover:bg-slate-100 transition-all shadow-sm flex items-center gap-2 hover:-translate-y-0.5">
+            <a href="contacts.php" class="px-4 py-2.5 rounded-2xl bg-white text-[#062AAD] text-xs font-bold hover:bg-slate-100 transition-all shadow-sm flex items-center gap-2 hover:-translate-y-0.5">
                 <i data-lucide="inbox" class="w-4 h-4 text-[#062AAD]"></i>
                 <span>Đơn mới (<?php echo $newContacts; ?>)</span>
             </a>
-            <a href="admin-events.php" class="px-4 py-2.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white text-xs font-bold transition-all border border-white/20 flex items-center gap-2 hover:-translate-y-0.5">
+            <a href="events.php" class="px-4 py-2.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white text-xs font-bold transition-all border border-white/20 flex items-center gap-2 hover:-translate-y-0.5">
                 <i data-lucide="plus-circle" class="w-4 h-4 text-[#C1FF72]"></i>
                 <span>Thêm Sự Kiện</span>
             </a>
-            <a href="index.php" target="_blank" class="px-3.5 py-2.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors border border-white/15" title="Mở trang chủ">
+            <a href="../index.php" target="_blank" class="px-3.5 py-2.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors border border-white/15" title="Mở trang chủ">
                 <i data-lucide="external-link" class="w-4 h-4"></i>
             </a>
         </div>
@@ -58,7 +58,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
 
     <!-- 1. KPI THỐNG KÊ TỔNG THỂ (04 THẺ CHỈ SỐ NHANH) -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        <a href="admin-programs.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
+        <a href="programs.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
             <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#062AAD] group-hover:bg-[#062AAD] group-hover:text-white flex items-center justify-center shrink-0 border border-blue-100 transition-colors">
                 <i data-lucide="layers" class="w-6 h-6"></i>
             </div>
@@ -71,7 +71,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
             </div>
         </a>
 
-        <a href="admin-events.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
+        <a href="events.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
             <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center shrink-0 border border-emerald-100 transition-colors">
                 <i data-lucide="calendar" class="w-6 h-6"></i>
             </div>
@@ -84,7 +84,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
             </div>
         </a>
 
-        <a href="admin-contacts.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
+        <a href="contacts.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
             <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 group-hover:bg-rose-600 group-hover:text-white flex items-center justify-center shrink-0 border border-rose-100 transition-colors">
                 <i data-lucide="mail" class="w-6 h-6"></i>
             </div>
@@ -97,7 +97,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
             </div>
         </a>
 
-        <a href="admin-partners.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
+        <a href="partners.php" class="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs flex items-center gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all group">
             <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white flex items-center justify-center shrink-0 border border-purple-100 transition-colors">
                 <i data-lucide="globe" class="w-6 h-6"></i>
             </div>
@@ -143,7 +143,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
                         Có đơn từ HTX Nuôi tôm và Startup EcoStraw đang chờ phân bổ chuyên gia cố vấn kỹ thuật và voucher chuyển đổi số.
                     </p>
                 </div>
-                <a href="admin-contacts.php" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs transition-colors">
+                <a href="contacts.php" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold text-xs transition-colors">
                     <span>Xử lý ngay trong Hộp thư</span>
                     <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
@@ -163,7 +163,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
                         Chuẩn bị phiên Pitching kết nối Quỹ đầu tư VinaCapital và Do Ventures cho các dự án thủy sản công nghệ cao Cà Mau.
                     </p>
                 </div>
-                <a href="admin-partners.php?category=fund" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 font-bold text-xs transition-colors">
+                <a href="partners.php?category=fund" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 font-bold text-xs transition-colors">
                     <span>Xem mạng lưới Quỹ đầu tư</span>
                     <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
@@ -183,7 +183,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
                         Cập nhật bài viết về khung chính sách Sandbox thử nghiệm và kết quả cải thiện bộ chỉ số ĐMST (PII) tỉnh Cà Mau 2026.
                     </p>
                 </div>
-                <a href="admin-news.php" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs transition-colors">
+                <a href="news.php" class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs transition-colors">
                     <span>Đăng bài viết mới</span>
                     <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
@@ -389,7 +389,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
                     <i data-lucide="calendar" class="w-4 h-4 text-[#062AAD]"></i>
                     <h3 class="text-xs font-black text-[#02185D] uppercase tracking-wider">Sự Kiện & Lịch Hoạt Động Gần Nhất</h3>
                 </div>
-                <a href="admin-events.php" class="text-xs font-bold text-[#05A6F5] hover:text-[#062AAD]">Quản lý</a>
+                <a href="events.php" class="text-xs font-bold text-[#05A6F5] hover:text-[#062AAD]">Quản lý</a>
             </div>
             <div class="space-y-3">
                 <?php foreach ($events as $ev): ?>
@@ -419,7 +419,7 @@ admin_header("Bảng Điều Khiển & Thống Kê Gợi Ý Quản Trị", "dash
                     <i data-lucide="mail" class="w-4 h-4 text-[#062AAD]"></i>
                     <h3 class="text-xs font-black text-[#02185D] uppercase tracking-wider">Đơn Đăng Ký Mới Cần Xử Lý</h3>
                 </div>
-                <a href="admin-contacts.php" class="text-xs font-bold text-[#05A6F5] hover:text-[#062AAD]">Xem tất cả</a>
+                <a href="contacts.php" class="text-xs font-bold text-[#05A6F5] hover:text-[#062AAD]">Xem tất cả</a>
             </div>
             <div class="space-y-3">
                 <?php foreach (array_slice($contacts, 0, 3) as $c): ?>

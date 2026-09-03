@@ -2,9 +2,12 @@
 if (!isset($page_title)) {
     $page_title = "CINEC - Hệ sinh thái Đổi mới sáng tạo Cà Mau - Bạc Liêu";
 }
+require_once __DIR__ . '/../config/lang.php';
+$lang = current_lang();
+$is_en = ($lang === 'en');
 ?>
 <!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<html lang="<?php echo $is_en ? 'en' : 'vi'; ?>" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,12 +49,11 @@ if (!isset($page_title)) {
                         cinecTextMuted: '#A6A7AA',   // Màu chữ phụ
                     },
                     fontFamily: {
-                        sans: ['Inter', 'Plus Jakarta Sans', 'Be Vietnam Pro', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                         inter: ['Inter', 'sans-serif'],
                         playball: ['Playball', 'cursive'],
                     },
                     fontSize: {
-                        // Kích thước chuẩn Figma Design Systems (Node 2:1078)
                         'h1': ['56px', { lineHeight: '64px', letterSpacing: '-0.02em', fontWeight: '700' }],
                         'h2': ['40px', { lineHeight: '48px', letterSpacing: '-0.02em', fontWeight: '700' }],
                         'h3': ['32px', { lineHeight: '40px', letterSpacing: '-0.015em', fontWeight: '600' }],
@@ -59,97 +61,74 @@ if (!isset($page_title)) {
                         'h5': ['20px', { lineHeight: '28px', fontWeight: '600' }],
                         'body-lg': ['16px', { lineHeight: '24px' }],
                         'body-md': ['14px', { lineHeight: '20px' }],
-                        'body-sm': ['13px', { lineHeight: '20px' }],
-                        'body-xs': ['12px', { lineHeight: '16px' }],
-                        'caption': ['12px', { lineHeight: '16px' }],
-                        'caption-xs': ['11px', { lineHeight: '16px' }],
-                    },
-                    spacing: {
-                        '128': '32rem',
+                        'body-sm': ['12px', { lineHeight: '16px' }],
                     },
                     boxShadow: {
-                        'figma-card': '0px 2px 4px 0px rgba(0, 0, 0, 0.1)',
-                        'figma-elevate': '0px 2px 4px 0px rgba(0, 0, 0, 0.25)',
-                        'figma-nav': '0px 2px 4px 0px rgba(0, 0, 0, 0.15)',
                         'subtle': '0 2px 10px rgba(6, 42, 173, 0.04)',
                         'premium': '0 10px 30px -10px rgba(6, 42, 173, 0.08), 0 2px 6px rgba(6, 42, 173, 0.02)',
                         'hover-card': '0 20px 40px -12px rgba(6, 42, 173, 0.14), 0 4px 12px rgba(6, 42, 173, 0.04)',
-                        'glow-blue': '0 8px 25px rgba(6, 42, 173, 0.25)',
-                        'glow-lime': '0 8px 25px rgba(193, 255, 114, 0.35)',
                     }
                 }
             }
         }
     </script>
     
-    <!-- Lucide Icons Library -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+        /* Typography Rules */
         body {
-            font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', 'Inter', sans-serif;
-            background-color: #FAFCFF;
-            color: #1e293b;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        /* Hiệu ứng mượt mà */
-        .reveal-on-scroll {
-            opacity: 1;
-            transform: translateY(0);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #5B5B5B;
+            background-color: #F7FAFD;
+            overflow-x: hidden;
         }
 
-        /* Nav link hover underline animation */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            color: #062AAD;
+        }
+
+        .font-playball {
+            font-family: 'Playball', cursive;
+        }
+
+        /* Nav link hover indicator effect */
         .nav-link-hover {
             position: relative;
         }
         .nav-link-hover::after {
             content: '';
             position: absolute;
-            bottom: -2px;
+            bottom: 0;
             left: 50%;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #05A6F5, #062AAD);
-            border-radius: 99px;
-            transition: all 0.25s ease-out;
+            background: #062AAD;
+            transition: all 0.25s ease-in-out;
             transform: translateX(-50%);
+            border-radius: 9999px;
         }
         .nav-link-hover:hover::after {
             width: 80%;
         }
-        
-        /* Dropdown Hover Animation */
-        .dropdown-menu {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .dropdown-hover:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        ::-webkit-scrollbar-track {
+            background: #F7FAFD;
         }
-        
-        /* Logo Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
         }
-        .animate-marquee {
-            animation: marquee 25s linear infinite;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
         }
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-        
-        /* Khóa cứng nền trong suốt cho wrapper header để chống cache JS cũ làm đục góc */
+
         #main-header, #header-wrapper {
             background-color: transparent !important;
             background: transparent !important;
@@ -170,15 +149,19 @@ if (!isset($page_title)) {
                     <img src="assets/img/logo-web-cinec.png" alt="CiNEC Logo" class="h-8 md:h-10 w-auto object-contain">
                 </a>
 
-                <!-- MENU (Giữa) - Desktop 1440px -->
-                <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
-                    <a href="index.php" class="nav-link-hover text-body-sm font-semibold hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">Trang chủ</a>
-                    <a href="gioi-thieu.php" class="nav-link-hover text-body-sm font-semibold hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'gioi-thieu.php' ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">Giới thiệu</a>
+                <!-- MENU (Giữa) - Desktop 1440px chuẩn Figma Inter 14px font-medium -->
+                <nav class="hidden lg:flex items-center gap-6 xl:gap-7">
+                    <a href="index.php" class="nav-link-hover text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                        <?php echo __('nav_home'); ?>
+                    </a>
+                    <a href="gioi-thieu.php" class="nav-link-hover text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'gioi-thieu.php' ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                        <?php echo __('nav_about'); ?>
+                    </a>
                     
                     <!-- DROPDOWN CHƯƠNG TRÌNH -->
                     <div class="relative group py-2">
-                        <a href="chuong-trinh.php" class="nav-link-hover flex items-center gap-1.5 text-body-sm font-semibold hover:text-cinecPrimary transition-colors <?php echo strpos(basename($_SERVER['PHP_SELF']), 'chuong-trinh') !== false ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">
-                            Chương trình
+                        <a href="chuong-trinh.php" class="nav-link-hover flex items-center gap-1.5 text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors <?php echo strpos(basename($_SERVER['PHP_SELF']), 'chuong-trinh') !== false ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                            <?php echo __('nav_programs'); ?>
                             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 text-slate-400 group-hover:text-cinecPrimary"></i>
                         </a>
                         
@@ -190,8 +173,8 @@ if (!isset($page_title)) {
                                         <i data-lucide="layers" class="w-4 h-4"></i>
                                     </div>
                                     <div>
-                                        <div class="text-body-xs font-bold text-slate-800 group-hover/item:text-blue-600 transition-colors">Nền tảng Đổi mới sáng tạo</div>
-                                        <div class="text-[11px] text-slate-500 font-normal">Sandbox, Dữ liệu Đổi mới sáng tạo & Chỉ số PII</div>
+                                        <div class="text-[13px] font-bold text-slate-800 group-hover/item:text-blue-600 transition-colors"><?php echo __('prog_platform_title'); ?></div>
+                                        <div class="text-[11.5px] text-slate-500 font-normal"><?php echo __('prog_platform_desc'); ?></div>
                                     </div>
                                 </a>
 
@@ -200,8 +183,8 @@ if (!isset($page_title)) {
                                         <i data-lucide="rocket" class="w-4 h-4"></i>
                                     </div>
                                     <div>
-                                        <div class="text-body-xs font-bold text-slate-800 group-hover/item:text-amber-600 transition-colors">Hành trình Khởi nghiệp</div>
-                                        <div class="text-[11px] text-slate-500 font-normal">Quy trình 4 bước liên thông & Đồng tài trợ 1:1</div>
+                                        <div class="text-[13px] font-bold text-slate-800 group-hover/item:text-amber-600 transition-colors"><?php echo __('prog_journey_title'); ?></div>
+                                        <div class="text-[11.5px] text-slate-500 font-normal"><?php echo __('prog_journey_desc'); ?></div>
                                     </div>
                                 </a>
 
@@ -210,8 +193,8 @@ if (!isset($page_title)) {
                                         <i data-lucide="shopping-bag" class="w-4 h-4"></i>
                                     </div>
                                     <div>
-                                        <div class="text-body-xs font-bold text-slate-800 group-hover/item:text-emerald-600 transition-colors">Doanh nghiệp số</div>
-                                        <div class="text-[11px] text-slate-500 font-normal">Voucher CĐS, Mentor KPI 90 ngày & Nâng chuẩn OCOP</div>
+                                        <div class="text-[13px] font-bold text-slate-800 group-hover/item:text-emerald-600 transition-colors"><?php echo __('prog_sme_title'); ?></div>
+                                        <div class="text-[11.5px] text-slate-500 font-normal"><?php echo __('prog_sme_desc'); ?></div>
                                     </div>
                                 </a>
 
@@ -220,8 +203,8 @@ if (!isset($page_title)) {
                                         <i data-lucide="graduation-cap" class="w-4 h-4"></i>
                                     </div>
                                     <div>
-                                        <div class="text-body-xs font-bold text-slate-800 group-hover/item:text-purple-600 transition-colors">Nhân tài số</div>
-                                        <div class="text-[11px] text-slate-500 font-normal">Học bổng tài năng số & Mô hình Đại học Khởi nghiệp</div>
+                                        <div class="text-[13px] font-bold text-slate-800 group-hover/item:text-purple-600 transition-colors"><?php echo __('prog_talent_title'); ?></div>
+                                        <div class="text-[11.5px] text-slate-500 font-normal"><?php echo __('prog_talent_desc'); ?></div>
                                     </div>
                                 </a>
                             </div>
@@ -230,44 +213,76 @@ if (!isset($page_title)) {
 
                     <!-- MENU SỰ KIỆN -->
                     <div class="relative py-2">
-                        <a href="su-kien.php" class="nav-link-hover text-body-sm font-semibold hover:text-cinecPrimary transition-colors <?php echo basename($_SERVER['PHP_SELF']) == 'su-kien.php' ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">
-                            Sự kiện
+                        <a href="su-kien.php" class="nav-link-hover text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors <?php echo basename($_SERVER['PHP_SELF']) == 'su-kien.php' ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                            <?php echo __('nav_events'); ?>
                         </a>
                     </div>
                     
                     <!-- MENU TIN TỨC -->
                     <div class="relative py-2">
-                        <a href="tin-tuc.php" class="nav-link-hover text-body-sm font-semibold hover:text-cinecPrimary transition-colors <?php echo basename($_SERVER['PHP_SELF']) == 'tin-tuc.php' ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">
-                            Tin tức & Insight
+                        <a href="tin-tuc.php" class="nav-link-hover text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors <?php echo basename($_SERVER['PHP_SELF']) == 'tin-tuc.php' ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                            <?php echo __('nav_news'); ?>
                         </a>
                     </div>
                     
-                    <a href="impact.php" class="nav-link-hover text-body-sm font-semibold hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'impact.php' ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">Impact</a>
-                    <a href="doi-tac.php" class="nav-link-hover text-body-sm font-semibold hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'doi-tac.php' ? 'text-cinecPrimary font-bold' : 'text-slate-600'; ?>">Đối tác</a>
+                    <a href="impact.php" class="nav-link-hover text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'impact.php' ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                        <?php echo __('nav_impact'); ?>
+                    </a>
+                    <a href="doi-tac.php" class="nav-link-hover text-[14px] leading-5 font-medium hover:text-cinecPrimary transition-colors py-2 <?php echo basename($_SERVER['PHP_SELF']) == 'doi-tac.php' ? 'text-cinecPrimary !font-bold' : 'text-slate-600'; ?>">
+                        <?php echo __('nav_partners'); ?>
+                    </a>
                 </nav>
 
-                <!-- CỤM CHUYỂN NGỮ & LIÊN HỆ (Phải) -->
-                <div class="hidden lg:flex items-center gap-5">
+                <!-- CỤM CÔNG TẮC CHUYỂN NGỮ & LIÊN HỆ (Phải) -->
+                <div class="hidden lg:flex items-center gap-4">
                     
-                    <!-- Bộ chuyển ngôn ngữ Switcher Toggle kiểu Figma (Ảnh 2) -->
-                    <div class="flex items-center bg-white border border-[#062AAD]/25 hover:border-[#062AAD] rounded-full p-1 w-16 h-8 justify-between relative cursor-pointer group transition-all duration-300 shadow-2xs">
-                        <!-- Chấm tròn màu xanh dương bên trái -->
-                        <span class="w-6 h-6 rounded-full bg-[#062AAD] flex items-center justify-center text-white text-[9px] font-bold transition-transform duration-300 shadow-xs"></span>
-                        <!-- Chữ VN bên phải -->
-                        <span class="text-[10px] font-extrabold text-[#062AAD] pr-2.5 tracking-wider">VN</span>
-                    </div>
+                    <!-- CÔNG TẮC BẬT TẮT CHUYỂN NGÔN NGỮ CHUẨN FIGMA GỐC (BẬT SANG EN HOẶC VỀ VI) -->
+                    <button onclick="toggleCinecLanguage()" 
+                            type="button" 
+                            class="group flex items-center bg-white border border-[#062AAD]/30 hover:border-[#062AAD] rounded-full p-1 w-16 h-8 justify-between relative cursor-pointer transition-all duration-300 shadow-2xs focus:outline-none"
+                            title="<?php echo $is_en ? 'Chuyển sang Tiếng Việt' : 'Switch to English'; ?>"
+                            aria-label="Toggle Language">
+                        
+                        <!-- Nhãn EN bên phải (khi đang ở VN) -->
+                        <span class="text-[11px] font-bold text-[#062AAD] pr-1.5 tracking-wider absolute right-1.5 transition-opacity duration-300 <?php echo !$is_en ? 'opacity-100' : 'opacity-0 pointer-events-none'; ?>">
+                            EN
+                        </span>
+                        
+                        <!-- Nhãn VN bên trái (khi đang ở EN) -->
+                        <span class="text-[11px] font-bold text-[#062AAD] pl-1.5 tracking-wider absolute left-1.5 transition-opacity duration-300 <?php echo $is_en ? 'opacity-100' : 'opacity-0 pointer-events-none'; ?>">
+                            VN
+                        </span>
+                        
+                        <!-- Nút trượt tròn xanh chuẩn Figma (Frame 2147223331) -->
+                        <span class="w-6 h-6 rounded-full bg-[#062AAD] flex items-center justify-center text-white text-[9px] font-extrabold transition-transform duration-300 shadow-xs transform <?php echo !$is_en ? 'translate-x-0' : 'translate-x-8'; ?>">
+                            <?php echo $is_en ? 'EN' : 'VN'; ?>
+                        </span>
+                    </button>
                     
-                    <!-- Nút liên hệ Pill-shape màu tươi sáng gradient từ Figma -->
-                    <a href="lien-he.php" class="group flex items-center gap-3 bg-gradient-to-r from-cinecSecondary to-cinecPrimary hover:from-cinecPrimary hover:to-[#02185D] text-white font-extrabold text-body-sm rounded-full pl-6 pr-2 py-2 shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-600/30 hover:-translate-y-0.5 transition-all duration-300">
-                        <span>Liên hệ</span>
-                        <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1 shadow-sm">
-                            <i data-lucide="arrow-right" class="w-4 h-4 text-cinecPrimary"></i>
+                    <!-- Nút liên hệ Pill-shape chuẩn Figma: Inter 15px font-semibold -->
+                    <a href="lien-he.php" class="group flex items-center gap-3 bg-[#062AAD] hover:bg-[#02185D] text-white font-semibold text-[14px] rounded-full pl-5 pr-1.5 py-1.5 shadow-md hover:shadow-lg transition-all duration-300">
+                        <span><?php echo __('nav_contact'); ?></span>
+                        <span class="w-7 h-7 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1 shadow-xs">
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#062AAD]"></i>
                         </span>
                     </a>
                 </div>
 
-                <!-- MOBILE ACTIONS (Hamburger chuẩn Figma Mobile) -->
-                <div class="flex lg:hidden items-center">
+                <!-- MOBILE ACTIONS (Công tắc & Hamburger Mobile) -->
+                <div class="flex lg:hidden items-center gap-3">
+                    <!-- Công tắc bật tắt ngôn ngữ trên Mobile Header -->
+                    <button onclick="toggleCinecLanguage()" 
+                            type="button" 
+                            class="group flex items-center bg-white border border-[#062AAD]/30 rounded-full p-0.5 w-14 h-7 justify-between relative cursor-pointer shadow-2xs focus:outline-none"
+                            aria-label="Toggle Language Mobile">
+                        <span class="text-[9px] font-bold text-[#062AAD] absolute <?php echo !$is_en ? 'right-1.5' : 'left-1.5'; ?>">
+                            <?php echo !$is_en ? 'EN' : 'VN'; ?>
+                        </span>
+                        <span class="w-5 h-5 rounded-full bg-[#062AAD] flex items-center justify-center text-white text-[8px] font-bold transition-transform duration-300 shadow-xs transform <?php echo !$is_en ? 'translate-x-0' : 'translate-x-7'; ?>">
+                            <?php echo $is_en ? 'EN' : 'VN'; ?>
+                        </span>
+                    </button>
+
                     <!-- Nút Hamburger Menu -->
                     <button id="mobile-menu-btn" class="p-1 text-[#062AAD] hover:text-cinecSecondary focus:outline-none" aria-label="Toggle Menu">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -285,7 +300,7 @@ if (!isset($page_title)) {
         <!-- Nội dung Drawer -->
         <div id="drawer-content" class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out p-6 pointer-events-auto">
             <!-- Header Drawer -->
-            <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                 <a href="index.php" class="flex items-center focus:outline-none">
                     <img src="assets/img/logo-web-cinec.png" alt="CiNEC Logo" class="h-8 w-auto object-contain">
                 </a>
@@ -293,48 +308,65 @@ if (!isset($page_title)) {
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
+
+            <!-- Công tắc chuyển ngôn ngữ trong Drawer Mobile -->
+            <div class="flex items-center justify-between bg-slate-50 p-3 rounded-2xl border border-slate-100 mt-4 mb-2">
+                <span class="text-xs font-bold text-slate-700">
+                    <?php echo $is_en ? 'Language: English' : 'Ngôn ngữ: Tiếng Việt'; ?>
+                </span>
+                <button onclick="toggleCinecLanguage()" 
+                        type="button" 
+                        class="group flex items-center bg-white border border-[#062AAD]/30 rounded-full p-1 w-16 h-8 justify-between relative cursor-pointer shadow-2xs focus:outline-none">
+                    <span class="text-[11px] font-bold text-[#062AAD] absolute <?php echo !$is_en ? 'right-2' : 'left-2'; ?>">
+                        <?php echo !$is_en ? 'EN' : 'VN'; ?>
+                    </span>
+                    <span class="w-6 h-6 rounded-full bg-[#062AAD] flex items-center justify-center text-white text-[9px] font-bold transition-transform duration-300 shadow-xs transform <?php echo !$is_en ? 'translate-x-0' : 'translate-x-8'; ?>">
+                        <?php echo $is_en ? 'EN' : 'VN'; ?>
+                    </span>
+                </button>
+            </div>
             
             <!-- Navigation Links -->
-            <nav class="flex-1 py-6 overflow-y-auto space-y-2">
-                <a href="index.php" class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'bg-blue-50 text-cinecPrimary' : ''; ?>">
-                    Trang chủ
+            <nav class="flex-1 py-4 overflow-y-auto space-y-1.5">
+                <a href="index.php" class="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'bg-blue-50 text-cinecPrimary font-bold' : ''; ?>">
+                    <?php echo __('nav_home'); ?>
                 </a>
-                <a href="gioi-thieu.php" class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'gioi-thieu.php' ? 'bg-blue-50 text-cinecPrimary' : ''; ?>">
-                    Giới thiệu
+                <a href="gioi-thieu.php" class="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'gioi-thieu.php' ? 'bg-blue-50 text-cinecPrimary font-bold' : ''; ?>">
+                    <?php echo __('nav_about'); ?>
                 </a>
                 
                 <!-- Accordion Chương trình Mobile -->
                 <div class="space-y-1">
-                    <button onclick="toggleMobileAccordion()" class="w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none">
-                        Chương trình
+                    <button onclick="toggleMobileAccordion()" class="w-full flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none">
+                        <span><?php echo __('nav_programs'); ?></span>
                         <i id="accordion-arrow" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"></i>
                     </button>
-                    <div id="mobile-accordion-content" class="hidden pl-6 pr-2 py-2 space-y-1 bg-slate-50/55 rounded-xl border border-slate-100">
-                        <a href="chuong-trinh-platform.php" class="block py-2 px-3 text-body-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg">1. Nền tảng Đổi mới sáng tạo</a>
-                        <a href="chuong-trinh-journey.php" class="block py-2 px-3 text-body-sm font-semibold text-slate-600 hover:text-amber-600 hover:bg-amber-50 rounded-lg">2. Hành trình Khởi nghiệp</a>
-                        <a href="chuong-trinh-sme.php" class="block py-2 px-3 text-body-sm font-semibold text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg">3. Doanh nghiệp số</a>
-                        <a href="chuong-trinh-talent.php" class="block py-2 px-3 text-body-sm font-semibold text-slate-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg">4. Nhân tài số</a>
+                    <div id="mobile-accordion-content" class="hidden pl-4 pr-2 py-2 space-y-1 bg-slate-50/70 rounded-xl border border-slate-100">
+                        <a href="chuong-trinh-platform.php" class="block py-2 px-3 text-xs font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg">1. <?php echo __('prog_platform_title'); ?></a>
+                        <a href="chuong-trinh-journey.php" class="block py-2 px-3 text-xs font-semibold text-slate-600 hover:text-amber-600 hover:bg-amber-50 rounded-lg">2. <?php echo __('prog_journey_title'); ?></a>
+                        <a href="chuong-trinh-sme.php" class="block py-2 px-3 text-xs font-semibold text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg">3. <?php echo __('prog_sme_title'); ?></a>
+                        <a href="chuong-trinh-talent.php" class="block py-2 px-3 text-xs font-semibold text-slate-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg">4. <?php echo __('prog_talent_title'); ?></a>
                     </div>
                 </div>
 
-                <a href="su-kien.php" class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'su-kien.php' ? 'bg-blue-50 text-cinecPrimary' : ''; ?>">
-                    Sự kiện
+                <a href="su-kien.php" class="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'su-kien.php' ? 'bg-blue-50 text-cinecPrimary font-bold' : ''; ?>">
+                    <?php echo __('nav_events'); ?>
                 </a>
-                <a href="tin-tuc.php" class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'tin-tuc.php' ? 'bg-blue-50 text-cinecPrimary' : ''; ?>">
-                    Tin tức & Insight
+                <a href="tin-tuc.php" class="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'tin-tuc.php' ? 'bg-blue-50 text-cinecPrimary font-bold' : ''; ?>">
+                    <?php echo __('nav_news'); ?>
                 </a>
-                <a href="impact.php" class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'impact.php' ? 'bg-blue-50 text-cinecPrimary' : ''; ?>">
-                    Impact
+                <a href="impact.php" class="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'impact.php' ? 'bg-blue-50 text-cinecPrimary font-bold' : ''; ?>">
+                    <?php echo __('nav_impact'); ?>
                 </a>
-                <a href="doi-tac.php" class="flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'doi-tac.php' ? 'bg-blue-50 text-cinecPrimary' : ''; ?>">
-                    Đối tác
+                <a href="doi-tac.php" class="flex items-center justify-between px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-slate-50 hover:text-cinecPrimary transition-all <?php echo basename($_SERVER['PHP_SELF']) == 'doi-tac.php' ? 'bg-blue-50 text-cinecPrimary font-bold' : ''; ?>">
+                    <?php echo __('nav_partners'); ?>
                 </a>
             </nav>
             
             <!-- Footer Drawer -->
-            <div class="pt-6 border-t border-slate-100 space-y-4">
-                <a href="lien-he.php" class="w-full flex items-center justify-center gap-2 bg-cinecPrimary text-white font-bold py-3 rounded-xl hover:bg-cinecSecondary transition-all">
-                    Liên hệ ngay <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <div class="pt-4 border-t border-slate-100 space-y-3">
+                <a href="lien-he.php" class="w-full flex items-center justify-center gap-2 bg-cinecPrimary text-white font-bold py-2.5 rounded-xl hover:bg-cinecSecondary transition-all text-xs">
+                    <?php echo __('nav_contact'); ?> <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
@@ -342,3 +374,42 @@ if (!isset($page_title)) {
     
     <!-- MAIN CONTENT WRAPPER -->
     <main class="flex-grow">
+
+    <!-- JAVASCRIPT ĐIỀU KHIỂN CÔNG TẮC NGÔN NGỮ CHỈ DỊCH TRANG ĐÃ CÓ BẢN DỊCH -->
+    <script>
+        function toggleCinecLanguage() {
+            var currentLang = '<?php echo $lang; ?>';
+            var newLang = (currentLang === 'vi') ? 'en' : 'vi';
+
+            // Dọn dẹp triệt để bất kỳ cookie googtrans cũ nào nếu có
+            var d = window.location.hostname;
+            while (d.includes('.')) {
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + d;
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + d;
+                d = d.substring(d.indexOf('.') + 1);
+            }
+            document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            localStorage.removeItem('googtrans');
+            sessionStorage.removeItem('googtrans');
+
+            // Lưu cài đặt ngôn ngữ cho CiNEC (lưu 1 năm)
+            document.cookie = "cinec_lang=" + newLang + "; path=/; max-age=31536000; SameSite=Lax";
+            localStorage.setItem("cinec_lang", newLang);
+
+            // Chuyển hướng kèm query param để PHP session cập nhật tức thì
+            var url = new URL(window.location.href);
+            url.searchParams.set('lang', newLang);
+            window.location.href = url.toString();
+        }
+
+        // Tự động kiểm tra và đồng bộ trạng thái khi chuyển sang bất kỳ trang nào
+        document.addEventListener("DOMContentLoaded", function() {
+            var savedLang = localStorage.getItem("cinec_lang");
+            var phpLang = '<?php echo $lang; ?>';
+            if (savedLang && savedLang !== phpLang && !window.location.search.includes('lang=')) {
+                var url = new URL(window.location.href);
+                url.searchParams.set('lang', savedLang);
+                window.location.replace(url.toString());
+            }
+        });
+    </script>

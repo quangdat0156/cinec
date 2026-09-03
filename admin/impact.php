@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/admin-layout.php';
+require_once __DIR__ . '/../includes/admin-layout.php';
 
 $impact = get_impact_info();
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     save_impact_info($impact);
     $_SESSION['flash_success'] = 'Đã lưu cấu hình tác động Impact thành công!';
-    header("Location: admin-impact.php");
+    header("Location: impact.php");
     exit;
 }
 
@@ -52,7 +52,7 @@ admin_header("Quản Lý Impact", "impact");
     </div>
 </div>
 
-<form action="admin-impact.php" method="POST" class="space-y-8">
+<form action="impact.php" method="POST" class="space-y-8">
 
     <!-- 1. TIÊU ĐỀ & THUYẾT MINH IMPACT HERO -->
     <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
